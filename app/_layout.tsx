@@ -22,7 +22,6 @@ export default function RootLayout() {
       <Stack screenOptions={{ headerShown: false }}>
         <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
         <Stack.Screen name="read-path" options={{ title: 'Read Path' }} />
-        <Stack.Screen name="listen-path" options={{ title: 'Listen Path' }} />
         <Stack.Screen name="hukamnama" options={{ title: 'Daily Hukamnama' }} />
         <Stack.Screen name="settings" options={{ title: 'Settings' }} />
         <Stack.Screen name="about" options={{ title: 'About' }} />
