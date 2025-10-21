@@ -240,10 +240,6 @@ export default function ReadPathScreen() {
 
                 {/* Bottom Audio Player */}
                 <View style={[styles.playerContainer, { backgroundColor: colors.card, borderTopColor: colors.border }]}>
-                    <View style={styles.playerHeader}>
-                        <Ionicons name="musical-notes" size={20} color={colors.gold} />
-                        <Text style={[styles.playerTitle, { color: colors.text }]}>Japji Sahib • Audio</Text>
-                    </View>
 
                     <View style={styles.progressContainer}>
                         <Slider
