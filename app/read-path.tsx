@@ -2,13 +2,15 @@ import { useTheme } from '@/contexts/theme-context';
 import japjiSahibData from '@/data/japji-sahib.json';
 import { useAppStore } from '@/store/app-store';
 import { Ionicons } from '@expo/vector-icons';
+import Slider from '@react-native-community/slider';
+import { AudioSource, useAudioPlayer } from 'expo-audio';
 import { LinearGradient } from 'expo-linear-gradient';
 import { Stack } from 'expo-router';
 import React, { useEffect, useRef, useState } from 'react';
 import {
+    ActivityIndicator,
     ScrollView,
     StyleSheet,
-    Switch,
     Text,
     TouchableOpacity,
     View,
@@ -16,49 +18,97 @@ import {
 
 export default function ReadPathScreen() {
     const { colors, isDarkMode, fontSize, fontSizes } = useTheme();
-    const { selectedLanguage, setLanguage, autoScrollEnabled, setAutoScroll } = useAppStore();
-    const [showControls, setShowControls] = useState(true);
+    const { selectedLanguage, setLanguage } = useAppStore();
     const scrollViewRef = useRef<ScrollView>(null);
-    const scrollY = useRef(0);
-    const autoScrollInterval = useRef<NodeJS.Timeout | null>(null);
+    // Audio player state
+    const [audioSource, setAudioSource] = useState<AudioSource | null>(null);
+    const player = useAudioPlayer(audioSource);
+    const [isLoading, setIsLoading] = useState(false);
+    const [audioLoaded, setAudioLoaded] = useState(false);
 
     const gradientColors: [string, string] = isDarkMode
         ? ['#000000', '#1A1A1A']
         : ['#FFFFFF', '#FFFAF0'];
 
+    // Load audio on mount
     useEffect(() => {
-        if (autoScrollEnabled) {
-            autoScrollInterval.current = setInterval(() => {
-                scrollViewRef.current?.scrollTo({
-                    y: scrollY.current + 1,
-                    animated: true,
-                });
-            }, 50);
-        } else {
-            if (autoScrollInterval.current) {
-                clearInterval(autoScrollInterval.current);
-            }
-        }
-
-        return () => {
-            if (autoScrollInterval.current) {
-                clearInterval(autoScrollInterval.current);
+        const loadAudio = async () => {
+            try {
+                setIsLoading(true);
+                try {
+                    const source = require('@/assets/audio/japji-sahib.mp3') as AudioSource;
+                    setAudioSource(source);
+                    setAudioLoaded(true);
+                } catch {
+                    console.log('Audio file not found. Please add japji-sahib.mp3 to assets/audio/');
+                    setAudioLoaded(false);
+                }
+            } catch (e) {
+                console.error('Error loading audio:', e);
+            } finally {
+                setIsLoading(false);
             }
         };
-    }, [autoScrollEnabled]);
+        loadAudio();
+    }, []);
 
-    const handleScroll = (event: any) => {
-        scrollY.current = event.nativeEvent.contentOffset.y;
+    const playPause = () => {
+        if (!audioLoaded) return;
+        if (player.playing) {
+            player.pause();
+        } else {
+            player.play();
+        }
+    };
+
+    const skip = (seconds: number) => {
+        if (!audioLoaded || !player.currentTime) return;
+        const newTime = Math.max(
+            0,
+            Math.min((player.currentTime || 0) + seconds, player.duration || 0)
+        );
+        player.seekTo(newTime);
+    };
+
+    const onSliderValueChange = (value: number) => {
+        if (audioLoaded) {
+            player.seekTo(value);
+        }
+    };
+
+    const formatTime = (seconds: number | null) => {
+        if (!seconds) return '0:00';
+        const mins = Math.floor(seconds / 60);
+        const secs = Math.floor(seconds % 60);
+        return `${mins}:${secs.toString().padStart(2, '0')}`;
     };
 
     const renderVerse = (verse: any, index: number) => {
+        const replaceEkonkar = (t: string) => {
+            if (!t) return t;
+            let out = t;
+            // Gurmukhi variants
+            out = out.replace(/੧\s*ਓਅੰਕਾਰ/g, 'ੴ');
+            out = out.replace(/\bਓਅੰਕਾਰ\b/g, 'ੴ');
+            // Hindi/Devanagari variants
+            out = out.replace(/੧\s*ओअंकार/g, 'ੴ');
+            out = out.replace(/\bओअंकार\b/g, 'ੴ');
+            out = out.replace(/\bओंकार\b/g, 'ੴ');
+            // English transliteration variants (Ik/Ek Oankaar/Onkar)
+            out = out.replace(/\b(?:ik|ek)\s+oankaar\b/gi, 'ੴ');
+            out = out.replace(/\b(?:ik|ek)\s+oankar\b/gi, 'ੴ');
+            out = out.replace(/\b(?:ik|ek)\s+onkar\b/gi, 'ੴ');
+            out = out.replace(/\b(?:ik|ek)\s+onkaar\b/gi, 'ੴ');
+            return out;
+        };
+
         let text = '';
         if (selectedLanguage === 'gurmukhi') {
-            text = verse.gurmukhi;
+            text = replaceEkonkar(verse.gurmukhi);
         } else if (selectedLanguage === 'hindi') {
-            text = verse.hindi;
+            text = replaceEkonkar(verse.hindi);
         } else {
-            text = verse.english;
+            text = replaceEkonkar(verse.english);
         }
 
         return (
@@ -161,30 +211,13 @@ export default function ReadPathScreen() {
                     </TouchableOpacity>
                 </View>
 
-                {/* Controls */}
-                {showControls && (
-                    <View style={[styles.controlsContainer, { backgroundColor: colors.card }]}>
-                        <View style={styles.controlRow}>
-                            <Text style={[styles.controlLabel, { color: colors.text }]}>
-                                Auto Scroll
-                            </Text>
-                            <Switch
-                                value={autoScrollEnabled}
-                                onValueChange={setAutoScroll}
-                                trackColor={{ false: colors.border, true: colors.gold }}
-                                thumbColor={autoScrollEnabled ? '#fff' : '#f4f3f4'}
-                            />
-                        </View>
-                    </View>
-                )}
+                {/* (Removed) Auto Scroll Controls */}
 
                 {/* Content */}
                 <ScrollView
                     ref={scrollViewRef}
                     style={styles.scrollView}
-                    contentContainerStyle={styles.content}
-                    onScroll={handleScroll}
-                    scrollEventThrottle={16}
+                    contentContainerStyle={[styles.content, { paddingBottom: 180 }]}
                 >
                     <Text style={[styles.title, { color: colors.gold }]}>
                         {japjiSahibData.title}
@@ -205,17 +238,73 @@ export default function ReadPathScreen() {
                     </View>
                 </ScrollView>
 
-                {/* Toggle Controls Button */}
-                <TouchableOpacity
-                    style={[styles.toggleButton, { backgroundColor: colors.gold }]}
-                    onPress={() => setShowControls(!showControls)}
-                >
-                    <Ionicons
-                        name={showControls ? 'chevron-up' : 'chevron-down'}
-                        size={24}
-                        color="#fff"
-                    />
-                </TouchableOpacity>
+                {/* Bottom Audio Player */}
+                <View style={[styles.playerContainer, { backgroundColor: colors.card, borderTopColor: colors.border }]}>
+                    <View style={styles.playerHeader}>
+                        <Ionicons name="musical-notes" size={20} color={colors.gold} />
+                        <Text style={[styles.playerTitle, { color: colors.text }]}>Japji Sahib • Audio</Text>
+                    </View>
+
+                    <View style={styles.progressContainer}>
+                        <Slider
+                            style={styles.slider}
+                            minimumValue={0}
+                            maximumValue={player.duration || 0}
+                            value={player.currentTime || 0}
+                            onSlidingComplete={onSliderValueChange}
+                            minimumTrackTintColor={colors.gold}
+                            maximumTrackTintColor={colors.border}
+                            thumbTintColor={colors.gold}
+                            disabled={!audioLoaded}
+                        />
+                        <View style={styles.timeContainer}>
+                            <Text style={[styles.timeText, { color: colors.textSecondary }]}>
+                                {formatTime(player.currentTime)}
+                            </Text>
+                            <Text style={[styles.timeText, { color: colors.textSecondary }]}>
+                                {formatTime(player.duration)}
+                            </Text>
+                        </View>
+                    </View>
+
+                    <View style={styles.controls}>
+                        <TouchableOpacity
+                            style={[styles.controlButton, { backgroundColor: colors.card }]}
+                            onPress={() => skip(-10)}
+                            disabled={!audioLoaded}
+                        >
+                            <Ionicons name="play-back" size={28} color={colors.gold} />
+                            <Text style={[styles.controlText, { color: colors.text }]}>-10s</Text>
+                        </TouchableOpacity>
+
+                        <TouchableOpacity
+                            style={[styles.playButton, { backgroundColor: colors.gold }]}
+                            onPress={playPause}
+                            disabled={isLoading || !audioLoaded}
+                        >
+                            {isLoading ? (
+                                <ActivityIndicator color="#fff" size="small" />
+                            ) : (
+                                <Ionicons name={player.playing ? 'pause' : 'play'} size={32} color="#fff" />
+                            )}
+                        </TouchableOpacity>
+
+                        <TouchableOpacity
+                            style={[styles.controlButton, { backgroundColor: colors.card }]}
+                            onPress={() => skip(10)}
+                            disabled={!audioLoaded}
+                        >
+                            <Ionicons name="play-forward" size={28} color={colors.gold} />
+                            <Text style={[styles.controlText, { color: colors.text }]}>+10s</Text>
+                        </TouchableOpacity>
+                    </View>
+
+                    {!audioLoaded && (
+                        <Text style={[styles.infoInline, { color: colors.textSecondary }]}>
+                            Audio file not found. Please add japji-sahib.mp3 to assets/audio/ folder.
+                        </Text>
+                    )}
+                </View>
             </LinearGradient>
         </>
     );
@@ -240,19 +329,6 @@ const styles = StyleSheet.create({
     tabText: {
         fontSize: 16,
         fontWeight: '600',
-    },
-    controlsContainer: {
-        padding: 16,
-        borderBottomWidth: 1,
-    },
-    controlRow: {
-        flexDirection: 'row',
-        justifyContent: 'space-between',
-        alignItems: 'center',
-    },
-    controlLabel: {
-        fontSize: 16,
-        fontWeight: '500',
     },
     scrollView: {
         flex: 1,
@@ -290,13 +366,67 @@ const styles = StyleSheet.create({
         textAlign: 'center',
         marginBottom: 4,
     },
-    toggleButton: {
+    // Bottom audio player styles
+    playerContainer: {
         position: 'absolute',
-        bottom: 20,
-        right: 20,
-        width: 50,
-        height: 50,
-        borderRadius: 25,
+        left: 0,
+        right: 0,
+        bottom: 0,
+        paddingTop: 12,
+        paddingHorizontal: 16,
+        paddingBottom: 16,
+        borderTopWidth: 1,
+    },
+    playerHeader: {
+        flexDirection: 'row',
+        alignItems: 'center',
+        gap: 8,
+        marginBottom: 8,
+    },
+    playerTitle: {
+        fontSize: 14,
+        fontWeight: '600',
+    },
+    progressContainer: {
+        width: '100%',
+    },
+    slider: {
+        width: '100%',
+        height: 32,
+    },
+    timeContainer: {
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        paddingHorizontal: 4,
+        marginTop: -6,
+        marginBottom: 6,
+    },
+    timeText: {
+        fontSize: 11,
+    },
+    controls: {
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'center',
+        gap: 20,
+        marginTop: 6,
+    },
+    controlButton: {
+        width: 64,
+        height: 64,
+        borderRadius: 32,
+        alignItems: 'center',
+        justifyContent: 'center',
+        elevation: 3,
+    },
+    controlText: {
+        fontSize: 10,
+        marginTop: 2,
+    },
+    playButton: {
+        width: 80,
+        height: 80,
+        borderRadius: 40,
         alignItems: 'center',
         justifyContent: 'center',
         elevation: 5,
@@ -304,5 +434,10 @@ const styles = StyleSheet.create({
         shadowOffset: { width: 0, height: 2 },
         shadowOpacity: 0.25,
         shadowRadius: 3.84,
+    },
+    infoInline: {
+        fontSize: 12,
+        textAlign: 'center',
+        marginTop: 8,
     },
 });

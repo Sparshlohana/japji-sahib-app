@@ -42,14 +42,6 @@ export default function HomeScreen() {
             <Ionicons name="book" size={32} color={colors.gold} />
             <Text style={[styles.buttonText, { color: colors.text }]}>📖 Read Path</Text>
           </TouchableOpacity>
-
-          <TouchableOpacity
-            style={[styles.mainButton, { backgroundColor: colors.card, borderColor: colors.gold }]}
-            onPress={() => router.push('/listen-path')}
-          >
-            <Ionicons name="headset" size={32} color={colors.gold} />
-            <Text style={[styles.buttonText, { color: colors.text }]}>🎧 Listen Path</Text>
-          </TouchableOpacity>
         </View>
 
         {/* Secondary Options */}
