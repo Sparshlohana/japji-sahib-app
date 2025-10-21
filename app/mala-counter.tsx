@@ -145,9 +145,11 @@ export default function MalaCounterScreen() {
 
                     {/* Info */}
                     <Text style={[styles.infoText, { color: colors.textSecondary }]}>
-                        Tap "Count" after each Japji Sahib recitation.
+                        {'Tap "'}
+                        {'Count'}
+                        {'" after each Japji Sahib recitation.'}
                         {'\n'}
-                        Your progress is saved automatically.
+                        {'Your progress is saved automatically.'}
                     </Text>
 
                     {/* Footer */}
