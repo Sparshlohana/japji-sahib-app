@@ -117,21 +117,21 @@ export default function AboutScreen() {
 
                         <TouchableOpacity
                             style={styles.contactButton}
-                            onPress={() => openLink('mailto:support@example.com')}
+                            onPress={() => openLink('mailto:sparsh.lohana@gmail.com')}
                         >
                             <Ionicons name="mail" size={24} color={colors.gold} />
                             <Text style={[styles.contactText, { color: colors.text }]}>
-                                support@example.com
+                                sparsh.lohana@gmail.com
                             </Text>
                         </TouchableOpacity>
 
                         <TouchableOpacity
                             style={styles.contactButton}
-                            onPress={() => openLink('https://github.com/example/japji-sahib')}
+                            onPress={() => openLink('tel:+918154000250')}
                         >
-                            <Ionicons name="logo-github" size={24} color={colors.gold} />
+                            <Ionicons name="call" size={24} color={colors.gold} />
                             <Text style={[styles.contactText, { color: colors.text }]}>
-                                GitHub Repository
+                                +91 81540 00250
                             </Text>
                         </TouchableOpacity>
                     </View>

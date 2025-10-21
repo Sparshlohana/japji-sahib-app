@@ -125,7 +125,7 @@ export default function SettingsScreen() {
                                 Developer
                             </Text>
                             <Text style={[styles.infoValue, { color: colors.text }]}>
-                                Japji Sahib App Team
+                                Sparsh Lohana
                             </Text>
                         </View>
                     </View>
