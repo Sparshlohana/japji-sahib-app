@@ -29,34 +29,165 @@ export default function HukamnamaScreen() {
         ? ['#000000', '#1A1A1A']
         : ['#FFFFFF', '#FFFAF0'];
 
+    // Ensure date is always a human-readable string even if API returns nested objects
+    const toReadableDate = (d: any): string => {
+        if (!d) return new Date().toDateString();
+        if (typeof d === 'string') return d;
+        if (typeof d?.readable === 'string') return d.readable;
+        if (typeof d?.full === 'string') return d.full;
+        if (typeof d?.gregorian === 'string') return d.gregorian;
+        // handle structures like {month, monthno, date, year, day}
+        if (d?.day && d?.month && (d?.date || d?.dayno || d?.daynum) && d?.year) {
+            const dayNum = d.date ?? d.dayno ?? d.daynum;
+            return `${d.day}, ${dayNum} ${d.month} ${d.year}`;
+        }
+        // sometimes there's a nested gregorian object
+        const g = d?.gregorian;
+        if (g && typeof g === 'object') {
+            const day = g.day || '';
+            const dayNum = g.date ?? g.dayno ?? g.daynum ?? '';
+            const month = g.month || '';
+            const year = g.year || '';
+            const parts = [day ? `${day},` : '', dayNum, month, year].filter(Boolean);
+            const joined = parts.join(' ').trim();
+            if (joined) return joined;
+        }
+        // final fallback
+        try {
+            const dt = new Date(d);
+            if (!isNaN(dt.getTime())) return dt.toDateString();
+        } catch { }
+        return new Date().toDateString();
+    };
+
     const fetchHukamnama = useCallback(async () => {
         try {
-            // Note: Replace with actual API endpoint
-            // Example: https://api.gurbaninow.com/v2/hukamnama/today
+            // Primary source: GurbaniNow v2
+            const resp = await fetch('https://api.gurbaninow.com/v2/hukamnama/today', {
+                headers: { Accept: 'application/json' },
+            });
+            if (!resp.ok) throw new Error(`Primary API failed: ${resp.status}`);
 
-            // For now, using sample data
-            const sampleData: HukamnamaData = {
-                gurmukhi:
-                    '\u0a38\u0a32\u0a4b\u0a15\u0a41 \u0965\\n\u0a28\u0a3e\u0a28\u0a15 \u0a28\u0a3e\u0a2e\u0a41 \u0a28 \u0a1a\u0a47\u0a24\u0a38\u0a40 \u0a1c\u0a2e\u0a41 \u0a06\u0a35\u0a38\u0a40 \u0a24\u0a47 \u0a2e\u0a41\u0a39\u0a24\u0a3f \u0965\\n\u0a24\u0a3e \u0a2e\u0a41\u0a16\u0a41 \u0a2b\u0a3f\u0a15\u0a3e \u0a2a\u0a1b\u0a41\u0a24\u0a3e\u0a39\u0a3f \u0a1c\u0a3e \u0a1c\u0a2e \u0a2a\u0a15\u0a5c\u0a3f \u0a1a\u0a32\u0a3e\u0a07\u0a06 \u0965\u0a67\u0965',
-                hindi:
-                    '\u0936\u094d\u0932\u094b\u0915 \u0965\\n\u0928\u093e\u0928\u0915 \u0928\u093e\u092e\u0941 \u0928 \u091a\u0947\u0924\u0938\u0940 \u091c\u092e\u0941 \u0906\u0935\u0938\u0940 \u0924\u0947 \u092e\u0941\u0939\u0924\u093f \u0965\\n\u0924\u093e \u092e\u0941\u0916\u0941 \u092b\u093f\u0915\u093e \u092a\u091b\u0941\u0924\u093e\u0939\u093f \u091c\u093e \u091c\u092e \u092a\u0915\u0921\u093c\u093f \u091a\u0932\u093e\u0907\u0906 \u0965\u0967\u0965',
-                english:
-                    'Salok:\nNanak, those who do not remember the Naam, the Name of the Lord, at that time, the Messenger of Death comes.\nThen, their faces turn pale, and they regret, when the Messenger of Death seizes them and leads them away. ||1||',
-                date: new Date().toDateString(),
+            const data: any = await resp.json();
+            console.log('Hukamnama response:', data);
+
+            // Attempt to normalize multiple possible shapes
+            // Shape A: { hukamnama: [{ line: { gurmukhi, translation: { english, hindi } }}, ...], date: { readable: '...' } }
+            // Shape B: { shabads: [{ verses: [...] }], date: '...' } (fallback parsing)
+            const lines: any[] = Array.isArray(data?.hukamnama)
+                ? data.hukamnama
+                : Array.isArray(data?.shabad)
+                    ? data.shabad
+                    : Array.isArray(data?.shabads)
+                        ? data.shabads.flatMap((s: any) => s?.verses || s?.lines || [])
+                        : Array.isArray(data?.verses)
+                            ? data.verses
+                            : [];
+
+            const pickFirstString = (obj: any): string | undefined => {
+                if (!obj) return undefined;
+                if (typeof obj === 'string') return obj;
+                for (const key of Object.keys(obj)) {
+                    const val = obj[key];
+                    if (typeof val === 'string' && val.trim()) return val;
+                }
+                return undefined;
             };
 
-            setHukamnama(sampleData);
+            const extractLine = (item: any) => {
+                const line = item?.line || item; // sometimes the item itself is the line
+                const gm =
+                    line?.gurmukhi?.unicode ||
+                    line?.gurmukhi?.akhar ||
+                    line?.gurmukhi?.text ||
+                    line?.gurmukhi ||
+                    line?.unicode ||
+                    line?.akhar ||
+                    '';
+                const tr = line?.translation || {};
+                const en =
+                    (typeof tr?.english === 'string' ? tr.english : pickFirstString(tr?.english)) ||
+                    tr?.en ||
+                    tr?.sant_singh_english ||
+                    line?.transliteration?.english ||
+                    '';
+                const hi =
+                    (typeof tr?.hindi === 'string' ? tr.hindi : pickFirstString(tr?.hindi)) ||
+                    tr?.hi ||
+                    '';
+                return { gm, en, hi };
+            };
 
-            // Cache the hukamnama
-            await AsyncStorage.setItem('hukamnama', JSON.stringify(sampleData));
-            await AsyncStorage.setItem('hukamnama_date', sampleData.date);
+            const parsed = lines.map(extractLine).filter((x) => x.gm || x.en || x.hi);
+
+            if (!parsed.length) throw new Error('Primary API returned no parsable lines');
+
+            const hukam: HukamnamaData = {
+                gurmukhi: parsed.map((l) => l.gm).filter(Boolean).join('\n'),
+                english: parsed.map((l) => l.en).filter(Boolean).join('\n'),
+                hindi: parsed.map((l) => l.hi).filter(Boolean).join('\n'),
+                date: toReadableDate(data?.date),
+            };
+
+            setHukamnama(hukam);
+            await AsyncStorage.setItem('hukamnama', JSON.stringify(hukam));
+            await AsyncStorage.setItem('hukamnama_cached_for', new Date().toDateString());
 
             setIsLoading(false);
             setRefreshing(false);
-        } catch (error) {
-            console.error('Error fetching hukamnama:', error);
-            setIsLoading(false);
-            setRefreshing(false);
+        } catch (primaryErr) {
+            console.warn('Primary hukamnama API failed, trying fallback...', primaryErr);
+
+            try {
+                // Fallback source: BaniDB
+                const resp2 = await fetch('https://api.banidb.com/v2/hukamnamas/today');
+                if (!resp2.ok) throw new Error(`Fallback API failed: ${resp2.status}`);
+                const data2: any = await resp2.json();
+
+                // Expecting something like { hukamnama: { lines: [{ gurmukhi: { text }, translations: { en, hi } }] } }
+                const lines2: any[] = data2?.hukamnama?.lines || data2?.lines || [];
+                const parsed2 = lines2
+                    .map((ln) => {
+                        const gm = ln?.gurmukhi?.text || ln?.gurmukhi || '';
+                        // Prefer Sant Singh English if present
+                        const en =
+                            ln?.translation?.english ||
+                            ln?.translations?.english ||
+                            (Array.isArray(ln?.translations)
+                                ? ln.translations.find((t: any) => t?.language === 'en' || t?.english)?.text
+                                : '') ||
+                            '';
+                        const hi =
+                            ln?.translation?.hindi ||
+                            ln?.translations?.hindi ||
+                            (Array.isArray(ln?.translations)
+                                ? ln.translations.find((t: any) => t?.language === 'hi' || t?.hindi)?.text
+                                : '') ||
+                            '';
+                        return { gm, en, hi };
+                    })
+                    .filter((x) => x.gm || x.en || x.hi);
+
+                if (!parsed2.length) throw new Error('Fallback API returned no parsable lines');
+
+                const hukam: HukamnamaData = {
+                    gurmukhi: parsed2.map((l) => l.gm).filter(Boolean).join('\n'),
+                    english: parsed2.map((l) => l.en).filter(Boolean).join('\n'),
+                    hindi: parsed2.map((l) => l.hi).filter(Boolean).join('\n'),
+                    date: toReadableDate(data2?.date),
+                };
+
+                setHukamnama(hukam);
+                await AsyncStorage.setItem('hukamnama', JSON.stringify(hukam));
+                await AsyncStorage.setItem('hukamnama_cached_for', new Date().toDateString());
+
+                setIsLoading(false);
+                setRefreshing(false);
+            } catch (fallbackErr) {
+                console.error('Error fetching hukamnama from all sources:', fallbackErr);
+                setIsLoading(false);
+                setRefreshing(false);
+            }
         }
     }, []);
 
@@ -64,11 +195,17 @@ export default function HukamnamaScreen() {
         try {
             // Try to load cached hukamnama
             const cached = await AsyncStorage.getItem('hukamnama');
-            const cacheDate = await AsyncStorage.getItem('hukamnama_date');
+            const cacheDate = await AsyncStorage.getItem('hukamnama_cached_for');
             const today = new Date().toDateString();
 
             if (cached && cacheDate === today) {
-                setHukamnama(JSON.parse(cached));
+                const parsed: any = JSON.parse(cached);
+                // Sanitize cached date if it's an object or invalid
+                if (parsed && typeof parsed.date !== 'string') {
+                    parsed.date = toReadableDate(parsed.date);
+                    await AsyncStorage.setItem('hukamnama', JSON.stringify(parsed));
+                }
+                setHukamnama(parsed);
                 setIsLoading(false);
                 return;
             }
@@ -128,64 +265,75 @@ export default function HukamnamaScreen() {
                         <RefreshControl refreshing={refreshing} onRefresh={onRefresh} tintColor={colors.gold} />
                     }
                 >
-                    {hukamnama && (
+                    {hukamnama ? (
                         <>
                             <Text style={[styles.title, { color: colors.gold }]}>Daily Hukamnama</Text>
-                            <Text style={[styles.date, { color: colors.textSecondary }]}>{hukamnama.date}</Text>
+                            <Text style={[styles.date, { color: colors.textSecondary }]}>{String(hukamnama.date)}</Text>
 
-                            <View style={[styles.section, { backgroundColor: colors.card }]}>
-                                <Text style={[styles.sectionTitle, { color: colors.gold }]}>ਗੁਰਮੁਖੀ</Text>
-                                <Text
-                                    style={[
-                                        styles.text,
-                                        {
-                                            color: colors.text,
-                                            fontSize: fontSizes[fontSize],
-                                            lineHeight: fontSizes[fontSize] * 1.6,
-                                        },
-                                    ]}
-                                >
-                                    {hukamnama.gurmukhi}
-                                </Text>
-                            </View>
+                            {hukamnama.gurmukhi?.trim() ? (
+                                <View style={[styles.section, { backgroundColor: colors.card }]}>
+                                    <Text style={[styles.sectionTitle, { color: colors.gold }]}>ਗੁਰਮੁਖੀ</Text>
+                                    <Text
+                                        style={[
+                                            styles.text,
+                                            {
+                                                color: colors.text,
+                                                fontSize: fontSizes[fontSize],
+                                                lineHeight: fontSizes[fontSize] * 1.6,
+                                            },
+                                        ]}
+                                    >
+                                        {hukamnama.gurmukhi}
+                                    </Text>
+                                </View>
+                            ) : null}
 
-                            <View style={[styles.section, { backgroundColor: colors.card }]}>
-                                <Text style={[styles.sectionTitle, { color: colors.gold }]}>हिंदी</Text>
-                                <Text
-                                    style={[
-                                        styles.text,
-                                        {
-                                            color: colors.text,
-                                            fontSize: fontSizes[fontSize],
-                                            lineHeight: fontSizes[fontSize] * 1.6,
-                                        },
-                                    ]}
-                                >
-                                    {hukamnama.hindi}
-                                </Text>
-                            </View>
+                            {hukamnama.hindi?.trim() ? (
+                                <View style={[styles.section, { backgroundColor: colors.card }]}>
+                                    <Text style={[styles.sectionTitle, { color: colors.gold }]}>हिंदी</Text>
+                                    <Text
+                                        style={[
+                                            styles.text,
+                                            {
+                                                color: colors.text,
+                                                fontSize: fontSizes[fontSize],
+                                                lineHeight: fontSizes[fontSize] * 1.6,
+                                            },
+                                        ]}
+                                    >
+                                        {hukamnama.hindi}
+                                    </Text>
+                                </View>
+                            ) : null}
 
-                            <View style={[styles.section, { backgroundColor: colors.card }]}>
-                                <Text style={[styles.sectionTitle, { color: colors.gold }]}>English Translation</Text>
-                                <Text
-                                    style={[
-                                        styles.text,
-                                        {
-                                            color: colors.text,
-                                            fontSize: fontSizes[fontSize],
-                                            lineHeight: fontSizes[fontSize] * 1.6,
-                                        },
-                                    ]}
-                                >
-                                    {hukamnama.english}
-                                </Text>
-                            </View>
+                            {hukamnama.english?.trim() ? (
+                                <View style={[styles.section, { backgroundColor: colors.card }]}>
+                                    <Text style={[styles.sectionTitle, { color: colors.gold }]}>English Translation</Text>
+                                    <Text
+                                        style={[
+                                            styles.text,
+                                            {
+                                                color: colors.text,
+                                                fontSize: fontSizes[fontSize],
+                                                lineHeight: fontSizes[fontSize] * 1.6,
+                                            },
+                                        ]}
+                                    >
+                                        {hukamnama.english}
+                                    </Text>
+                                </View>
+                            ) : null}
 
                             <View style={styles.footer}>
                                 <Text style={[styles.footerText, { color: colors.gold }]}>ਵਾਹਿਗੁਰੂ ਜੀ ਕਾ ਖਾਲਸਾ</Text>
                                 <Text style={[styles.footerText, { color: colors.gold }]}>ਵਾਹਿਗੁਰੂ ਜੀ ਕੀ ਫਤਿਹ</Text>
                             </View>
                         </>
+                    ) : (
+                        <View style={[styles.section, { backgroundColor: colors.card }]}>
+                            <Text style={[styles.sectionTitle, { color: colors.gold }]}>Unable to load</Text>
+                            <Text style={[styles.text, { color: colors.text }]}>Please check your connection and pull to refresh.</Text>
+                        </View>
                     )}
                 </ScrollView>
             </LinearGradient>
