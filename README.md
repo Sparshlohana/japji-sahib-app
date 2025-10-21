@@ -91,6 +91,27 @@ eas build -p android --profile production
 
 The APK will be available for download from your EAS dashboard once the build completes.
 
+## Build size optimization
+
+This project is configured to keep release builds lean:
+
+- JS bundle minification is enabled by default in production, and we also strip `console.*` calls (except `console.warn` and `console.error`) via Babel to reduce bundle size.
+- Android release builds enable Proguard and resource shrinking to remove unused classes and resources.
+- Use Android App Bundles (AAB) for production to let Google Play deliver ABI- and density-split APKs to users, significantly reducing install size compared to a universal APK.
+
+What we changed:
+
+- Added `babel.config.js` with `transform-remove-console` in production.
+- Added the `expo-build-properties` plugin in `app.json` with:
+  - `android.enableProguardInReleaseBuilds: true`
+  - `android.enableShrinkResourcesInReleaseBuilds: true`
+
+Tips:
+
+- For internal testing where size matters, consider using the `production` profile (AAB) instead of the `preview` APK, or create a dedicated profile that builds per-ABI APKs if you eject/prebuild.
+- Large media assets (audio/images) dominate size. Keep audio compressed (e.g., 96–128 kbps AAC/MP3) and optimize images (WebP/PNG). Only ship assets you need.
+- Hermes is enabled by default with Expo SDK 54 and helps reduce JS size.
+
 ## Project Structure
 
 ```
