@@ -9,6 +9,7 @@ import { Stack } from 'expo-router';
 import React, { useEffect, useRef, useState } from 'react';
 import {
     ActivityIndicator,
+    Modal,
     ScrollView,
     StyleSheet,
     Text,
@@ -18,6 +19,10 @@ import {
 
 export default function ReadPathScreen() {
     const { colors, isDarkMode, fontSize, fontSizes } = useTheme();
+    // Font size keys for modal selection
+    const fontSizeKeys = Object.keys(fontSizes) as (keyof typeof fontSizes)[];
+    const [localFontSize, setLocalFontSize] = useState(fontSize);
+    const [fontModalVisible, setFontModalVisible] = useState(false);
     const { selectedLanguage, setLanguage } = useAppStore();
     const scrollViewRef = useRef<ScrollView>(null);
     // Audio player state
@@ -121,8 +126,8 @@ export default function ReadPathScreen() {
                         styles.verseText,
                         {
                             color: colors.text,
-                            fontSize: fontSizes[fontSize],
-                            lineHeight: fontSizes[fontSize] * 1.6,
+                            fontSize: fontSizes[localFontSize],
+                            lineHeight: fontSizes[localFontSize] * 1.6,
                         },
                     ]}
                 >
@@ -140,9 +145,63 @@ export default function ReadPathScreen() {
                     title: 'Read Path',
                     headerStyle: { backgroundColor: colors.primary },
                     headerTintColor: '#fff',
+                    headerRight: () => (
+                        <TouchableOpacity
+                            onPress={() => setFontModalVisible(true)}
+                            style={{ paddingHorizontal: 12, paddingVertical: 6 }}
+                            accessibilityRole="button"
+                            accessibilityLabel="Change font size"
+                            hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
+                        >
+                            <Text style={{ color: '#fff', fontSize: 18, fontWeight: '700' }}>Aa</Text>
+                        </TouchableOpacity>
+                    ),
                 }}
             />
             <LinearGradient colors={gradientColors} style={styles.container}>
+                {/* (HeaderRight handles opening font size modal) */}
+                {/* Font Size Modal */}
+                <Modal
+                    visible={fontModalVisible}
+                    animationType="slide"
+                    transparent
+                    onRequestClose={() => setFontModalVisible(false)}
+                >
+                    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: 'rgba(0,0,0,0.3)' }}>
+                        <View style={{ backgroundColor: colors.card, borderRadius: 20, padding: 24, minWidth: 260, alignItems: 'center', elevation: 5 }}>
+                            <Text style={{ fontSize: 18, fontWeight: 'bold', marginBottom: 18, color: colors.text }}>Choose Font Size</Text>
+                            {fontSizeKeys.map(key => (
+                                <TouchableOpacity
+                                    key={key}
+                                    style={{
+                                        paddingVertical: 12,
+                                        paddingHorizontal: 32,
+                                        borderRadius: 12,
+                                        backgroundColor: localFontSize === key ? colors.gold : 'transparent',
+                                        borderWidth: 1,
+                                        borderColor: localFontSize === key ? colors.gold : colors.border,
+                                        marginBottom: 10,
+                                        width: '100%',
+                                    }}
+                                    onPress={() => {
+                                        setLocalFontSize(key);
+                                        setFontModalVisible(false);
+                                    }}
+                                >
+                                    <Text style={{ fontSize: 16, color: localFontSize === key ? '#fff' : colors.text, textAlign: 'center', fontWeight: localFontSize === key ? 'bold' : '600' }}>
+                                        {key.charAt(0).toUpperCase() + key.slice(1)} ({fontSizes[key]})
+                                    </Text>
+                                </TouchableOpacity>
+                            ))}
+                            <TouchableOpacity
+                                style={{ marginTop: 8, padding: 8, borderRadius: 8, backgroundColor: colors.border, width: '100%' }}
+                                onPress={() => setFontModalVisible(false)}
+                            >
+                                <Text style={{ color: colors.text, textAlign: 'center' }}>Cancel</Text>
+                            </TouchableOpacity>
+                        </View>
+                    </View>
+                </Modal>
                 {/* Language Tabs */}
                 <View style={[styles.tabContainer, { backgroundColor: colors.card }]}>
                     <TouchableOpacity
