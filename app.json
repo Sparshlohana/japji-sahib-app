@@ -1,25 +1,31 @@
 {
   "expo": {
-    "name": "jap-ji-sahib",
+    "name": "Shri Japji Sahib",
     "slug": "jap-ji-sahib",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
     "scheme": "japjisahib",
     "userInterfaceStyle": "automatic",
+    "description": "A peaceful devotional app for reading and listening to Japji Sahib Path",
     "newArchEnabled": true,
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.japjisahib.app"
     },
     "android": {
       "adaptiveIcon": {
-        "backgroundColor": "#E6F4FE",
+        "backgroundColor": "#D4AF37",
         "foregroundImage": "./assets/images/android-icon-foreground.png",
         "backgroundImage": "./assets/images/android-icon-background.png",
         "monochromeImage": "./assets/images/android-icon-monochrome.png"
       },
       "edgeToEdgeEnabled": true,
-      "predictiveBackGestureEnabled": false
+      "predictiveBackGestureEnabled": false,
+      "package": "com.japjisahib.app",
+      "permissions": [
+        "INTERNET"
+      ]
     },
     "web": {
       "output": "static",
@@ -43,6 +49,11 @@
     "experiments": {
       "typedRoutes": true,
       "reactCompiler": true
+    },
+    "extra": {
+      "eas": {
+        "projectId": "your-project-id"
+      }
     }
   }
 }

@@ -1,98 +1,195 @@
-import { Image } from 'expo-image';
-import { Platform, StyleSheet } from 'react-native';
-
-import { HelloWave } from '@/components/hello-wave';
-import ParallaxScrollView from '@/components/parallax-scroll-view';
-import { ThemedText } from '@/components/themed-text';
-import { ThemedView } from '@/components/themed-view';
-import { Link } from 'expo-router';
+import { useTheme } from '@/contexts/theme-context';
+import { Ionicons, MaterialCommunityIcons } from '@expo/vector-icons';
+import { LinearGradient } from 'expo-linear-gradient';
+import { useRouter } from 'expo-router';
+import React from 'react';
+import { ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 
 export default function HomeScreen() {
-  return (
-    <ParallaxScrollView
-      headerBackgroundColor={{ light: '#A1CEDC', dark: '#1D3D47' }}
-      headerImage={
-        <Image
-          source={require('@/assets/images/partial-react-logo.png')}
-          style={styles.reactLogo}
-        />
-      }>
-      <ThemedView style={styles.titleContainer}>
-        <ThemedText type="title">Welcome!</ThemedText>
-        <HelloWave />
-      </ThemedView>
-      <ThemedView style={styles.stepContainer}>
-        <ThemedText type="subtitle">Step 1: Try it</ThemedText>
-        <ThemedText>
-          Edit <ThemedText type="defaultSemiBold">app/(tabs)/index.tsx</ThemedText> to see changes.
-          Press{' '}
-          <ThemedText type="defaultSemiBold">
-            {Platform.select({
-              ios: 'cmd + d',
-              android: 'cmd + m',
-              web: 'F12',
-            })}
-          </ThemedText>{' '}
-          to open developer tools.
-        </ThemedText>
-      </ThemedView>
-      <ThemedView style={styles.stepContainer}>
-        <Link href="/modal">
-          <Link.Trigger>
-            <ThemedText type="subtitle">Step 2: Explore</ThemedText>
-          </Link.Trigger>
-          <Link.Preview />
-          <Link.Menu>
-            <Link.MenuAction title="Action" icon="cube" onPress={() => alert('Action pressed')} />
-            <Link.MenuAction
-              title="Share"
-              icon="square.and.arrow.up"
-              onPress={() => alert('Share pressed')}
-            />
-            <Link.Menu title="More" icon="ellipsis">
-              <Link.MenuAction
-                title="Delete"
-                icon="trash"
-                destructive
-                onPress={() => alert('Delete pressed')}
-              />
-            </Link.Menu>
-          </Link.Menu>
-        </Link>
+  const router = useRouter();
+  const { colors, isDarkMode } = useTheme();
 
-        <ThemedText>
-          {`Tap the Explore tab to learn more about what's included in this starter app.`}
-        </ThemedText>
-      </ThemedView>
-      <ThemedView style={styles.stepContainer}>
-        <ThemedText type="subtitle">Step 3: Get a fresh start</ThemedText>
-        <ThemedText>
-          {`When you're ready, run `}
-          <ThemedText type="defaultSemiBold">npm run reset-project</ThemedText> to get a fresh{' '}
-          <ThemedText type="defaultSemiBold">app</ThemedText> directory. This will move the current{' '}
-          <ThemedText type="defaultSemiBold">app</ThemedText> to{' '}
-          <ThemedText type="defaultSemiBold">app-example</ThemedText>.
-        </ThemedText>
-      </ThemedView>
-    </ParallaxScrollView>
+  const gradientColors: [string, string, string] = isDarkMode
+    ? ['#000000', '#1A1A1A', '#2A2A2A']
+    : ['#FFFFFF', '#FFFAF0', '#FFF8DC'];
+
+  return (
+    <LinearGradient colors={gradientColors} style={styles.container}>
+      <ScrollView contentContainerStyle={styles.scrollContent}>
+        {/* Khanda Icon */}
+        <View style={styles.iconContainer}>
+          <MaterialCommunityIcons
+            name="khanda"
+            size={80}
+            color={colors.gold}
+          />
+        </View>
+
+        {/* Title */}
+        <Text style={[styles.title, { color: colors.text }]}>
+          ਸ਼੍ਰੀ ਜਪੁਜੀ ਸਾਹਿਬ
+        </Text>
+        <Text style={[styles.subtitle, { color: colors.gold }]}>
+          Shri Japji Sahib
+        </Text>
+
+        {/* Main Buttons */}
+        <View style={styles.buttonContainer}>
+          <TouchableOpacity
+            style={[styles.mainButton, { backgroundColor: colors.card, borderColor: colors.gold }]}
+            onPress={() => router.push('/read-path')}
+          >
+            <Ionicons name="book" size={32} color={colors.gold} />
+            <Text style={[styles.buttonText, { color: colors.text }]}>📖 Read Path</Text>
+          </TouchableOpacity>
+
+          <TouchableOpacity
+            style={[styles.mainButton, { backgroundColor: colors.card, borderColor: colors.gold }]}
+            onPress={() => router.push('/listen-path')}
+          >
+            <Ionicons name="headset" size={32} color={colors.gold} />
+            <Text style={[styles.buttonText, { color: colors.text }]}>🎧 Listen Path</Text>
+          </TouchableOpacity>
+        </View>
+
+        {/* Secondary Options */}
+        <View style={styles.secondaryContainer}>
+          <TouchableOpacity
+            style={[styles.secondaryButton, { backgroundColor: colors.card, borderColor: colors.border }]}
+            onPress={() => router.push('/hukamnama')}
+          >
+            <MaterialCommunityIcons name="newspaper-variant" size={24} color={colors.gold} />
+            <Text style={[styles.secondaryText, { color: colors.text }]}>Daily Hukamnama</Text>
+          </TouchableOpacity>
+
+          <TouchableOpacity
+            style={[styles.secondaryButton, { backgroundColor: colors.card, borderColor: colors.border }]}
+            onPress={() => router.push('/mala-counter')}
+          >
+            <MaterialCommunityIcons name="beaker" size={24} color={colors.gold} />
+            <Text style={[styles.secondaryText, { color: colors.text }]}>Mala Counter</Text>
+          </TouchableOpacity>
+
+          <TouchableOpacity
+            style={[styles.secondaryButton, { backgroundColor: colors.card, borderColor: colors.border }]}
+            onPress={() => router.push('/settings')}
+          >
+            <Ionicons name="settings" size={24} color={colors.gold} />
+            <Text style={[styles.secondaryText, { color: colors.text }]}>Settings</Text>
+          </TouchableOpacity>
+
+          <TouchableOpacity
+            style={[styles.secondaryButton, { backgroundColor: colors.card, borderColor: colors.border }]}
+            onPress={() => router.push('/about')}
+          >
+            <Ionicons name="information-circle" size={24} color={colors.gold} />
+            <Text style={[styles.secondaryText, { color: colors.text }]}>About</Text>
+          </TouchableOpacity>
+        </View>
+
+        {/* Footer */}
+        <View style={styles.footer}>
+          <Text style={[styles.footerText, { color: colors.gold }]}>
+            ਵਾਹਿਗੁਰੂ ਜੀ ਕਾ ਖਾਲਸਾ
+          </Text>
+          <Text style={[styles.footerText, { color: colors.gold }]}>
+            ਵਾਹਿਗੁਰੂ ਜੀ ਕੀ ਫਤਿਹ
+          </Text>
+          <Text style={[styles.footerSubtext, { color: colors.textSecondary }]}>
+            Waheguru Ji Ka Khalsa, Waheguru Ji Ki Fateh
+          </Text>
+        </View>
+      </ScrollView>
+    </LinearGradient>
   );
 }
 
 const styles = StyleSheet.create({
-  titleContainer: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: 8,
+  container: {
+    flex: 1,
   },
-  stepContainer: {
-    gap: 8,
+  scrollContent: {
+    flexGrow: 1,
+    padding: 20,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  iconContainer: {
+    marginTop: 40,
+    marginBottom: 20,
+    padding: 20,
+  },
+  title: {
+    fontSize: 36,
+    fontWeight: 'bold',
+    textAlign: 'center',
     marginBottom: 8,
   },
-  reactLogo: {
-    height: 178,
-    width: 290,
-    bottom: 0,
-    left: 0,
-    position: 'absolute',
+  subtitle: {
+    fontSize: 24,
+    textAlign: 'center',
+    marginBottom: 40,
+    fontWeight: '600',
+  },
+  buttonContainer: {
+    width: '100%',
+    maxWidth: 400,
+    gap: 16,
+    marginBottom: 30,
+  },
+  mainButton: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    padding: 20,
+    borderRadius: 16,
+    borderWidth: 2,
+    gap: 12,
+    elevation: 4,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.25,
+    shadowRadius: 3.84,
+  },
+  buttonText: {
+    fontSize: 20,
+    fontWeight: '600',
+  },
+  secondaryContainer: {
+    width: '100%',
+    maxWidth: 400,
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    gap: 12,
+    justifyContent: 'center',
+    marginBottom: 40,
+  },
+  secondaryButton: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    padding: 12,
+    borderRadius: 12,
+    borderWidth: 1,
+    gap: 8,
+    minWidth: '45%',
+  },
+  secondaryText: {
+    fontSize: 14,
+    fontWeight: '500',
+  },
+  footer: {
+    alignItems: 'center',
+    paddingVertical: 20,
+  },
+  footerText: {
+    fontSize: 18,
+    fontWeight: '600',
+    textAlign: 'center',
+    marginBottom: 4,
+  },
+  footerSubtext: {
+    fontSize: 12,
+    textAlign: 'center',
+    marginTop: 8,
   },
 });

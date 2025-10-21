@@ -1,0 +1,331 @@
+{
+    "title": "ਜਪੁਜੀ ਸਾਹਿਬ",
+    "verses": [
+        {
+            "id": 0,
+            "type": "mool_mantar",
+            "gurmukhi": "੧ ਓਅੰਕਾਰ ਸਤਿ ਨਾਮੁ ਕਰਤਾ ਪੁਰਖੁ ਨਿਰਭਉ ਨਿਰਵੈਰੁ ਅਕਾਲ ਮੂਰਤਿ ਅਜੂਨੀ ਸੈਭੰ ਗੁਰ ਪ੍ਰਸਾਦਿ ॥",
+            "hindi": "੧ ओअंकार सति नामु करता पुरखु निरभउ निरवैरु अकाल मूरति अजूनी सैभं गुर प्रसादि ॥",
+            "english": "Ik Oankaar Sat Naam Kartaa Purakh Nirbhao Nirvair Akaal Moorat Ajoonee Saibhan Gur Prasaad."
+        },
+        {
+            "id": 1,
+            "type": "pauri",
+            "number": 0,
+            "gurmukhi": "॥ ਜਪੁ ॥\nਆਦਿ ਸਚੁ ਜੁਗਾਦਿ ਸਚੁ ॥\nਹੈ ਭੀ ਸਚੁ ਨਾਨਕ ਹੋਸੀ ਭੀ ਸਚੁ ॥੧॥",
+            "hindi": "॥ जपु ॥\nआदि सचु जुगादि सचु ॥\nहै भी सचु नानक होसी भी सचु ॥१॥",
+            "english": "|| Jap ||\nAad Sach Jugaad Sach.\nHai Bhee Sach Naanak Hosee Bhee Sach. ||1||"
+        },
+        {
+            "id": 2,
+            "type": "pauri",
+            "number": 1,
+            "gurmukhi": "ਸੋਚੈ ਸੋਚਿ ਨ ਹੋਵਈ ਜੇ ਸੋਚੀ ਲਖ ਵਾਰ ॥\nਚੁਪੈ ਚੁਪ ਨ ਹੋਵਈ ਜੇ ਲਾਇ ਰਹਾ ਲਿਵ ਤਾਰ ॥\nਭੁਖਿਆ ਭੁਖ ਨ ਉਤਰੀ ਜੇ ਬੰਨਾ ਪੁਰੀਆ ਭਾਰ ॥\nਸਹਸ ਸਿਆਣਪਾ ਲਖ ਹੋਹਿ ਤ ਇਕ ਨ ਚਲੈ ਨਾਲਿ ॥\nਕਿਵ ਸਚਿਆਰਾ ਹੋਈਐ ਕਿਵ ਕੂੜੈ ਤੁਟੈ ਪਾਲਿ ॥\nਹੁਕਮਿ ਰਜਾਈ ਚਲਣਾ ਨਾਨਕ ਲਿਖਿਆ ਨਾਲਿ ॥੧॥",
+            "hindi": "सोचै सोचि न होवई जे सोची लख वार ॥\nचुपै चुप न होवई जे लाइ रहा लिव तार ॥\nभुखिआ भुख न उतरी जे बंना पुरीआ भार ॥\nसहस सिआणपा लख होहि त इक न चलै नालि ॥\nकिव सचिआरा होईऐ किव कूड़ै तुटै पालि ॥\nहुकमि रजाई चलणा नानक लिखिआ नालि ॥१॥",
+            "english": "Sochai Soch Na Hova-ee Jay Sochee Lakh Vaar.\nChupai Chup Na Hova-ee Jay Laa-ay Rahaa Liv Taar.\nBhukhi-aa Bhukh Na Utree Jay Bannaa Puree-aa Bhaar.\nSahas Si-aanpaa Lakh Hohi Ta Ik Na Chalai Naal.\nKiv Sachi-aaraa Ho-ee-ai Kiv Koorhai Tutai Paal.\nHukam Rajaa-ee Chalnaa Naanak Likhi-aa Naal. ||1||"
+        },
+        {
+            "id": 3,
+            "type": "pauri",
+            "number": 2,
+            "gurmukhi": "ਹੁਕਮੀ ਹੋਵਨਿ ਆਕਾਰ ਹੁਕਮੁ ਨ ਕਹਿਆ ਜਾਈ ॥\nਹੁਕਮੀ ਹੋਵਨਿ ਜੀਅ ਹੁਕਮਿ ਮਿਲੈ ਵਡਿਆਈ ॥\nਹੁਕਮੀ ਉਤਮੁ ਨੀਚੁ ਹੁਕਮਿ ਲਿਖਿ ਦੁਖ ਸੁਖ ਪਾਈਅਹਿ ॥\nਇਕਨਾ ਹੁਕਮੀ ਬਖਸੀਸ ਇਕਿ ਹੁਕਮੀ ਸਦਾ ਭਵਾਈਅਹਿ ॥\nਹੁਕਮੈ ਅੰਦਰਿ ਸਭੁ ਕੋ ਬਾਹਰਿ ਹੁਕਮ ਨ ਕੋਇ ॥\nਨਾਨਕ ਹੁਕਮੈ ਜੇ ਬੁਝੈ ਤ ਹਉਮੈ ਕਹੈ ਨ ਕੋਇ ॥੨॥",
+            "hindi": "हुकमी होवनि आकार हुकमु न कहिआ जाई ॥\nहुकमी होवनि जीअ हुकमि मिलै वडिआई ॥\nहुकमी उतमु नीचु हुकमि लिखि दुख सुख पाईअहि ॥\nइकना हुकमी बखसीस इकि हुकमी सदा भवाईअहि ॥\nहुकमै अंदरि सभु को बाहरि हुकम न कोइ ॥\nनानक हुकमै जे बुझै त हउमै कहै न कोइ ॥२॥",
+            "english": "Hukmee Hovan Aakaar Hukam Na Kahi-aa Jaa-ee.\nHukmee Hovan Jee-a Hukam Milai Vadi-aa-ee.\nHukmee Utam Neech Hukam Likh Dukh Sukh Paa-ee-ahi.\nIknaa Hukmee Bakhsees Ik Hukmee Sadaa Bhavaa-ee-ahi.\nHukmai Andar Sabh Ko Baahar Hukam Na Ko-ay.\nNaanak Hukmai Jay Bhujhai Ta Ha-umai Kahai Na Ko-ay. ||2||"
+        },
+        {
+            "id": 4,
+            "type": "pauri",
+            "number": 3,
+            "gurmukhi": "ਗਾਵੈ ਕੋ ਤਾਣੁ ਹੋਵੈ ਕਿਸੈ ਤਾਣੁ ॥\nਗਾਵੈ ਕੋ ਦਾਤਿ ਜਾਣੈ ਨੀਸਾਣੁ ॥\nਗਾਵੈ ਕੋ ਗੁਣ ਵਡਿਆਈਆ ਚਾਰ ॥\nਗਾਵੈ ਕੋ ਵਿਦਿਆ ਵਿਖਮੁ ਵੀਚਾਰੁ ॥\nਗਾਵੈ ਕੋ ਸਾਜਿ ਕਰੇ ਤਨੁ ਖੇਹ ॥\nਗਾਵੈ ਕੋ ਜੀਅ ਲੈ ਫਿਰਿ ਦੇਹ ॥\nਗਾਵੈ ਕੋ ਜਾਪੈ ਦਿਸੈ ਦੂਰਿ ॥\nਗਾਵੈ ਕੋ ਵੇਖੈ ਹਾਦਰਾ ਹਦੂਰਿ ॥\nਕਥਨਾ ਕਥੀ ਨ ਆਵੈ ਤੋਟਿ ॥\nਕਥਿ ਕਥਿ ਕਥੀ ਕੋਟੀ ਕੋਟਿ ਕੋਟਿ ॥\nਦੇਦਾ ਦੇ ਲੈਦੇ ਥਕਿ ਪਾਹਿ ॥\nਜੁਗਾ ਜੁਗੰਤਰਿ ਖਾਹੀ ਖਾਹਿ ॥\nਹੁਕਮੀ ਹੁਕਮੁ ਚਲਾਏ ਰਾਹੁ ॥\nਨਾਨਕ ਵਿਗਸੈ ਵੇਪਰਵਾਹੁ ॥੩॥",
+            "hindi": "गावै को ताणु होवै किसै ताणु ॥\nगावै को दाति जाणै नीसाणु ॥\nगावै को गुण वडिआईआ चार ॥\nगावै को विदिआ विखमु वीचारु ॥\nगावै को साजि करे तनु खेह ॥\nगावै को जीअ लै फिरि देह ॥\nगावै को जापै दिसै दूरि ॥\nगावै को वेखै हादरा हदूरि ॥\nकथना कथी न आवै तोटि ॥\nकथि कथि कथी कोटी कोटि कोटि ॥\nदेदा दे लैदे थकि पाहि ॥\nजुगा जुगंतरि खाही खाहि ॥\nहुकमी हुकमु चलाए राहु ॥\nनानक विगसै वेपरवाहु ॥३॥",
+            "english": "Gaavai Ko Taan Hovai Kisai Taan.\nGaavai Ko Daat Jaanai Neesaan.\nGaavai Ko Gun Vadi-aa-ee-aa Chaar.\nGaavai Ko Vidi-aa Vikham Veechaar.\nGaavai Ko Saaj Karay Tan Khayh.\nGaavai Ko Jee-a Lai Fir Dayh.\nGaavai Ko Jaapai Disai Door.\nGaavai Ko Vaykhai Haad-raa Hadoor.\nKathnaa Kathee Na Aavai Tot.\nKath Kath Kathee Kotee Kot Kot.\nDaydaa Day Laiday Thak Paahi.\nJugaa Jugantar Khaahee Khaahi.\nHukmee Hukam Chalaa-ay Raahu.\nNaanak Vigsai Vayparvaahu. ||3||"
+        },
+        {
+            "id": 5,
+            "type": "pauri",
+            "number": 4,
+            "gurmukhi": "ਸਾਚਾ ਸਾਹਿਬੁ ਸਾਚੁ ਨਾਇ ਭਾਖਿਆ ਭਾਉ ਅਪਾਰੁ ॥\nਆਖਹਿ ਮੰਗਹਿ ਦੇਹਿ ਦੇਹਿ ਦਾਤਿ ਕਰੇ ਦਾਤਾਰੁ ॥\nਫੇਰਿ ਕਿ ਅਗੈ ਰਖੀਐ ਜਿਤੁ ਦਿਸੈ ਦਰਬਾਰੁ ॥\nਮੁਹੌ ਕਿ ਬੋਲਣੁ ਬੋਲੀਐ ਜਿਤੁ ਸੁਣਿ ਧਰੇ ਪਿਆਰੁ ॥\nਅੰਮ੍ਰਿਤ ਵੇਲਾ ਸਚੁ ਨਾਉ ਵਡਿਆਈ ਵੀਚਾਰੁ ॥\nਕਰਮੀ ਆਵੈ ਕਪੜਾ ਨਦਰੀ ਮੋਖੁ ਦੁਆਰੁ ॥\nਨਾਨਕ ਏਵੈ ਜਾਣੀਐ ਸਭੁ ਆਪੇ ਸਚਿਆਰੁ ॥੪॥",
+            "hindi": "साचा साहिबु साचु नाइ भाखिआ भाउ अपारु ॥\nआखहि मंगहि देहि देहि दाति करे दातारु ॥\nफेरि कि अगै रखीऐ जितु दिसै दरबारु ॥\nमुहौ कि बोलणु बोलीऐ जितु सुणि धरे पिआरु ॥\nअम्रित वेला सचु नाउ वडिआई वीचारु ॥\nकरमी आवै कपड़ा नदरी मोखु दुआरु ॥\nनानक एवै जाणीऐ सभु आपे सचिआरु ॥४॥",
+            "english": "Saachaa Saahib Saach Naa-ay Bhaakhi-aa Bhaa-o Apaar.\nAakhahi Mangahi Dayhi Dayhi Daat Karay Daataar.\nFayr Ki Agai Rakhee-ai Jit Disai Darbaar.\nMuhou Ki Bolan Bolee-ai Jit Sun Dharay Pi-aar.\nAmrit Vaylaa Sach Naa-o Vadi-aa-ee Veechaar.\nKarmee Aavai Kaparaa Nadree Mokh Du-aar.\nNaanak Ayvai Jaanee-ai Sabh Aapay Sachiaar. ||4||"
+        },
+        {
+            "id": 6,
+            "type": "pauri",
+            "number": 5,
+            "gurmukhi": "ਥਾਪਿਆ ਨ ਜਾਇ ਕੀਤਾ ਨ ਹੋਇ ॥\nਆਪੇ ਆਪਿ ਨਿਰੰਜਨੁ ਸੋਇ ॥\nਜਿਨਿ ਸੇਵਿਆ ਤਿਨਿ ਪਾਇਆ ਮਾਨੁ ॥\nਨਾਨਕ ਗਾਵੀਐ ਗੁਣੀ ਨਿਧਾਨੁ ॥\nਗਾਵੀਐ ਸੁਣੀਐ ਮਨਿ ਰਖੀਐ ਭਾਉ ॥\nਦੁਖੁ ਪਰਹਰਿ ਸੁਖੁ ਘਰਿ ਲੈ ਜਾਇ ॥\nਗੁਰਮੁਖਿ ਨਾਦੰ ਗੁਰਮੁਖਿ ਵੇਦੰ ਗੁਰਮੁਖਿ ਰਹਿਆ ਸਮਾਈ ॥\nਗੁਰੁ ਈਸਰੁ ਗੁਰੁ ਗੋਰਖੁ ਬਰਮਾ ਗੁਰੁ ਪਾਰਬਤੀ ਮਾਈ ॥\nਜੇ ਹਉ ਜਾਣਾ ਆਖਾ ਨਾਹੀ ਕਹਣਾ ਕਥਨੁ ਨ ਜਾਈ ॥\nਗੁਰਾ ਇਕ ਦੇਹਿ ਬੁਝਾਈ ॥\nਸਭਨਾ ਜੀਆ ਕਾ ਇਕੁ ਦਾਤਾ ਸੋ ਮੈ ਵਿਸਰਿ ਨ ਜਾਈ ॥੫॥",
+            "hindi": "थापिआ न जाइ कीता न होइ ॥\nआपे आपि निरंजनु सोइ ॥\nजिनि सेविआ तिनि पाइआ मानु ॥\nनानक गावीऐ गुणी निधानु ॥\nगावीऐ सुणीऐ मनि रखीऐ भाउ ॥\nदुखु परहरि सुखु घरि लै जाइ ॥\nगुरमुखि नादं गुरमुखि वेदं गुरमुखि रहिआ समाई ॥\nगुरु ईसरु गुरु गोरखु बरमा गुरु पारबती माई ॥\nजे हउ जाणा आखा नाही कहणा कथनु न जाई ॥\nगुरा इक देहि बुझाई ॥\nसभना जीआ का इकु दाता सो मै विसरि न जाई ॥५॥",
+            "english": "Thaapi-aa Na Jaa-ay Keetaa Na Ho-ay.\nAapay Aap Niranjan So-ay.\nJin Sayvi-aa Tin Paa-i-aa Maan.\nNaanak Gaavee-ai Gunee Nidhaan.\nGaavee-ai Sunee-ai Man Rakhee-ai Bhaa-o.\nDukh Parhar Sukh Ghar Lai Jaa-ay.\nGurmukh Naadang Gurmukh Vaydang Gurmukh Rahi-aa Samaa-ee.\nGur Eesar Gur Gorakh Barmaa Gur Paarbatee Maa-ee.\nJay Ha-o Jaanaa Aakhaa Naahee Kahnaa Kathan Na Jaa-ee.\nGuraa Ik Dayhi Bujhaa-ee.\nSabhnaa Jee-aa Kaa Ik Daataa So Mai Visar Na Jaa-ee. ||5||"
+        },
+        {
+            "id": 7,
+            "type": "pauri",
+            "number": 6,
+            "gurmukhi": "ਤੀਰਥਿ ਨਾਵਾ ਜੇ ਤਿਸੁ ਭਾਵਾ ਵਿਣੁ ਭਾਣੇ ਕਿ ਨਾਇ ਕਰੀ ॥\nਜੇਤੀ ਸਿਰਠਿ ਉਪਾਈ ਵੇਖਾ ਵਿਣੁ ਕਰਮਾ ਕਿ ਮਿਲੈ ਲਈ ॥\nਮਤਿ ਵਿਚਿ ਰਤਨ ਜਵਾਹਰ ਮਾਣਿਕ ਜੇ ਇਕ ਗੁਰ ਕੀ ਸਿਖ ਸੁਣੀ ॥\nਗੁਰਾ ਇਕ ਦੇਹਿ ਬੁਝਾਈ ॥\nਸਭਨਾ ਜੀਆ ਕਾ ਇਕੁ ਦਾਤਾ ਸੋ ਮੈ ਵਿਸਰਿ ਨ ਜਾਈ ॥੬॥",
+            "hindi": "तीरथि नावा जे तिसु भावा विणु भाणे कि नाइ करी ॥\nजेती सिरठि उपाई वेखा विणु करमा कि मिलै लई ॥\nमति विचि रतन जवाहर माणिक जे इक गुर की सिख सुणी ॥\nगुरा इक देहि बुझाई ॥\nसभना जीआ का इकु दाता सो मै विसरि न जाई ॥६॥",
+            "english": "Teerath Naavaa Jay Tis Bhaavaa Vin Bhaanay Ki Naa-ay Karee.\nJaytee Sirath Upaa-ee Vaykhaa Vin Karmaa Ki Milai La-ee.\nMat Vich Ratan Javaahar Maanak Jay Ik Gur Kee Sikh Sunee.\nGuraa Ik Dayhi Bujhaa-ee.\nSabhnaa Jee-aa Kaa Ik Daataa So Mai Visar Na Jaa-ee. ||6||"
+        },
+        {
+            "id": 8,
+            "type": "pauri",
+            "number": 7,
+            "gurmukhi": "ਜੇ ਜੁਗ ਚਾਰੇ ਆਰਜਾ ਹੋਰ ਦਸੂਣੀ ਹੋਇ ॥\nਨਵਾ ਖੰਡਾ ਵਿਚਿ ਜਾਣੀਐ ਨਾਲਿ ਚਲੈ ਸਭੁ ਕੋਇ ॥\nਚੰਗਾ ਨਾਉ ਰਖਾਇ ਕੈ ਜਸੁ ਕੀਰਤਿ ਜਗਿ ਲੇਇ ॥\nਜੇ ਤਿਸੁ ਨਦਰਿ ਨ ਆਵਈ ਤ ਵਾਤ ਨ ਪੁਛੈ ਕੇ ॥\nਕੀਟਾ ਅੰਦਰਿ ਕੀਟੁ ਕਰਿ ਦੋਸੀ ਦੋਸੁ ਧਰੇ ॥\nਨਾਨਕ ਨਿਰਗੁਣਿ ਗੁਣੁ ਕਰੇ ਗੁਣਵੰਤਿਆ ਗੁਣੁ ਦੇ ॥\nਤੇਹਾ ਕੋਇ ਨ ਸੁਝਈ ਜਿ ਤਿਸੁ ਗੁਣੁ ਕੋਇ ਕਰੇ ॥੭॥",
+            "hindi": "जे जुग चारे आरजा होर दसूणी होइ ॥\nनवा खंडा विचि जाणीऐ नालि चलै सभु कोइ ॥\nचंगा नाउ रखाइ कै जसु कीरति जगि लेइ ॥\nजे तिसु नदरि न आवई त वात न पुछै के ॥\nकीटा अंदरि कीटु करि दोसी दोसु धरे ॥\nनानक निरगुणि गुणु करे गुणवंतिआ गुणु दे ॥\nतेहा कोइ न सुझई जि तिसु गुणु कोइ करे ॥७॥",
+            "english": "Jay Jug Chaaray Aarjaa Hor Dasoonee Ho-ay.\nNavaa Khandaa Vich Jaanee-ai Naal Chalai Sabh Ko-ay.\nChangaa Naa-o Rakhaa-ay Kai Jas Keerat Jag Lay-ay.\nJay Tis Nadar Na Aava-ee Ta Vaat Na Puchhai Kay.\nKeetaa Andar Keet Kar Dosee Dos Dharay.\nNaanak Nirgun Gun Karay Gunvanti-aa Gun Day.\nTayhaa Ko-ay Na Sujh-ee Ji Tis Gun Ko-ay Karay. ||7||"
+        },
+        {
+            "id": 9,
+            "type": "pauri",
+            "number": 8,
+            "gurmukhi": "ਸੁਣਿਐ ਸਿਧ ਪੀਰ ਸੁਰਿ ਨਾਥ ॥\nਸੁਣਿਐ ਧਰਤਿ ਧਵਲ ਆਕਾਸ ॥\nਸੁਣਿਐ ਦੀਪ ਲੋਅ ਪਾਤਾਲ ॥\nਸੁਣਿਐ ਪੋਹਿ ਨ ਸਕੈ ਕਾਲੁ ॥\nਨਾਨਕ ਭਗਤਾ ਸਦਾ ਵਿਗਾਸੁ ॥\nਸੁਣਿਐ ਦੂਖ ਪਾਪ ਕਾ ਨਾਸੁ ॥੮॥",
+            "hindi": "सुणिऐ सिध पीर सुरि नाथ ॥\nसुणिऐ धरति धवल आकास ॥\nसुणिऐ दीप लोअ पाताल ॥\nसुणिऐ पोहि न सकै कालु ॥\nनानक भगता सदा विगासु ॥\nसुणिऐ दूख पाप का नासु ॥८॥",
+            "english": "Suni-ai Sidh Peer Sur Naath.\nSuni-ai Dharat Dhaval Aakaas.\nSuni-ai Deep Lo-a Paataal.\nSuni-ai Pohi Na Sakai Kaal.\nNaanak Bhagtaa Sadaa Vigaas.\nSuni-ai Dookh Paap Kaa Naas. ||8||"
+        },
+        {
+            "id": 10,
+            "type": "pauri",
+            "number": 9,
+            "gurmukhi": "ਸੁਣਿਐ ਈਸਰੁ ਬਰਮਾ ਇੰਦੁ ॥\nਸੁਣਿਐ ਮੁਖਿ ਸਾਲਾਹਣ ਮੰਦੁ ॥\nਸੁਣਿਐ ਜੋਗ ਜੁਗਤਿ ਤਨਿ ਭੇਦ ॥\nਸੁਣਿਐ ਸਾਸਤ ਸਿਮ੍ਰਿਤਿ ਵੇਦ ॥\nਨਾਨਕ ਭਗਤਾ ਸਦਾ ਵਿਗਾਸੁ ॥\nਸੁਣਿਐ ਦੂਖ ਪਾਪ ਕਾ ਨਾਸੁ ॥੯॥",
+            "hindi": "सुणिऐ ईसरु बरमा इंदु ॥\nसुणिऐ मुखि सालाहण मंदु ॥\nसुणिऐ जोग जुगति तनि भेद ॥\nसुणिऐ सासत सिम्रिति वेद ॥\nनानक भगता सदा विगासु ॥\nसुणिऐ दूख पाप का नासु ॥९॥",
+            "english": "Suni-ai Eesar Barmaa Ind.\nSuni-ai Mukh Saalaahan Mand.\nSuni-ai Jog Jugat Tan Bhayd.\nSuni-ai Saasat Simrit Vayd.\nNaanak Bhagtaa Sadaa Vigaas.\nSuni-ai Dookh Paap Kaa Naas. ||9||"
+        },
+        {
+            "id": 11,
+            "type": "pauri",
+            "number": 10,
+            "gurmukhi": "ਸੁਣਿਐ ਸਤੁ ਸੰਤੋਖੁ ਗਿਆਨੁ ॥\nਸੁਣਿਐ ਅਠਸਠਿ ਕਾ ਇਸਨਾਨੁ ॥\nਸੁਣਿਐ ਪੜਿ ਪੜਿ ਪਾਵਹਿ ਮਾਨੁ ॥\nਸੁਣਿਐ ਲਾਗੈ ਸਹਜਿ ਧਿਆਨੁ ॥\nਨਾਨਕ ਭਗਤਾ ਸਦਾ ਵਿਗਾਸੁ ॥\nਸੁਣਿਐ ਦੂਖ ਪਾਪ ਕਾ ਨਾਸੁ ॥੧੦॥",
+            "hindi": "सुणिऐ सतु संतोखु गिआनु ॥\nसुणिऐ अठसठि का इसनानु ॥\nसुणिऐ पड़ि पड़ि पावहि मानु ॥\nसुणिऐ लागै सहजि धिआनु ॥\nनानक भगता सदा विगासु ॥\nसुणिऐ दूख पाप का नासु ॥१०॥",
+            "english": "Suni-ai Sat Santokh Gi-aan.\nSuni-ai Athsath Kaa Isnaan.\nSuni-ai Parh Parh Paavahi Maan.\nSuni-ai Laagai Sahj Dhi-aan.\nNaanak Bhagtaa Sadaa Vigaas.\nSuni-ai Dookh Paap Kaa Naas. ||10||"
+        },
+        {
+            "id": 12,
+            "type": "pauri",
+            "number": 11,
+            "gurmukhi": "ਮੰਨੈ ਕੀ ਗਤਿ ਕਹੀ ਨ ਜਾਇ ॥\nਜੇ ਕੋ ਕਹੈ ਪਿਛੈ ਪਛੁਤਾਇ ॥\nਕਾਗਦਿ ਕਲਮ ਨ ਲਿਖਣਹਾਰੁ ॥\nਮੰਨੈ ਕਾ ਬਹਿ ਕਰਨਿ ਵੀਚਾਰੁ ॥\nਐਸਾ ਨਾਮੁ ਨਿਰੰਜਨੁ ਹੋਇ ॥\nਜੇ ਕੋ ਮੰਨਿ ਜਾਣੈ ਮਨਿ ਕੋਇ ॥੧੧॥",
+            "hindi": "मंनै की गति कही न जाइ ॥\nजे को कहै पिछै पछुताइ ॥\nकागदि कलम न लिखणहारु ॥\nमंनै का बहि करनि वीचारु ॥\nऐसा नामु निरंजनु होइ ॥\nजे को मंनि जाणै मनि कोइ ॥११॥",
+            "english": "Mannai Kee Gat Kahee Na Jaa-ay.\nJay Ko Kahai Pichhai Pachhutaa-ay.\nKaagad Kalam Na Likhanhar.\nMannai Kaa Bahi Karan Veechaar.\nAisaa Naam Niranjan Ho-ay.\nJay Ko Mann Jaanai Man Ko-ay. ||11||"
+        },
+        {
+            "id": 13,
+            "type": "pauri",
+            "number": 12,
+            "gurmukhi": "ਮੰਨੈ ਸੁਰਤਿ ਹੋਵੈ ਮਨਿ ਬੁਧਿ ॥\nਮੰਨੈ ਸਗਲ ਭਵਣ ਕੀ ਸੁਧਿ ॥\nਮੰਨੈ ਮੁਹਿ ਚੋਟਾ ਨਾ ਖਾਇ ॥\nਮੰਨੈ ਜਮ ਕੈ ਸਾਥਿ ਨ ਜਾਇ ॥\nਐਸਾ ਨਾਮੁ ਨਿਰੰਜਨੁ ਹੋਇ ॥\nਜੇ ਕੋ ਮੰਨਿ ਜਾਣੈ ਮਨਿ ਕੋਇ ॥੧੨॥",
+            "hindi": "मंनै सुरति होवै मनि बुधि ॥\nमंनै सगल भवण की सुधि ॥\nमंनै मुहि चोटा ना खाइ ॥\nमंनै जम कै साथि न जाइ ॥\nऐसा नामु निरंजनु होइ ॥\nजे को मंनि जाणै मनि कोइ ॥१२॥",
+            "english": "Mannai Surat Hovai Man Budh.\nMannai Sagal Bhavan Kee Sudh.\nMannai Muhi Chotaa Naa Khaa-ay.\nMannai Jam Kai Saath Na Jaa-ay.\nAisaa Naam Niranjan Ho-ay.\nJay Ko Mann Jaanai Man Ko-ay. ||12||"
+        },
+        {
+            "id": 14,
+            "type": "pauri",
+            "number": 13,
+            "gurmukhi": "ਮੰਨੈ ਮਾਰਗਿ ਠਾਕ ਨ ਪਾਇ ॥\nਮੰਨੈ ਪਤਿ ਸਿਉ ਪਰਗਟੁ ਜਾਇ ॥\nਮੰਨੈ ਮਗੁ ਨ ਚਲੈ ਪੰਥੁ ॥\nਮੰਨੈ ਧਰਮ ਸੇਤੀ ਸਨਬੰਧੁ ॥\nਐਸਾ ਨਾਮੁ ਨਿਰੰਜਨੁ ਹੋਇ ॥\nਜੇ ਕੋ ਮੰਨਿ ਜਾਣੈ ਮਨਿ ਕੋਇ ॥੧੩॥",
+            "hindi": "मंनै मारगि ठाक न पाइ ॥\nमंनै पति सिउ परगटु जाइ ॥\nमंनै मगु न चलै पंथु ॥\nमंनै धरम सेती सनबंधु ॥\nऐसा नामु निरंजनु होइ ॥\nजे को मंनि जाणै मनि कोइ ॥१३॥",
+            "english": "Mannai Maarag Thaak Na Paa-ay.\nMannai Pat Si-o Pargat Jaa-ay.\nMannai Mag Na Chalai Panth.\nMannai Dharam Saytee Sanbandh.\nAisaa Naam Niranjan Ho-ay.\nJay Ko Mann Jaanai Man Ko-ay. ||13||"
+        },
+        {
+            "id": 15,
+            "type": "pauri",
+            "number": 14,
+            "gurmukhi": "ਮੰਨੈ ਪਾਵਹਿ ਮੋਖੁ ਦੁਆਰੁ ॥\nਮੰਨੈ ਪਰਵਾਰੈ ਸਾਧਾਰੁ ॥\nਮੰਨੈ ਤਰੈ ਤਾਰੇ ਗੁਰੂ ॥\nਮੰਨੈ ਨਾਨਕ ਭਵਹਿ ਨ ਭਵਹਿ ॥\nਐਸਾ ਨਾਮੁ ਨਿਰੰਜਨੁ ਹੋਇ ॥\nਜੇ ਕੋ ਮੰਨਿ ਜਾਣੈ ਮਨਿ ਕੋਇ ॥੧੪॥",
+            "hindi": "मंनै पावहि मोखु दुआरु ॥\nमंनै परवारै साधारु ॥\nमंनै तरै तारे गुरू ॥\nमंनै नानक भवहि न भवहि ॥\nऐसा नामु निरंजनु होइ ॥\nजे को मंनि जाणै मनि कोइ ॥१४॥",
+            "english": "Mannai Paavahi Mokh Du-aar.\nMannai Parvaarai Saadhaar.\nMannai Tarai Taaray Guroo.\nMannai Naanak Bhavahi Na Bhavahi.\nAisaa Naam Niranjan Ho-ay.\nJay Ko Mann Jaanai Man Ko-ay. ||14||"
+        },
+        {
+            "id": 16,
+            "type": "pauri",
+            "number": 15,
+            "gurmukhi": "ਪੰਚ ਪਰਵਾਣ ਪੰਚ ਪਰਧਾਨੁ ॥\nਪੰਚੇ ਪਾਵਹਿ ਦਰਗਹਿ ਮਾਨੁ ॥\nਪੰਚੇ ਸੋਹਹਿ ਦਰਿ ਰਾਜਾਨੁ ॥\nਪੰਚਾ ਕਾ ਗੁਰੁ ਏਕੁ ਧਿਆਨੁ ॥\nਜੇ ਕੋ ਕਹੈ ਕਰੈ ਵੀਚਾਰੁ ॥\nਕਰਤੇ ਕੈ ਕਰਣੈ ਨਾਹੀ ਸੁਮਾਰੁ ॥\nਧੌਲੁ ਧਰਮੁ ਦਇਆ ਕਾ ਪੂਤੁ ॥\nਸੰਤੋਖੁ ਥਾਪਿ ਰਖਿਆ ਜਿਨਿ ਸੂਤਿ ॥\nਜੇ ਕੋ ਬੁਝੈ ਹੋਵੈ ਸਚਿਆਰੁ ॥\nਧਵਲੈ ਉਪਰਿ ਕੇਤਾ ਭਾਰੁ ॥\nਧਰਤੀ ਹੋਰੁ ਪਰੈ ਹੋਰੁ ਹੋਰੁ ॥\nਤਿਸ ਤੇ ਭਾਰੁ ਤਲੈ ਕਵਣੁ ਜੋਰੁ ॥\nਜੀਅ ਜਾਤਿ ਰੰਗਾ ਕੇ ਨਾਵ ॥\nਸਭਨਾ ਲਿਖਿਆ ਵੁੜੀ ਕਲਾਮ ॥\nਏਹੁ ਲੇਖਾ ਲਿਖਿ ਜਾਣੈ ਕੋਇ ॥\nਲੇਖਾ ਲਿਖਿਆ ਕੇਤਾ ਹੋਇ ॥\nਕੇਤਾ ਤਾਣੁ ਸੁਆਲਿਹੁ ਰੂਪੁ ॥\nਕੇਤੀ ਦਾਤਿ ਜਾਣੈ ਕੌਣੁ ਕੂਤੁ ॥\nਕੀਤਾ ਪਸਾਉ ਏਕੋ ਕਵਾਉ ॥\nਤਿਸ ਤੇ ਹੋਏ ਲਖ ਦਰੀਆਉ ॥\nਕੁਦਰਤਿ ਕਵਣ ਕਹਾ ਵੀਚਾਰੁ ॥\nਵਾਰਿਆ ਨ ਜਾਵਾ ਏਕ ਵਾਰ ॥\nਜੋ ਤੁਧੁ ਭਾਵੈ ਸਾਈ ਭਲੀ ਕਾਰ ॥\nਤੂ ਸਦਾ ਸਲਾਮਤਿ ਨਿਰੰਕਾਰ ॥੧੫॥",
+            "hindi": "पंच परवाण पंच परधानु ॥\nपंचे पावहि दरगहि मानु ॥\nपंचे सोहहि दरि राजानु ॥\nपंचा का गुरु एकु धिआनु ॥\nजे को कहै करै वीचारु ॥\nकरते कै करणै नाही सुमारु ॥\nधौलु धरमु दइआ का पूतु ॥\nसंतोखु थापि रखिआ जिनि सूति ॥\nजे को बुझै होवै सचिआरु ॥\nधवलै उपरि केता भारु ॥\nधरती होरु परै होरु होरु ॥\nतिस ते भारु तलै कवणु जोरु ॥\nजीअ जाति रंगा के नाव ॥\nसभना लिखिआ वुड़ी कलाम ॥\nएहु लेखा लिखि जाणै कोइ ॥\nलेखा लिखिआ केता होइ ॥\nकेता ताणु सुआलिहु रूपु ॥\nकेती दाति जाणै कौणु कूतु ॥\nकीता पसाउ एको कवाउ ॥\nतिस ते होए लख दरीआउ ॥\nकुदरति कवण कहा वीचारु ॥\nवारिआ न जावा एक वार ॥\nजो तुधु भावै साई भली कार ॥\nतू सदा सलामति निरंकार ॥१५॥",
+            "english": "Panch Parvaan Panch Pardhaan.\nPanchay Paavahi Dargahi Maan.\nPanchay Sohahi Dar Raajaan.\nPanchaa Kaa Gur Ayk Dhi-aan.\nJay Ko Kahai Karai Veechaar.\nKartay Kai Karnai Naahee Sumaar.\nDhaul Dharam Da-i-aa Kaa Poot.\nSantokh Thaap Rakhi-aa Jin Soot.\nJay Ko Bhujhai Hovai Sachiaar.\nDhavlai Upar Kaytaa Bhaar.\nDhartee Hor Parai Hor Hor.\nTis Tay Bhaar Talai Kavan Jor.\nJee-a Jaat Rangaa Kay Naav.\nSabhnaa Likhi-aa Vurhee Kalaam.\nAyho Laykhaa Likh Jaanai Ko-ay.\nLaykhaa Likhi-aa Kaytaa Ho-ay.\nKaytaa Taan Su-aalihu Roop.\nKaytee Daat Jaanai Kaun Koot.\nKeetaa Pasaa-o Ayko Kavaa-o.\nTis Tay Ho-ay Lakh Daree-aa-o.\nKudrat Kavan Kahaa Veechaar.\nVaari-aa Na Jaavaa Ayk Vaar.\nJo Tudh Bhaavai Saa-ee Bhalee Kaar.\nToo Sadaa Salaamat Nirankaar. ||15||"
+        },
+        {
+            "id": 17,
+            "type": "pauri",
+            "number": 16,
+            "gurmukhi": "ਅਸੰਖ ਜਪ ਅਸੰਖ ਭਾਉ ॥\nਅਸੰਖ ਪੂਜਾ ਅਸੰਖ ਤਪ ਤਾਉ ॥\nਅਸੰਖ ਗਰੰਥ ਮੁਖਿ ਵੇਦ ਪਾਠ ॥\nਅਸੰਖ ਜੋਗ ਮਨਿ ਰਹਹਿ ਉਦਾਸ ॥\nਅਸੰਖ ਭਗਤ ਗੁਣ ਗਿਆਨ ਵੀਚਾਰ ॥\nਅਸੰਖ ਸਤੀ ਅਸੰਖ ਦਾਤਾਰ ॥\nਅਸੰਖ ਸੂਰ ਮੁਹ ਭਖ ਸਾਰ ॥\nਅਸੰਖ ਮੋਨਿ ਲਿਵ ਲਾਇ ਤਾਰ ॥\nਕੁਦਰਤਿ ਕਵਣ ਕਹਾ ਵੀਚਾਰੁ ॥\nਵਾਰਿਆ ਨ ਜਾਵਾ ਏਕ ਵਾਰ ॥\nਜੋ ਤੁਧੁ ਭਾਵੈ ਸਾਈ ਭਲੀ ਕਾਰ ॥\nਤੂ ਸਦਾ ਸਲਾਮਤਿ ਨਿਰੰਕਾਰ ॥੧੬॥",
+            "hindi": "असंख जप असंख भाउ ॥\nअसंख पूजा असंख तप ताउ ॥\nअसंख गरंथ मुखि वेद पाठ ॥\nअसंख जोग मनि रहहि उदास ॥\nअसंख भगत गुण गिआन वीचार ॥\nअसंख सती असंख दातार ॥\nअसंख सूर मुह भख सार ॥\nअसंख मोनि लिव लाइ तार ॥\nकुदरति कवण कहा वीचारु ॥\nवारिआ न जावा एक वार ॥\nजो तुधु भावै साई भली कार ॥\nतू सदा सलामति निरंकार ॥१६॥",
+            "english": "Asankh Jap Asankh Bhaa-o.\nAsankh Poojaa Asankh Tap Taa-o.\nAsankh Garanth Mukh Vayd Paath.\nAsankh Jog Man Rahahi Udaas.\nAsankh Bhagat Gun Gi-aan Veechaar.\nAsankh Satee Asankh Daataar.\nAsankh Soor Muh Bhakh Saar.\nAsankh Mon Liv Laa-ay Taar.\nKudrat Kavan Kahaa Veechaar.\nVaari-aa Na Jaavaa Ayk Vaar.\nJo Tudh Bhaavai Saa-ee Bhalee Kaar.\nToo Sadaa Salaamat Nirankaar. ||16||"
+        },
+        {
+            "id": 18,
+            "type": "pauri",
+            "number": 17,
+            "gurmukhi": "ਅਸੰਖ ਮੂਰਖ ਅੰਧ ਘੋਰ ॥\nਅਸੰਖ ਚੋਰ ਹਰਾਮਖੋਰ ॥\nਅਸੰਖ ਅਮਰ ਕਰਿ ਜਾਹਿ ਜੋਰ ॥\nਅਸੰਖ ਗਲਵਢ ਹਤਿਆ ਕਮਾਹਿ ॥\nਅਸੰਖ ਪਾਪੀ ਪਾਪੁ ਕਰਿ ਜਾਹਿ ॥\nਅਸੰਖ ਕੂੜਿਆਰ ਕੂੜੇ ਫਿਰਾਹਿ ॥\nਅਸੰਖ ਮਲੇਛ ਮਲੁ ਭਖਿ ਖਾਹਿ ॥\nਅਸੰਖ ਨਿੰਦਕ ਸਿਰਿ ਕਰਹਿ ਭਾਰੁ ॥\nਨਾਨਕੁ ਨੀਚੁ ਕਹੈ ਵੀਚਾਰੁ ॥\nਵਾਰਿਆ ਨ ਜਾਵਾ ਏਕ ਵਾਰ ॥\nਜੋ ਤੁਧੁ ਭਾਵੈ ਸਾਈ ਭਲੀ ਕਾਰ ॥\nਤੂ ਸਦਾ ਸਲਾਮਤਿ ਨਿਰੰਕਾਰ ॥੧੭॥",
+            "hindi": "असंख मूरख अंध घोर ॥\nअसंख चोर हरामखोर ॥\nअसंख अमर करि जाहि जोर ॥\nअसंख गलवढ हतिआ कमाहि ॥\nअसंख पापी पापु करि जाहि ॥\nअसंख कूड़िआर कूड़े फिराहि ॥\nअसंख मलेछ मलु भखि खाहि ॥\nअसंख निंदक सिरि करहि भारु ॥\nनानकु नीचु कहै वीचारु ॥\nवारिआ न जावा एक वार ॥\nजो तुधु भावै साई भली कार ॥\nतू सदा सलामति निरंकार ॥१७॥",
+            "english": "Asankh Moorakh Andh Ghor.\nAsankh Chor Haraamkhor.\nAsankh Amar Kar Jaahi Jor.\nAsankh Galvadh Hati-aa Kamaahi.\nAsankh Paapee Paap Kar Jaahi.\nAsankh Koorhi-aar Koorhay Firaahi.\nAsankh Malaychh Mal Bhakh Khaahi.\nAsankh Nindak Sir Karahi Bhaar.\nNaanak Neech Kahai Veechaar.\nVaari-aa Na Jaavaa Ayk Vaar.\nJo Tudh Bhaavai Saa-ee Bhalee Kaar.\nToo Sadaa Salaamat Nirankaar. ||17||"
+        },
+        {
+            "id": 19,
+            "type": "pauri",
+            "number": 18,
+            "gurmukhi": "ਅਸੰਖ ਨਾਵ ਅਸੰਖ ਥਾਵ ॥\nਅਗੰਮ ਅਗੰਮ ਅਸੰਖ ਲੋਅ ॥\nਅਸੰਖ ਕਹਹਿ ਸਿਰਿ ਭਾਰੁ ਹੋਇ ॥\nਅਖਰੀ ਨਾਮੁ ਅਖਰੀ ਸਾਲਾਹ ॥\nਅਖਰੀ ਗਿਆਨੁ ਗੀਤ ਗੁਣ ਗਾਹ ॥\nਅਖਰੀ ਲਿਖਣੁ ਬੋਲਣੁ ਬਾਣਿ ॥\nਅਖਰਾ ਸਿਰਿ ਸੰਜੋਗੁ ਵਖਾਣਿ ॥\nਜਿਨਿ ਏਹਿ ਲਿਖੇ ਤਿਸੁ ਸਿਰਿ ਨਾਹਿ ॥\nਜਿਵ ਫੁਰਮਾਏ ਤਿਵ ਤਿਵ ਪਾਹਿ ॥\nਜੇਤਾ ਕੀਤਾ ਤੇਤਾ ਨਾਉ ॥\nਵਿਣੁ ਨਾਵੈ ਨਾਹੀ ਕੋ ਥਾਉ ॥\nਕੁਦਰਤਿ ਕਵਣ ਕਹਾ ਵੀਚਾਰੁ ॥\nਵਾਰਿਆ ਨ ਜਾਵਾ ਏਕ ਵਾਰ ॥\nਜੋ ਤੁਧੁ ਭਾਵੈ ਸਾਈ ਭਲੀ ਕਾਰ ॥\nਤੂ ਸਦਾ ਸਲਾਮਤਿ ਨਿਰੰਕਾਰ ॥੧੮॥",
+            "hindi": "असंख नाव असंख थाव ॥\nअगंम अगंम असंख लोअ ॥\nअसंख कहहि सिरि भारु होइ ॥\nअखरी नामु अखरी सालाह ॥\nअखरी गिआनु गीत गुण गाह ॥\nअखरी लिखणु बोलणु बाणि ॥\nअखरा सिरि संजोगु वखाणि ॥\nजिनि एहि लिखे तिसु सिरि नाहि ॥\nजिव फुरमाए तिव तिव पाहि ॥\nजेता कीता तेता नाउ ॥\nविणु नावै नाही को थाउ ॥\nकुदरति कवण कहा वीचारु ॥\nवारिआ न जावा एक वार ॥\nजो तुधु भावै साई भली कार ॥\nतू सदा सलामति निरंकार ॥१८॥",
+            "english": "Asankh Naav Asankh Thaav.\nAgamm Agamm Asankh Lo-a.\nAsankh Kahahi Sir Bhaar Ho-ay.\nAkhree Naam Akhree Saalaah.\nAkhree Gi-aan Geet Gun Gaah.\nAkhree Likhan Bolan Baan.\nAkhraa Sir Sanjog Vakhaan.\nJin Ayhi Likhay Tis Sir Naahi.\nJiv Furmaa-ay Tiv Tiv Paahi.\nJaytaa Keetaa Taytaa Naa-o.\nVin Naavai Naahee Ko Thaa-o.\nKudrat Kavan Kahaa Veechaar.\nVaari-aa Na Jaavaa Ayk Vaar.\nJo Tudh Bhaavai Saa-ee Bhalee Kaar.\nToo Sadaa Salaamat Nirankaar. ||18||"
+        },
+        {
+            "id": 20,
+            "type": "pauri",
+            "number": 19,
+            "gurmukhi": "ਭਰੀਐ ਹਥੁ ਪੈਰੁ ਤਨੁ ਦੇਹ ॥\nਪਾਣੀ ਧੋਤੈ ਉਤਰਸੁ ਖੇਹ ॥\nਮੂਤ ਪਲੀਤੀ ਕਪੜੁ ਹੋਇ ॥\nਦੇ ਸਾਬੂਣੁ ਲਈਐ ਓਹੁ ਧੋਇ ॥\nਭਰੀਐ ਮਤਿ ਪਾਪਾ ਕੈ ਸੰਗਿ ॥\nਓਹੁ ਧੋਪੈ ਨਾਵੈ ਕੈ ਰੰਗਿ ॥\nਪੁੰਨੀ ਪਾਪੀ ਆਖਣੁ ਨਾਹਿ ॥\nਕਰਿ ਕਰਿ ਕਰਣਾ ਲਿਖਿ ਲੈ ਜਾਹੁ ॥\nਆਪੇ ਬੀਜਿ ਆਪੇ ਹੀ ਖਾਹੁ ॥\nਨਾਨਕ ਹੁਕਮੀ ਆਵਹੁ ਜਾਹੁ ॥੧੯॥",
+            "hindi": "भरीऐ हथु पैरु तनु देह ॥\nपाणी धोतै उतरसु खेह ॥\nमूत पलीती कपड़ु होइ ॥\nदे साबूणु लईऐ ओहु धोइ ॥\nभरीऐ मति पापा कै संगि ॥\nओहु धोपै नावै कै रंगि ॥\nपुंनी पापी आखणु नाहि ॥\nकरि करि करणा लिखि लै जाहु ॥\nआपे बीजि आपे ही खाहु ॥\nनानक हुकमी आवहु जाहु ॥१९॥",
+            "english": "Bharee-ai Hath Pair Tan Dayh.\nPaanee Dhotai Utras Khayh.\nMoot Paleetee Kaparh Ho-ay.\nDay Saaboon La-ee-ai Oh Dho-ay.\nBharee-ai Mat Paapaa Kai Sang.\nOh Dhopai Naavai Kai Rang.\nPunnee Paapee Aakhan Naahi.\nKar Kar Karnaa Likh Lai Jaahu.\nAapay Beej Aapay Hee Khaahu.\nNaanak Hukmee Aavhu Jaahu. ||19||"
+        },
+        {
+            "id": 21,
+            "type": "pauri",
+            "number": 20,
+            "gurmukhi": "ਤੀਰਥੁ ਤਪੁ ਦਇਆ ਦਤੁ ਦਾਨੁ ॥\nਜੇ ਕੋ ਪਾਵੈ ਤਿਲ ਕਾ ਮਾਨੁ ॥\nਸੁਣਿਆ ਮੰਨਿਆ ਮਨਿ ਕੀਤਾ ਭਾਉ ॥\nਅੰਤਰਗਤਿ ਤੀਰਥਿ ਮਲਿ ਨਾਉ ॥\nਸਭਿ ਗੁਣ ਤੇਰੇ ਮੈ ਨਾਹੀ ਕੋਇ ॥\nਵਿਣੁ ਗੁਣ ਕੀਤੇ ਭਗਤਿ ਨ ਹੋਇ ॥\nਸੁਅਸਤਿ ਆਥਿ ਬਾਣੀ ਬਰਮਾਉ ॥\nਸਤਿ ਸੁਹਾਣੁ ਸਦਾ ਮਨਿ ਚਾਉ ॥\nਕਵਣੁ ਸੁ ਵੇਲਾ ਵਖਤੁ ਕਵਣੁ ਕਵਣ ਥਿਤਿ ਕਵਣੁ ਵਾਰੁ ॥\nਕਵਣਿ ਸਿ ਰੁਤੀ ਮਾਹੁ ਕਵਣੁ ਜਿਤੁ ਹੋਆ ਆਕਾਰੁ ॥\nਵੇਲ ਨ ਪਾਈਆ ਪੰਡਤੀ ਜਿ ਹੋਵੈ ਲੇਖੁ ਪੁਰਾਣੁ ॥\nਵਖਤੁ ਨ ਪਾਇਓ ਕਾਦੀਆ ਜਿ ਲਿਖਨਿ ਲੇਖੁ ਕੁਰਾਣੁ ॥\nਥਿਤਿ ਵਾਰੁ ਨਾ ਜੋਗੀ ਜਾਣੈ ਰੁਤਿ ਮਾਹੁ ਨਾ ਕੋਈ ॥\nਜਾ ਕਰਤਾ ਸਿਰਠੀ ਕਉ ਸਾਜੇ ਆਪੇ ਜਾਣੈ ਸੋਈ ॥\nਕਿਵ ਕਰਿ ਆਖਾ ਕਿਵ ਸਾਲਾਹੀ ਕਿਉ ਵਰਨੀ ਕਿਵ ਜਾਣਾ ॥\nਨਾਨਕ ਆਖਣਿ ਸਭੁ ਕੋ ਆਖੈ ਇਕ ਦੂ ਇਕੁ ਸਿਆਣਾ ॥\nਵਡਾ ਸਾਹਿਬੁ ਵਡੀ ਨਾਈ ਕੀਤਾ ਜਾ ਕਾ ਹੋਵੈ ॥\nਨਾਨਕ ਜੇ ਕੋ ਆਪੌ ਜਾਣੈ ਅਗੈ ਗਇਆ ਨ ਸੋਹੈ ॥੨੦॥",
+            "hindi": "तीरथु तपु दइआ दतु दानु ॥\nजे को पावै तिल का मानु ॥\nसुणिआ मंनिआ मनि कीता भाउ ॥\nअंतरगति तीरथि मलि नाउ ॥\nसभि गुण तेरे मै नाही कोइ ॥\nविणु गुण कीते भगति न होइ ॥\nसुअसति आथि बाणी बरमाउ ॥\nसति सुहाणु सदा मनि चाउ ॥\nकवणु सु वेला वखतु कवणु कवण थिति कवणु वारु ॥\nकवणि सि रुती माहु कवणु जितु होआ आकारु ॥\nवेल न पाईआ पंडती जि होवै लेखु पुराणु ॥\nवखतु न पाइओ कादीआ जि लिखनि लेखु कुराणु ॥\nथिति वारु ना जोगी जाणै रुति माहु ना कोई ॥\nजा करता सिरठी कउ साजे आपे जाणै सोई ॥\nकिव करि आखा किव सालाही किउ वरनी किव जाणा ॥\nनानक आखणि सभु को आखै इक दू इकु सिआणा ॥\nवडा साहिबु वडी नाई कीता जा का होवै ॥\nनानक जे को आपौ जाणै अगै गइआ न सोहै ॥२०॥",
+            "english": "Teerath Tap Da-i-aa Dat Daan.\nJay Ko Paavai Til Kaa Maan.\nSuni-aa Manni-aa Man Keetaa Bhaa-o.\nAntargat Teerath Mal Naa-o.\nSabh Gun Tayray Mai Naahee Ko-ay.\nVin Gun Keetay Bhagat Na Ho-ay.\nSu-asat Aath Banee Barmaa-o.\nSat Suhaan Sadaa Man Chaa-o.\nKavan Su Vaylaa Vakhat Kavan Kavan Thit Kavan Vaar.\nKavan Si Rutee Maahu Kavan Jit Ho-aa Aakaar.\nVayl Na Paa-ee-aa Pandtee Ji Hovai Laykh Puraan.\nVakhat Na Paa-i-o Kaadee-aa Ji Likhan Laykh Kuraan.\nThit Vaar Naa Jogee Jaanai Rut Maahu Naa Ko-ee.\nJaa Kartaa Sirthee Ka-o Saajay Aapay Jaanai So-ee.\nKiv Kar Aakhaa Kiv Saalaahee Ki-o Varnee Kiv Jaanaa.\nNaanak Aakhan Sabh Ko Aakhai Ik Doo Ik Si-aanaa.\nVadaa Saahib Vadee Naa-ee Keetaa Jaa Kaa Hovai.\nNaanak Jay Ko Aapou Jaanai Agai Ga-i-aa Na Sohai. ||20||"
+        },
+        {
+            "id": 22,
+            "type": "pauri",
+            "number": 21,
+            "gurmukhi": "ਤੀਰਥੁ ਤਪੁ ਦਇਆ ਦਤੁ ਦਾਨੁ ॥\nਜੇ ਕੋ ਪਾਵੈ ਤਿਲ ਕਾ ਮਾਨੁ ॥\nਸੁਣਿਆ ਮੰਨਿਆ ਮਨਿ ਕੀਤਾ ਭਾਉ ॥\nਅੰਤਰਗਤਿ ਤੀਰਥਿ ਮਲਿ ਨਾਉ ॥\nਸਭਿ ਗੁਣ ਤੇਰੇ ਮੈ ਨਾਹੀ ਕੋਇ ॥\nਵਿਣੁ ਗੁਣ ਕੀਤੇ ਭਗਤਿ ਨ ਹੋਇ ॥\nਸੁਅਸਤਿ ਆਥਿ ਬਾਣੀ ਬਰਮਾਉ ॥\nਸਤਿ ਸੁਹਾਣੁ ਸਦਾ ਮਨਿ ਚਾਉ ॥\nਕਵਣੁ ਸੁ ਵੇਲਾ ਵਖਤੁ ਕਵਣੁ ਕਵਣ ਥਿਤਿ ਕਵਣੁ ਵਾਰੁ ॥\nਕਵਣਿ ਸਿ ਰੁਤੀ ਮਾਹੁ ਕਵਣੁ ਜਿਤੁ ਹੋਆ ਆਕਾਰੁ ॥\nਵੇਲ ਨ ਪਾਈਆ ਪੰਡਤੀ ਜਿ ਹੋਵੈ ਲੇਖੁ ਪੁਰਾਣੁ ॥\nਵਖਤੁ ਨ ਪਾਇਓ ਕਾਦੀਆ ਜਿ ਲਿਖਨਿ ਲੇਖੁ ਕੁਰਾਣੁ ॥\nਥਿਤਿ ਵਾਰੁ ਨਾ ਜੋਗੀ ਜਾਣੈ ਰੁਤਿ ਮਾਹੁ ਨਾ ਕੋਈ ॥\nਜਾ ਕਰਤਾ ਸਿਰਠੀ ਕਉ ਸਾਜੇ ਆਪੇ ਜਾਣੈ ਸੋਈ ॥\nਕਿਵ ਕਰਿ ਆਖਾ ਕਿਵ ਸਾਲਾਹੀ ਕਿਉ ਵਰਨੀ ਕਿਵ ਜਾਣਾ ॥\nਨਾਨਕ ਆਖਣਿ ਸਭੁ ਕੋ ਆਖੈ ਇਕ ਦੂ ਇਕੁ ਸਿਆਣਾ ॥\nਵਡਾ ਸਾਹਿਬੁ ਵਡੀ ਨਾਈ ਕੀਤਾ ਜਾ ਕਾ ਹੋਵੈ ॥\nਨਾਨਕ ਜੇ ਕੋ ਆਪੌ ਜਾਣੈ ਅਗੈ ਗਇਆ ਨ ਸੋਹੈ ॥੨੧॥",
+            "hindi": "तीरथु तपु दइआ दतु दानु ॥\nजे को पावै तिल का मानु ॥\nसुणिआ मंनिआ मनि कीता भाउ ॥\nअंतरगति तीरथि मलि नाउ ॥\nसभि गुण तेरे मै नाही कोइ ॥\nविणु गुण कीते भगति न होइ ॥\nसुअसति आथि बाणी बरमाउ ॥\nसति सुहाणु सदा मनि चाउ ॥\nकवणु सु वेला वखतु कवणु कवण थिति कवणु वारु ॥\nकवणि सि रुती माहु कवणु जितु होआ आकारु ॥\nवेल न पाईआ पंडती जि होवै लेखु पुराणु ॥\nवखतु न पाइओ कादीआ जि लिखनि लेखु कुराणु ॥\nथिति वारु ना जोगी जाणै रुति माहु ना कोई ॥\nजा करता सिरठी कउ साजे आपे जाणै सोई ॥\nकिव करि आखा किव सालाही किउ वरनी किव जाणा ॥\nनानक आखणि सभु को आखै इक दू इकु सिआणा ॥\nवडा साहिबु वडी नाई कीता जा का होवै ॥\nनानक जे को आपौ जाणै अगै गइआ न सोहै ॥२१॥",
+            "english": "Teerath Tap Da-i-aa Dat Daan.\nJay Ko Paavai Til Kaa Maan.\nSuni-aa Manni-aa Man Keetaa Bhaa-o.\nAntargat Teerath Mal Naa-o.\nSabh Gun Tayray Mai Naahee Ko-ay.\nVin Gun Keetay Bhagat Na Ho-ay.\nSu-asat Aath Banee Barmaa-o.\nSat Suhaan Sadaa Man Chaa-o.\nKavan Su Vaylaa Vakhat Kavan Kavan Thit Kavan Vaar.\nKavan Si Rutee Maahu Kavan Jit Ho-aa Aakaar.\nVayl Na Paa-ee-aa Pandtee Ji Hovai Laykh Puraan.\nVakhat Na Paa-i-o Kaadee-aa Ji Likhan Laykh Kuraan.\nThit Vaar Naa Jogee Jaanai Rut Maahu Naa Ko-ee.\nJaa Kartaa Sirthee Ka-o Saajay Aapay Jaanai So-ee.\nKiv Kar Aakhaa Kiv Saalaahee Ki-o Varnee Kiv Jaanaa.\nNaanak Aakhan Sabh Ko Aakhai Ik Doo Ik Si-aanaa.\nVadaa Saahib Vadee Naa-ee Keetaa Jaa Kaa Hovai.\nNaanak Jay Ko Aapou Jaanai Agai Ga-i-aa Na Sohai. ||21||"
+        },
+        {
+            "id": 23,
+            "type": "pauri",
+            "number": 22,
+            "gurmukhi": "ਪਾਤਾਲਾ ਪਾਤਾਲ ਲਖ ਆਗਾਸਾ ਆਗਾਸ ॥\nਓੜਕ ਓੜਕ ਭਾਲਿ ਥਕੇ ਵੇਦ ਕਹਨਿ ਇਕ ਵਾਤ ॥\nਸਹਸ ਅਠਾਰਹ ਕਹਨਿ ਕਤੇਬਾ ਅਸੁਲੂ ਇਕੁ ਧਾਤੁ ॥\nਲੇਖਾ ਹੋਇ ਤ ਲਿਖੀਐ ਲੇਖੈ ਹੋਇ ਵਿਣਾਸੁ ॥\nਨਾਨਕ ਵਡਾ ਆਖੀਐ ਆਪੇ ਜਾਣੈ ਆਪੁ ॥੨੨॥",
+            "hindi": "पाताला पाताल लख आगासा आगास ॥\nओड़क ओड़क भालि थके वेद कहनि इक वात ॥\nसहस अठारह कहनि कतेबा असुलू इकु धातु ॥\nलेखा होइ त लिखीऐ लेखै होइ विणासु ॥\nनानक वडा आखीऐ आपे जाणै आपु ॥२२॥",
+            "english": "Paataalaa Paataal Lakh Aagaasaa Aagaas.\nOrhak Orhak Bhaal Thakay Vayd Kahan Ik Vaat.\nSahas Athaarah Kahan Kataybaa Asuloo Ik Dhaat.\nLaykhaa Ho-ay Ta Likhee-ai Laykhai Ho-ay Vinaas.\nNaanak Vadaa Aakhee-ai Aapay Jaanai Aap. ||22||"
+        },
+        {
+            "id": 24,
+            "type": "pauri",
+            "number": 23,
+            "gurmukhi": "ਸਾਲਾਹੀ ਸਾਲਾਹਿ ਏਤੀ ਸੁਰਤਿ ਨ ਪਾਈਆ ॥\nਨਦੀਆ ਅਤੈ ਵਾਹ ਪਵਹਿ ਸਮੁੰਦਿ ਨ ਜਾਣੀਅਹਿ ॥\nਸਮੁੰਦ ਸਾਹ ਸੁਲਤਾਨ ਗਿਰਹਾ ਸੇਤੀ ਮਾਲੁ ਧਨੁ ॥\nਕੀੜੀ ਤੁਲਿ ਨ ਹੋਵਨੀ ਜੇ ਤਿਸੁ ਮਨਹੁ ਨ ਵੀਸਰਹਿ ॥੨੩॥",
+            "hindi": "सालाही सालाहि एती सुरति न पाईआ ॥\nनदीआ अतै वाह पवहि समुंदि न जाणीअहि ॥\nसमुंद साह सुलतान गिरहा सेती मालु धनु ॥\nकीड़ी तुलि न होवनी जे तिसु मनहु न वीसरहि ॥२३॥",
+            "english": "Saalaahee Saalaah Aytee Surat Na Paa-ee-aa.\nNadee-aa Atai Vaah Pavahi Samund Na Jaanee-ahi.\nSamund Saah Sultaan Girhaa Saytee Maal Dhan.\nKeerhee Tul Na Hovnee Jay Tis Manhu Na Veesrahi. ||23||"
+        },
+        {
+            "id": 25,
+            "type": "pauri",
+            "number": 24,
+            "gurmukhi": "ਅੰਤੁ ਨ ਸਿਫਤੀ ਕਹਣਿ ਨ ਅੰਤੁ ॥\nਅੰਤੁ ਨ ਕਰਣੈ ਦੇਣਿ ਨ ਅੰਤੁ ॥\nਅੰਤੁ ਨ ਵੇਖਣਿ ਸੁਣਣਿ ਨ ਅੰਤੁ ॥\nਅੰਤੁ ਨ ਜਾਪੈ ਕਿਆ ਮਨਿ ਮੰਤੁ ॥\nਅੰਤੁ ਨ ਜਾਪੈ ਕੀਤਾ ਆਕਾਰੁ ॥\nਅੰਤੁ ਨ ਜਾਪੈ ਪਾਰਾਵਾਰੁ ॥\nਅੰਤ ਕਾਰਣਿ ਕੇਤੇ ਬਿਲਲਾਹਿ ॥\nਤਾ ਕੇ ਅੰਤ ਨ ਪਾਏ ਜਾਹਿ ॥\nਏਹੁ ਅੰਤੁ ਨ ਜਾਣੈ ਕੋਇ ॥\nਬਹੁਤਾ ਕਹੀਐ ਬਹੁਤਾ ਹੋਇ ॥\nਵਡਾ ਸਾਹਿਬੁ ਊਚਾ ਥਾਉ ॥\nਊਚੇ ਉਪਰਿ ਊਚਾ ਨਾਉ ॥\nਏਵਡੁ ਊਚਾ ਹੋਵੈ ਕੋਇ ॥\nਤਿਸੁ ਊਚੇ ਕਉ ਜਾਣੈ ਸੋਇ ॥\nਜੇਵਡੁ ਆਪਿ ਜਾਣੈ ਆਪਿ ਆਪਿ ॥\nਨਾਨਕ ਨਦਰੀ ਕਰਮੀ ਦਾਤਿ ॥੨੪॥",
+            "hindi": "अंतु न सिफती कहणि न अंतु ॥\nअंतु न करणै देणि न अंतु ॥\nअंतु न वेखणि सुणणि न अंतु ॥\nअंतु न जापै किआ मनि मंतु ॥\nअंतु न जापै कीता आकारु ॥\nअंतु न जापै पारावारु ॥\nअंत कारणि केते बिललाहि ॥\nता के अंत न पाए जाहि ॥\nएहु अंतु न जाणै कोइ ॥\nबहुता कहीऐ बहुता होइ ॥\nवडा साहिबु ऊचा थाउ ॥\nऊचे उपरि ऊचा नाउ ॥\nएवडु ऊचा होवै कोइ ॥\nतिसु ऊचे कउ जाणै सोइ ॥\nजेवडु आपि जाणै आपि आपि ॥\nनानक नदरी करमी दाति ॥२४॥",
+            "english": "Ant Na Siftee Kahan Na Ant.\nAnt Na Karnai Dayn Na Ant.\nAnt Na Vaykhan Sunan Na Ant.\nAnt Na Jaapai Ki-aa Man Mant.\nAnt Na Jaapai Keetaa Aakaar.\nAnt Na Jaapai Paaraavaar.\nAnt Kaaran Kaytay Billaahi.\nTaa Kay Ant Na Paa-ay Jaahi.\nAyhu Ant Na Jaanai Ko-ay.\nBahutaa Kahee-ai Bahutaa Ho-ay.\nVadaa Saahib Oochaa Thaa-o.\nOochay Upar Oochaa Naa-o.\nAyvad Oochaa Hovai Ko-ay.\nTis Oochay Ka-o Jaanai So-ay.\nJayvad Aap Jaanai Aap Aap.\nNaanak Nadree Karmee Daat. ||24||"
+        },
+        {
+            "id": 26,
+            "type": "pauri",
+            "number": 25,
+            "gurmukhi": "ਬਹੁਤਾ ਕਰਮੁ ਲਿਖਿਆ ਨਾ ਜਾਇ ॥\nਵਡਾ ਦਾਤਾ ਤਿਲੁ ਨ ਤਮਾਇ ॥\nਕੇਤੇ ਮੰਗਹਿ ਜੋਧ ਅਪਾਰ ॥\nਕੇਤਿਆ ਗਣਤ ਨਹੀ ਵੀਚਾਰੁ ॥\nਕੇਤੇ ਖਪਿ ਤੁਟਹਿ ਵੇਕਾਰ ॥\nਕੇਤੇ ਲੈ ਲੈ ਮੁਕਰੁ ਪਾਹਿ ॥\nਕੇਤੇ ਮੂਰਖ ਖਾਹੀ ਖਾਹਿ ॥\nਕੇਤਿਆ ਦੂਖ ਭੂਖ ਸਦ ਮਾਰ ॥\nਏਹਿ ਭਿ ਦਾਤਿ ਤੇਰੀ ਦਾਤਾਰ ॥\nਬੰਦਿ ਖਲਾਸੀ ਭਾਣੈ ਹੋਇ ॥\nਹੋਰੁ ਆਖਿ ਨ ਸਕੈ ਕੋਇ ॥\nਜੇ ਕੋ ਖਾਇਕੁ ਆਖਣਿ ਪਾਇ ॥\nਓਹੁ ਜਾਣੈ ਜੇਤੀਆ ਮੁਹਿ ਖਾਇ ॥\nਆਪੇ ਜਾਣੈ ਆਪੇ ਦੇਇ ॥\nਆਖਹਿ ਸਿ ਭਿ ਕੇਈ ਕੇਇ ॥\nਜਿਸ ਨੋ ਬਖਸੇ ਸਿਫਤਿ ਸਾਲਾਹ ॥\nਨਾਨਕ ਪਾਤਿਸਾਹੀ ਪਾਤਿਸਾਹੁ ॥੨੫॥",
+            "hindi": "बहुता करमु लिखिआ ना जाइ ॥\nवडा दाता तिलु न तमाइ ॥\nकेते मंगहि जोध अपार ॥\nकेतिआ गणत नही वीचारु ॥\nकेते खपि तुटहि वेकार ॥\nकेते लै लै मुकरु पाहि ॥\nकेते मूरख खाही खाहि ॥\nकेतिआ दूख भूख सद मार ॥\nएहि भि दाति तेरी दातार ॥\nबंदि खलासी भाणै होइ ॥\nहोरु आखि न सकै कोइ ॥\nजे को खाइकु आखणि पाइ ॥\nओहु जाणै जेतीआ मुहि खाइ ॥\nआपे जाणै आपे देइ ॥\nआखहि सि भि केई केइ ॥\nजिस नो बखसे सिफति सालाह ॥\nनानक पातिसाही पातिसाहु ॥२५॥",
+            "english": "Bahutaa Karam Likhi-aa Naa Jaa-ay.\nVadaa Daataa Til Na Tamaa-ay.\nKaytay Mangahi Jodh Apaar.\nKayti-aa Ganat Nahee Veechaar.\nKaytay Khap Tutahi Vaykaar.\nKaytay Lai Lai Mukar Paahi.\nKaytay Moorakh Khaahee Khaahi.\nKayti-aa Dookh Bhookh Sad Maar.\nAyhi Bhi Daat Tayree Daataar.\nBand Khalaasee Bhaanai Ho-ay.\nHor Aakh Na Sakai Ko-ay.\nJay Ko Khaa-ik Aakhan Paa-ay.\nOh Jaanai Jaytee-aa Muhi Khaa-ay.\nAapay Jaanai Aapay Day-ay.\nAakhahi Si Bhi Kay-ee Kay-ay.\nJis No Bakhsay Sifat Saalaah.\nNaanak Paatisaahee Paatisaahu. ||25||"
+        },
+        {
+            "id": 27,
+            "type": "pauri",
+            "number": 26,
+            "gurmukhi": "ਅਮੁਲ ਗੁਣ ਅਮੁਲ ਵਾਪਾਰ ॥\nਅਮੁਲ ਵਾਪਾਰੀਏ ਅਮੁਲ ਭੰਡਾਰ ॥\nਅਮੁਲ ਆਵਹਿ ਅਮੁਲ ਲੈ ਜਾਹਿ ॥\nਅਮੁਲ ਭਾਇ ਅਮੁਲਾ ਸਮਾਹਿ ॥\nਅਮੁਲੁ ਧਰਮੁ ਅਮੁਲੁ ਦੀਬਾਣੁ ॥\nਅਮੁਲੁ ਤੁਲੁ ਅਮੁਲੁ ਪਰਵਾਣੁ ॥\nਅਮੁਲੁ ਬਖਸੀਸ ਅਮੁਲੁ ਨੀਸਾਣੁ ॥\nਅਮੁਲੁ ਕਰਮੁ ਅਮੁਲੁ ਫੁਰਮਾਣੁ ॥\nਅਮੁਲੋ ਅਮੁਲੁ ਆਖਿਆ ਨ ਜਾਇ ॥\nਆਖਿ ਆਖਿ ਰਹੇ ਲਿਵ ਲਾਇ ॥\nਆਖਹਿ ਵੇਦ ਪਾਠ ਪੁਰਾਣ ॥\nਆਖਹਿ ਪੜੇ ਕਰਹਿ ਵਖਿਆਣ ॥\nਆਖਹਿ ਬਰਮੇ ਆਖਹਿ ਇੰਦ ॥\nਆਖਹਿ ਗੋਪੀ ਤੈ ਗੋਵਿੰਦ ॥\nਆਖਹਿ ਈਸਰ ਆਖਹਿ ਸਿਧ ॥\nਆਖਹਿ ਕੇਤੇ ਕੀਤੇ ਬੁਧ ॥\nਆਖਹਿ ਦਾਨਵ ਆਖਹਿ ਦੇਵ ॥\nਆਖਹਿ ਸੁਰਿ ਨਰ ਮੁਨਿ ਜਨ ਸੇਵ ॥\nਕੇਤੇ ਆਖਹਿ ਆਖਣਿ ਪਾਹਿ ॥\nਕੇਤੇ ਕਹਿ ਕਹਿ ਉਠਿ ਉਠਿ ਜਾਹਿ ॥\nਏਤੇ ਕੀਤੇ ਹੋਰਿ ਕਰੇਹਿ ॥\nਤਾ ਆਖਿ ਨ ਸਕਹਿ ਕੇਈ ਕੇਇ ॥\nਜੇਵਡੁ ਭਾਵੈ ਤੇਵਡੁ ਹੋਇ ॥\nਨਾਨਕ ਜਾਣੈ ਸਾਚਾ ਸੋਇ ॥\nਜੇ ਕੋ ਆਖੈ ਬੋਲੁਵਿਗਾੜੁ ॥\nਤਾ ਲਿਖੀਐ ਸਿਰਿ ਗਾਵਾਰਾ ਗਾਵਾਰੁ ॥੨੬॥",
+            "hindi": "अमुल गुण अमुल वापार ॥\nअमुल वापारीए अमुल भंडार ॥\nअमुल आवहि अमुल लै जाहि ॥\nअमुल भाइ अमुला समाहि ॥\nअमुलु धरमु अमुलु दीबाणु ॥\nअमुलु तुलु अमुलु परवाणु ॥\nअमुलु बखसीस अमुलु नीसाणु ॥\nअमुलु करमु अमुलु फुरमाणु ॥\nअमुलो अमुलु आखिआ न जाइ ॥\nआखि आखि रहे लिव लाइ ॥\nआखहि वेद पाठ पुराण ॥\nआखहि पड़े करहि वखिआण ॥\nआखहि बरमे आखहि इंद ॥\nआखहि गोपी तै गोविंद ॥\nआखहि ईसर आखहि सिध ॥\nआखहि केते कीते बुध ॥\nआखहि दानव आखहि देव ॥\nआखहि सुरि नर मुनि जन सेव ॥\nकेते आखहि आखणि पाहि ॥\nकेते कहि कहि उठि उठि जाहि ॥\nएते कीते होरि करेहि ॥\nता आखि न सकहि केई केइ ॥\nजेवडु भावै तेवडु होइ ॥\nनानक जाणै साचा सोइ ॥\nजे को आखै बोलुविगाड़ु ॥\nता लिखीऐ सिरि गावारा गावारु ॥२६॥",
+            "english": "Amul Gun Amul Vaapaar.\nAmul Vaapaari-ay Amul Bhandaar.\nAmul Aavahi Amul Lai Jaahi.\nAmul Bhaa-ay Amulaa Samaahi.\nAmul Dharam Amul Deebaan.\nAmul Tul Amul Parvaan.\nAmul Bakhsees Amul Neesaan.\nAmul Karam Amul Furmaan.\nAmulo Amul Aakhi-aa Na Jaa-ay.\nAakh Aakh Rahay Liv Laa-ay.\nAakhahi Vayd Paath Puraan.\nAakhahi Parhay Karahi Vakhi-aan.\nAakhahi Barmay Aakhahi Ind.\nAakhahi Gopee Tai Govind.\nAakhahi Eesar Aakhahi Sidh.\nAakhahi Kaytay Keetay Budh.\nAakhahi Daanav Aakhahi Dayv.\nAakhahi Sur Nar Mun Jan Sayv.\nKaytay Aakhahi Aakhan Paahi.\nKaytay Kahi Kahi Uth Uth Jaahi.\nAytay Keetay Hor Karayhi.\nTaa Aakh Na Sakahi Kay-ee Kay-ay.\nJayvad Bhaavai Tayvad Ho-ay.\nNaanak Jaanai Saachaa So-ay.\nJay Ko Aakhai Boluvigaarh.\nTaa Likhee-ai Sir Gaavaaraa Gaavaar. ||26||"
+        },
+        {
+            "id": 28,
+            "type": "pauri",
+            "number": 27,
+            "gurmukhi": "ਸੋ ਦਰੁ ਕੇਹਾ ਸੋ ਘਰੁ ਕੇਹਾ ਜਿਤੁ ਬਹਿ ਸਰਬ ਸਮਾਲੇ ॥\nਵਾਜੇ ਨਾਦ ਅਨੇਕ ਅਸੰਖਾ ਕੇਤੇ ਵਾਵਣਹਾਰੇ ॥\nਕੇਤੇ ਰਾਗ ਪਰੀ ਸਿਉ ਕਹੀਅਨਿ ਕੇਤੇ ਗਾਵਣਹਾਰੇ ॥\nਗਾਵਹਿ ਤੁਹਨੋ ਪਉਣੁ ਪਾਣੀ ਬੈਸੰਤਰੁ ਗਾਵੈ ਰਾਜਾ ਧਰਮੁ ਦੁਆਰੇ ॥\nਗਾਵਹਿ ਚਿਤੁ ਗੁਪਤੁ ਲਿਖਿ ਜਾਣਹਿ ਲਿਖਿ ਲਿਖਿ ਧਰਮੁ ਵੀਚਾਰੇ ॥\nਗਾਵਹਿ ਈਸਰੁ ਬਰਮਾ ਦੇਵੀ ਸੋਹਨਿ ਸਦਾ ਸਵਾਰੇ ॥\nਗਾਵਹਿ ਇੰਦ ਇਦਾਸਣਿ ਬੈਠੇ ਦੇਵਤਿਆ ਦਰਿ ਨਾਲੇ ॥\nਗਾਵਹਿ ਸਿਧ ਸਮਾਧੀ ਅੰਦਰਿ ਗਾਵਨਿ ਸਾਧ ਵਿਚਾਰੇ ॥\nਗਾਵਨਿ ਜਤੀ ਸਤੀ ਸੰਤੋਖੀ ਗਾਵਹਿ ਵੀਰ ਕਰਾਰੇ ॥\nਗਾਵਨਿ ਪੰਡਿਤ ਪੜਨਿ ਰਖੀਸੁਰ ਜੁਗੁ ਜੁਗੁ ਵੇਦਾ ਨਾਲੇ ॥\nਗਾਵਹਿ ਮੋਹਣੀਆ ਮਨੁ ਮੋਹਨਿ ਸੁਰਗਾ ਮਛ ਪਇਆਲੇ ॥\nਗਾਵਨਿ ਰਤਨ ਉਪਾਏ ਤੇਰੇ ਅਠਸਠਿ ਤੀਰਥ ਨਾਲੇ ॥\nਗਾਵਹਿ ਜੋਧ ਮਹਾਬਲ ਸੂਰਾ ਗਾਵਹਿ ਖਾਣੀ ਚਾਰੇ ॥\nਗਾਵਹਿ ਖੰਡ ਮੰਡਲ ਵਰਭੰਡਾ ਕਰਿ ਕਰਿ ਰਖੇ ਤੇਰੇ ਧਾਰੇ ॥\nਸੇਈ ਤੁਧੁਨੋ ਗਾਵਨਿ ਜੋ ਤੁਧੁ ਭਾਵਨਿ ਰਤੇ ਤੇਰੇ ਭਗਤ ਰਸਾਲੇ ॥\nਹੋਰਿ ਕੇਤੇ ਤੁਧੁਨੋ ਗਾਵਨਿ ਸੇ ਮੈ ਚਿਤਿ ਨ ਆਵਨਿ ਨਾਨਕੁ ਕਿਆ ਬੀਚਾਰੇ ॥\nਸੋਈ ਸੋਈ ਸਦਾ ਸਚੁ ਸਾਹਿਬੁ ਸਾਚਾ ਸਾਚੀ ਨਾਈ ॥\nਹੈ ਭੀ ਹੋਸੀ ਜਾਇ ਨ ਜਾਸੀ ਰਚਨਾ ਜਿਨਿ ਰਚਾਈ ॥\nਰੰਗੀ ਰੰਗੀ ਭਾਤੀ ਕਰਿ ਕਰਿ ਜਿਨਸੀ ਮਾਇਆ ਜਿਨਿ ਉਪਾਈ ॥\nਕਰਿ ਕਰਿ ਦੇਖੈ ਕੀਤਾ ਆਪਣਾ ਜਿਉ ਤਿਸ ਦੀ ਵਡਿਆਈ ॥\nਜੋ ਤਿਸੁ ਭਾਵੈ ਸੋਈ ਕਰਸੀ ਫਿਰਿ ਹੁਕਮੁ ਨ ਕਰਣਾ ਜਾਈ ॥\nਸੋ ਪਾਤਿਸਾਹੁ ਸਾਹਾ ਪਾਤਿਸਾਹਿਬੁ ਨਾਨਕ ਰਹਣੁ ਰਜਾਈ ॥੨੭॥",
+            "hindi": "सो दरु केहा सो घरु केहा जितु बहि सरब समाले ॥\nवाजे नाद अनेक असंखा केते वावणहारे ॥\nकेते राग परी सिउ कहीअनि केते गावणहारे ॥\nगावहि तुहनो पउणु पाणी बैसंतरु गावै राजा धरमु दुआरे ॥\nगावहि चितु गुपतु लिखि जाणहि लिखि लिखि धरमु वीचारे ॥\nगावहि ईसरु बरमा देवी सोहनि सदा सवारे ॥\nगावहि इंद इदासणि बैठे देवतिआ दरि नाले ॥\nगावहि सिध समाधी अंदरि गावनि साध विचारे ॥\nगावनि जती सती संतोखी गावहि वीर करारे ॥\nगावनि पंडित पड़नि रखीसुर जुगु जुगु वेदा नाले ॥\nगावहि मोहणीआ मनु मोहनि सुरगा मछ पइआले ॥\nगावनि रतन उपाए तेरे अठसठि तीरथ नाले ॥\nगावहि जोध महाबल सूरा गावहि खाणी चारे ॥\nगावहि खंड मंडल वरभंडा करि करि रखे तेरे धारे ॥\nसेई तुधुनो गावनि जो तुधु भावनि रते तेरे भगत रसाले ॥\nहोरि केते तुधुनो गावनि से मै चिति न आवनि नानकु किआ बीचारे ॥\nसोई सोई सदा सचु साहिबु साचा साची नाई ॥\nहै भी होसी जाइ न जासी रचना जिनि रचाई ॥\nरंगी रंगी भाती करि करि जिनसी माइआ जिनि उपाई ॥\nकरि करि देखै कीता आपणा जिउ तिस दी वडिआई ॥\nजो तिसु भावै सोई करसी फिरि हुकमु न करणा जाई ॥\nसो पातिसाहु साहा पातिसाहिबु नानक रहणु रजाई ॥२७॥",
+            "english": "So Dar Kayhaa So Ghar Kayhaa Jit Bahi Sarab Samaalay.\nVaajay Naad Anayk Asankhaa Kaytay Vaavanharay.\nKaytay Raag Paree Si-o Kahee-an Kaytay Gaavanharay.\nGaavahi Tuhno Pa-un Paanee Baisantar Gaavai Raajaa Dharam Du-aaray.\nGaavahi Chit Gupat Likh Jaanahi Likh Likh Dharam Veechaaray.\nGaavahi Eesar Barmaa Dayvee Sohan Sadaa Savaaray.\nGaavahi Ind Idaasan Baithay Dayvti-aa Dar Naalay.\nGaavahi Sidh SamaaDhee Andar Gaavan SaaDh Vichaaray.\nGaavan Jatee Satee Santokhee Gaavahi Veer Karaaray.\nGaavan Pandit Parhan Rakheesur Jug Jug Vaydaa Naalay.\nGaavahi Mohnee-aa Man Mohan Surgaa Machh Pa-i-aalay.\nGaavan Ratan Upaa-ay Tayray Athsath Teerath Naalay.\nGaavahi Jodh Mahaabal Sooraa Gaavahi Khaanee Chaaray.\nGaavahi Khand Mandal Varbhandaa Kar Kar Rakhay Tayray Dhaaray.\nSay-ee Tudhuno Gaavan Jo Tudh Bhaavan Ratay Tayray Bhagat Rasaalay.\nHor Kaytay Tudhuno Gaavan Say Mai Chit Na Aavan Naanak Ki-aa Beechaaray.\nSo-ee So-ee Sadaa Sach Saahib Saachaa Saachee Naa-ee.\nHai Bhee Hosee Jaa-ay Na Jaasee Rachnaa Jin Rachaa-ee.\nRangee Rangee Bhaatee Kar Kar Jinsee Maa-i-aa Jin Upaa-ee.\nKar Kar Daykhai Keetaa Aapnaa Ji-o Tis Dee Vadi-aa-ee.\nJo Tis Bhaavai So-ee Karsee Fir Hukam Na Karnaa Jaa-ee.\nSo Paatisaahu Saahaa Paatisaahib Naanak Rahan Rajaa-ee. ||27||"
+        },
+        {
+            "id": 29,
+            "type": "pauri",
+            "number": 28,
+            "gurmukhi": "ਮੁੰਦਾ ਸੰਤੋਖੁ ਸਰਮੁ ਪਤੁ ਝੋਲੀ ਧਿਆਨ ਕੀ ਕਰਹਿ ਬਿਭੂਤਿ ॥\nਖਿੰਥਾ ਕਾਲੁ ਕੁਆਰੀ ਕਾਇਆ ਜੁਗਤਿ ਡੰਡਾ ਪਰਤੀਤਿ ॥\nਆਈ ਪੰਥੀ ਸਗਲ ਜਮਾਤੀ ਮਨਿ ਜੀਤੈ ਜਗੁ ਜੀਤੁ ॥\nਆਦੇਸੁ ਤਿਸੈ ਆਦੇਸੁ ॥\nਆਦਿ ਅਨੀਲੁ ਅਨਾਦਿ ਅਨਾਹਤਿ ਜੁਗੁ ਜੁਗੁ ਏਕੋ ਵੇਸੁ ॥੨੮॥",
+            "hindi": "मुंदा संतोखु सरमु पतु झोली धिआन की करहि बिभूति ॥\nखिंथा कालु कुआरी काइआ जुगति डंडा परतीति ॥\nआई पंथी सगल जमाती मनि जीतै जगु जीतु ॥\nआदेसु तिसै आदेसु ॥\nआदि अनीलु अनादि अनाहति जुगु जुगु एको वेसु ॥२८॥",
+            "english": "Mundaa Santokh Saram Pat Jholee Dhi-aan Kee Karahi Bibhoot.\nKhinthaa Kaal Ku-aaree Kaa-i-aa Jugat Dandaa Parteet.\nAa-ee Panthee Sagal Jamaatee Man Jeetai Jag Jeet.\nAadaysu Tisai Aadaysu.\nAad Aneel Anaad Anaahat Jug Jug Ayko Vays. ||28||"
+        },
+        {
+            "id": 30,
+            "type": "pauri",
+            "number": 29,
+            "gurmukhi": "ਭੁਗਤਿ ਗਿਆਨੁ ਦਇਆ ਭੰਡਾਰਣਿ ਘਟਿ ਘਟਿ ਵਾਜਹਿ ਨਾਦ ॥\nਆਪਿ ਨਾਥੁ ਨਾਥੀ ਸਭ ਜਾ ਕੀ ਰਿਧਿ ਸਿਧਿ ਅਵਰਾ ਸਾਦ ॥\nਸੰਜੋਗੁ ਵਿਜੋਗੁ ਦੁਇ ਕਾਰ ਚਲਾਵਹਿ ਲੇਖੇ ਆਵਹਿ ਭਾਗ ॥\nਆਦੇਸੁ ਤਿਸੈ ਆਦੇਸੁ ॥\nਆਦਿ ਅਨੀਲੁ ਅਨਾਦਿ ਅਨਾਹਤਿ ਜੁਗੁ ਜੁਗੁ ਏਕੋ ਵੇਸੁ ॥੨੯॥",
+            "hindi": "भुगति गिआनु दइआ भंडारणि घटि घटि वाजहि नाद ॥\nआपि नाथु नाथी सभ जा की रिधि सिधि अवरा साद ॥\nसंजोगु विजोगु दुइ कार चलावहि लेखे आवहि भाग ॥\nआदेसु तिसै आदेसु ॥\nआदि अनीलु अनादि अनाहति जुगु जुगु एको वेसु ॥२९॥",
+            "english": "Bhugat Gi-aan Da-i-aa Bhandaaran Ghat Ghat Vaajahi Naad.\nAap Naath Naathee Sabh Jaa Kee Ridh Sidh Avraa Saad.\nSanjog Vijog Du-ay Kaar Chalaavahi Laykhay Aavahi Bhaag.\nAadaysu Tisai Aadaysu.\nAad Aneel Anaad Anaahat Jug Jug Ayko Vays. ||29||"
+        },
+        {
+            "id": 31,
+            "type": "pauri",
+            "number": 30,
+            "gurmukhi": "ਏਕਾ ਮਾਈ ਜੁਗਤਿ ਵਿਆਈ ਤਿਨਿ ਚੇਲੇ ਪਰਵਾਣੁ ॥\nਇਕੁ ਸੰਸਾਰੀ ਇਕੁ ਭੰਡਾਰੀ ਇਕੁ ਲਾਏ ਦੀਬਾਣੁ ॥\nਜਿਵ ਤਿਸੁ ਭਾਵੈ ਤਿਵੈ ਚਲਾਵੈ ਜਿਵ ਹੋਵੈ ਫੁਰਮਾਣੁ ॥\nਓਹੁ ਵੇਖੈ ਓਨਾ ਨਦਰਿ ਨ ਆਵੈ ਬਹੁਤਾ ਏਹੁ ਵਿਡਾਣੁ ॥\nਆਦੇਸੁ ਤਿਸੈ ਆਦੇਸੁ ॥\nਆਦਿ ਅਨੀਲੁ ਅਨਾਦਿ ਅਨਾਹਤਿ ਜੁਗੁ ਜੁਗੁ ਏਕੋ ਵੇਸੁ ॥੩੦॥",
+            "hindi": "एका माई जुगति विआई तिनि चेले परवाणु ॥\nइकु संसारी इकु भंडारी इकु लाए दीबाणु ॥\nजिव तिसु भावै तिवै चलावै जिव होवै फुरमाणु ॥\nओहु वेखै ओना नदरि न आवै बहुता एहु विडाणु ॥\nआदेसु तिसै आदेसु ॥\nआदि अनीलु अनादि अनाहति जुगु जुगु एको वेसु ॥३०॥",
+            "english": "Aykaa Maa-ee Jugat Vi-aa-ee Tin Chaylay Parvaan.\nIk Sansaaree Ik Bhandaaree Ik Laa-ay Deebaan.\nJiv Tis Bhaavai Tivai Chalaavai Jiv Hovai Furmaan.\nOh Vaykhai Onaa Nadar Na Aavai Bahutaa Ayhu Vidaan.\nAadaysu Tisai Aadaysu.\nAad Aneel Anaad Anaahat Jug Jug Ayko Vays. ||30||"
+        },
+        {
+            "id": 32,
+            "type": "pauri",
+            "number": 31,
+            "gurmukhi": "ਆਸਣੁ ਲੋਇ ਲੋਇ ਭੰਡਾਰ ॥\nਜੋ ਕਿਛੁ ਪਾਇਆ ਸੁ ਏਕਾ ਵਾਰ ॥\nਕਰਿ ਕਰਿ ਵੇਖੈ ਸਿਰਜਣਹਾਰੁ ॥\nਨਾਨਕ ਸਚੇ ਕੀ ਸਾਚੀ ਕਾਰ ॥\nਆਦੇਸੁ ਤਿਸੈ ਆਦੇਸੁ ॥\nਆਦਿ ਅਨੀਲੁ ਅਨਾਦਿ ਅਨਾਹਤਿ ਜੁਗੁ ਜੁਗੁ ਏਕੋ ਵੇਸੁ ॥੩੧॥",
+            "hindi": "आसणु लोइ लोइ भंडार ॥\nजो किछु पाइआ सु एका वार ॥\nकरि करि वेखै सिरजणहारु ॥\nनानक सचे की साची कार ॥\nआदेसु तिसै आदेसु ॥\nआदि अनीलु अनादि अनाहति जुगु जुगु एको वेसु ॥३१॥",
+            "english": "Aasan Lo-ay Lo-ay Bhandaar.\nJo Kichh Paa-i-aa Su Aykaa Vaar.\nKar Kar Vaykhai Sirjanhar.\nNaanak Sachay Kee Saachee Kaar.\nAadaysu Tisai Aadaysu.\nAad Aneel Anaad Anaahat Jug Jug Ayko Vays. ||31||"
+        },
+        {
+            "id": 33,
+            "type": "pauri",
+            "number": 32,
+            "gurmukhi": "ਇਕ ਦੂ ਜੀਭੌ ਲਖ ਹੋਹਿ ਲਖ ਹੋਵਹਿ ਲਖ ਵੀਸ ॥\nਲਖੁ ਲਖੁ ਗੇੜਾ ਆਖੀਅਹਿ ਏਕੁ ਨਾਮੁ ਜਗਦੀਸ ॥\nਏਤੁ ਰਾਹਿ ਪਤਿ ਪਵੜੀਆ ਚੜੀਐ ਹੋਇ ਇਕੀਸ ॥\nਸੁਣਿ ਗਲਾ ਆਕਾਸ ਕੀ ਕੀਟਾ ਆਈ ਰੀਸ ॥\nਨਾਨਕ ਨਦਰੀ ਪਾਈਐ ਕੂੜੀ ਕੂੜੈ ਠੀਸ ॥੩੨॥",
+            "hindi": "इक दू जीभौ लख होहि लख होवहि लख वीस ॥\nलखु लखु गेड़ा आखीअहि एकु नामु जगदीस ॥\nएतु राहि पति पवड़ीआ चड़ीऐ होइ इकीस ॥\nसुणि गला आकास की कीटा आई रीस ॥\nनानक नदरी पाईऐ कूड़ी कूड़ै ठीस ॥३२॥",
+            "english": "Ik Doo Jeebhou Lakh Hohi Lakh Hovahi Lakh Vees.\nLakh Lakh Gayrhaa Aakhee-ahi Ayk Naam Jagdees.\nAyt Raahi Pat Pavrhee-aa Charhee-ai Ho-ay Ikees.\nSun Galaa Aakaas Kee Keetaa Aa-ee Rees.\nNaanak Nadree Paa-ee-ai Koorhee Koorhai Thees. ||32||"
+        },
+        {
+            "id": 34,
+            "type": "pauri",
+            "number": 33,
+            "gurmukhi": "ਆਖਣਿ ਜੋਰੁ ਚੁਪੈ ਨਹ ਜੋਰੁ ॥\nਜੋਰੁ ਨ ਮੰਗਣਿ ਦੇਣਿ ਨ ਜੋਰੁ ॥\nਜੋਰੁ ਨ ਜੀਵਣਿ ਮਰਣਿ ਨਹ ਜੋਰੁ ॥\nਜੋਰੁ ਨ ਰਾਜਿ ਮਾਲਿ ਮਨਿ ਸੋਰੁ ॥\nਜੋਰੁ ਨ ਸੁਰਤੀ ਗਿਆਨਿ ਵੀਚਾਰਿ ॥\nਜੋਰੁ ਨ ਜੁਗਤੀ ਛੁਟੈ ਸੰਸਾਰੁ ॥\nਜਿਸੁ ਹਥਿ ਜੋਰੁ ਕਰਿ ਵੇਖੈ ਸੋਇ ॥\nਨਾਨਕ ਉਤਮੁ ਨੀਚੁ ਨ ਕੋਇ ॥੩੩॥",
+            "hindi": "आखणि जोरु चुपै नह जोरु ॥\nजोरु न मंगणि देणि न जोरु ॥\nजोरु न जीवणि मरणि नह जोरु ॥\nजोरु न राजि मालि मनि सोरु ॥\nजोरु न सुरती गिआनि वीचारि ॥\nजोरु न जुगती छुटै संसारु ॥\nजिसु हथि जोरु करि वेखै सोइ ॥\nनानक उतमु नीचु न कोइ ॥३३॥",
+            "english": "Aakhan Jor Chupai Nah Jor.\nJor Na Mangan Dayn Na Jor.\nJor Na Jeevan Maran Nah Jor.\nJor Na Raaj Maal Man Sor.\nJor Na Surtee Gi-aan Veechaar.\nJor Na Jugtee Chhutai Sansaar.\nJis Hath Jor Kar Vaykhai So-ay.\nNaanak Utam Neech Na Ko-ay. ||33||"
+        },
+        {
+            "id": 35,
+            "type": "pauri",
+            "number": 34,
+            "gurmukhi": "ਰਾਤੀ ਰੁਤੀ ਥਿਤੀ ਵਾਰ ॥\nਪਵਣ ਪਾਣੀ ਅਗਨੀ ਪਾਤਾਲ ॥\nਤਿਸੁ ਵਿਚਿ ਧਰਤੀ ਥਾਪਿ ਰਖੀ ਧਰਮ ਸਾਲ ॥\nਤਿਸੁ ਵਿਚਿ ਜੀਅ ਜੁਗਤਿ ਕੇ ਰੰਗ ॥\nਤਿਨ ਕੇ ਨਾਮ ਅਨੇਕ ਅਨੰਤ ॥\nਕਰਮੀ ਕਰਮੀ ਹੋਇ ਵੀਚਾਰੁ ॥\nਸਚਾ ਆਪਿ ਸਚਾ ਦਰਬਾਰੁ ॥\nਤਿਥੈ ਸੋਹਨਿ ਪੰਚ ਪਰਵਾਣੁ ॥\nਨਦਰੀ ਕਰਮਿ ਪਵੈ ਨੀਸਾਣੁ ॥\nਕਚ ਪਕਾਈ ਓਥੈ ਪਾਇ ॥\nਨਾਨਕ ਗਇਆ ਜਾਪੈ ਜਾਇ ॥੩੪॥",
+            "hindi": "राती रुती थिती वार ॥\nपवण पाणी अगनी पाताल ॥\nतिसु विचि धरती थापि रखी धरम साल ॥\nतिसु विचि जीअ जुगति के रंग ॥\nतिन के नाम अनेक अनंत ॥\nकरमी करमी होइ वीचारु ॥\nसचा आपि सचा दरबारु ॥\nतिथै सोहनि पंच परवाणु ॥\nनदरी करमि पवै नीसाणु ॥\nकच पकाई ओथै पाइ ॥\nनानक गइआ जापै जाइ ॥३४॥",
+            "english": "Raatee Rutee Thitee Vaar.\nPavan Paanee Agnee Paataal.\nTis Vich Dhartee Thaap Rakhee Dharam Saal.\nTis Vich Jee-a Jugat Kay Rang.\nTin Kay Naam Anayk Anant.\nKarmee Karmee Ho-ay Veechaar.\nSachaa Aap Sachaa Darbaar.\nTithai Sohan Panch Parvaan.\nNadree Karam Pavai Neesaan.\nKach Pakaa-ee Othai Paa-ay.\nNaanak Ga-i-aa Jaapai Jaa-ay. ||34||"
+        },
+        {
+            "id": 36,
+            "type": "pauri",
+            "number": 35,
+            "gurmukhi": "ਧਰਮ ਖੰਡ ਕਾ ਏਹੋ ਧਰਮੁ ॥\nਗਿਆਨ ਖੰਡ ਕਾ ਆਖਹੁ ਕਰਮੁ ॥\nਕੇਤੇ ਪਵਣ ਪਾਣੀ ਵੈਸੰਤਰ ਕੇਤੇ ਕਾਨ ਮਹੇਸ ॥\nਕੇਤੇ ਬਰਮੇ ਘਾੜਤਿ ਘੜੀਅਹਿ ਰੂਪ ਰੰਗ ਕੇ ਵੇਸ ॥\nਕੇਤੀਆ ਕਰਮ ਭੂਮੀ ਮੇਰ ਕੇਤੇ ਕੇਤੇ ਧੂ ਉਪਦੇਸ ॥\nਕੇਤੇ ਇੰਦ ਚੰਦ ਸੂਰ ਕੇਤੇ ਕੇਤੇ ਮੰਡਲ ਦੇਸ ॥\nਕੇਤੇ ਸਿਧ ਬੁਧ ਨਾਥ ਕੇਤੇ ਕੇਤੇ ਦੇਵੀ ਵੇਸ ॥\nਕੇਤੇ ਦੇਵ ਦਾਨਵ ਮੁਨਿ ਕੇਤੇ ਕੇਤੇ ਰਤਨ ਸਮੁੰਦ ॥\nਕੇਤੀਆ ਖਾਣੀ ਕੇਤੀਆ ਬਾਣੀ ਕੇਤੇ ਪਾਤ ਨਰਿੰਦ ॥\nਕੇਤੀਆ ਸੁਰਤੀ ਸੇਵਕ ਕੇਤੇ ਨਾਨਕ ਅੰਤੁ ਨ ਅੰਤੁ ॥੩੫॥",
+            "hindi": "धरम खंड का एहो धरमु ॥\nगिआन खंड का आखहु करमु ॥\nकेते पवण पाणी वैसंतर केते कान महेस ॥\nकेते बरमे घाड़ति घड़ीअहि रूप रंग के वेस ॥\nकेतीआ करम भूमी मेर केते केते धू उपदेस ॥\nकेते इंद चंद सूर केते केते मंडल देस ॥\nकेते सिध बुध नाथ केते केते देवी वेस ॥\nकेते देव दानव मुनि केते केते रतन समुंद ॥\nकेतीआ खाणी केतीआ बाणी केते पात नरिंद ॥\nकेतीआ सुरती सेवक केते नानक अंतु न अंतु ॥३५॥",
+            "english": "Dharam Khand Kaa Ayho Dharam.\nGi-aan Khand Kaa Aakhahu Karam.\nKaytay Pavan Paanee Vaisantar Kaytay Kaan Mahays.\nKaytay Barmay Ghaarhat Gharhee-ahi Roop Rang Kay Vays.\nKaytee-aa Karam Bhoomee Mayr Kaytay Kaytay Dhoo Updays.\nKaytay Ind Chand Soor Kaytay Kaytay Mandal Days.\nKaytay Sidh Budh Naath Kaytay Kaytay Dayvee Vays.\nKaytay Dayv Daanav Mun Kaytay Kaytay Ratan Samund.\nKaytee-aa Khaanee Kaytee-aa Baanee Kaytay Paat Narind.\nKaytee-aa Surtee Sayvak Kaytay Naanak Ant Na Ant. ||35||"
+        },
+        {
+            "id": 37,
+            "type": "pauri",
+            "number": 36,
+            "gurmukhi": "ਗਿਆਨ ਖੰਡ ਮਹਿ ਗਿਆਨੁ ਪਰਚੰਡੁ ॥\nਤਿਥੈ ਨਾਦ ਬਿਨੋਦ ਕੋਡ ਅਨੰਦੁ ॥\nਸਰਮ ਖੰਡ ਕੀ ਬਾਣੀ ਰੂਪੁ ॥\nਤਿਥੈ ਘਾੜਤਿ ਘੜੀਐ ਬਹੁਤੁ ਅਨੂਪੁ ॥\nਤਾ ਕੀਆ ਗਲਾ ਕਥੀਆ ਨਾ ਜਾਹਿ ॥\nਜੇ ਕੋ ਕਹੈ ਪਿਛੈ ਪਛੁਤਾਇ ॥\nਤਿਥੈ ਘੜੀਐ ਸੁਰਤਿ ਮਤਿ ਮਨਿ ਬੁਧਿ ॥\nਤਿਥੈ ਘੜੀਐ ਸੁਰਾ ਸਿਧਾ ਕੀ ਸੁਧਿ ॥੩੬॥",
+            "hindi": "गिआन खंड महि गिआनु परचंडु ॥\nतिथै नाद बिनोद कोड अनंदु ॥\nसरम खंड की बाणी रूपु ॥\nतिथै घाड़ति घड़ीऐ बहुतु अनूपु ॥\nता कीआ गला कथीआ ना जाहि ॥\nजे को कहै पिछै पछुताइ ॥\nतिथै घड़ीऐ सुरति मति मनि बुधि ॥\nतिथै घड़ीऐ सुरा सिधा की सुधि ॥३६॥",
+            "english": "Gi-aan Khand Mahi Gi-aan Parchand.\nTithai Naad Binod Kod Anand.\nSaram Khand Kee Baanee Roop.\nTithai Ghaarhat Gharhee-ai Bahut Anoop.\nTaa Kee-aa Galaa Kathee-aa Naa Jaahi.\nJay Ko Kahai Pichhai Pachhutaa-ay.\nTithai Gharhee-ai Surat Mat Man Budh.\nTithai Gharhee-ai Suraa Sidhaa Kee Sudh. ||36||"
+        },
+        {
+            "id": 38,
+            "type": "pauri",
+            "number": 37,
+            "gurmukhi": "ਕਰਮ ਖੰਡ ਕੀ ਬਾਣੀ ਜੋਰੁ ॥\nਤਿਥੈ ਹੋਰੁ ਨ ਕੋਈ ਹੋਰੁ ॥\nਤਿਥੈ ਜੋਧ ਮਹਾਬਲ ਸੂਰ ॥\nਤਿਨ ਮਹਿ ਰਾਮੁ ਰਹਿਆ ਭਰਪੂਰ ॥\nਤਿਥੈ ਸੀਤੋ ਸੀਤਾ ਮਹਿਮਾ ਮਾਹਿ ॥\nਤਾ ਕੇ ਰੂਪ ਨ ਕਥਨੇ ਜਾਹਿ ॥\nਨਾ ਓਹਿ ਮਰਹਿ ਨ ਠਾਗੇ ਜਾਹਿ ॥\nਜਿਨ ਕੈ ਰਾਮੁ ਵਸੈ ਮਨ ਮਾਹਿ ॥\nਤਿਥੈ ਭਗਤ ਵਸਹਿ ਕੇ ਲੋਅ ॥\nਕਰਹਿ ਅਨੰਦੁ ਸਚਾ ਮਨਿ ਸੋਇ ॥\nਸਚ ਖੰਡਿ ਵਸੈ ਨਿਰੰਕਾਰੁ ॥\nਕਰਿ ਕਰਿ ਵੇਖੈ ਨਦਰਿ ਨਿਹਾਲ ॥\nਤਿਥੈ ਖੰਡ ਮੰਡਲ ਵਰਭੰਡ ॥\nਜੇ ਕੋ ਕਥੈ ਤ ਅੰਤ ਨ ਅੰਤ ॥\nਤਿਥੈ ਲੋਅ ਲੋਅ ਆਕਾਰ ॥\nਜਿਵ ਜਿਵ ਹੁਕਮੁ ਤਿਵੈ ਤਿਵ ਕਾਰ ॥\nਵੇਖੈ ਵਿਗਸੈ ਕਰਿ ਵੀਚਾਰੁ ॥\nਨਾਨਕ ਕਥਨਾ ਕਰੜਾ ਸਾਰੁ ॥੩੭॥",
+            "hindi": "करम खंड की बाणी जोरु ॥\nतिथै होरु न कोई होरु ॥\nतिथै जोध महाबल सूर ॥\nतिन महि रामु रहिआ भरपूर ॥\nतिथै सीतो सीता महिमा माहि ॥\nता के रूप न कथने जाहि ॥\nना ओहि मरहि न ठागे जाहि ॥\nजिन कै रामु वसै मन माहि ॥\nतिथै भगत वसहि के लोअ ॥\nकरहि अनंदु सचा मनि सोइ ॥\nसच खंडि वसै निरंकारु ॥\nकरि करि वेखै नदरि निहाल ॥\nतिथै खंड मंडल वरभंड ॥\nजे को कथै त अंत न अंत ॥\nतिथै लोअ लोअ आकार ॥\nजिव जिव हुकमु तिवै तिव कार ॥\nवेखै विगसै करि वीचारु ॥\nनानक कथना करड़ा सारु ॥३७॥",
+            "english": "Karam Khand Kee Baanee Jor.\nTithai Hor Na Ko-ee Hor.\nTithai Jodh Mahaabal Soor.\nTin Mahi Raam Rahi-aa Bharpoor.\nTithai Seeto Seetaa Mahimaa Maahi.\nTaa Kay Roop Na Kathnay Jaahi.\nNaa Ohi Marahi Na Thaagay Jaahi.\nJin Kai Raam Vasai Man Maahi.\nTithai Bhagat Vasahi Kay Lo-a.\nKarahi Anand Sachaa Man So-ay.\nSach Khand Vasai Nirankaar.\nKar Kar Vaykhai Nadar Nihaal.\nTithai Khand Mandal Varbhand.\nJay Ko Kathai Ta Ant Na Ant.\nTithai Lo-a Lo-a Aakaar.\nJiv Jiv Hukam Tivai Tiv Kaar.\nVaykhai Vigsai Kar Veechaar.\nNaanak Kathnaa Karrhaa Saar. ||37||"
+        },
+        {
+            "id": 39,
+            "type": "pauri",
+            "number": 38,
+            "gurmukhi": "ਪਵਣੁ ਗੁਰੂ ਪਾਣੀ ਪਿਤਾ ਮਾਤਾ ਧਰਤਿ ਮਹਤੁ ॥\nਦਿਵਸੁ ਰਾਤਿ ਦੁਇ ਦਾਈ ਦਾਇਆ ਖੇਲੈ ਸਗਲ ਜਗਤੁ ॥\nਚੰਗਿਆਈਆ ਬੁਰਿਆਈਆ ਵਾਚੈ ਧਰਮੁ ਹਦੂਰਿ ॥\nਕਰਮੀ ਆਪੋ ਆਪਣੀ ਕੇ ਨੇੜੈ ਕੇ ਦੂਰਿ ॥\nਜਿਨੀ ਨਾਮੁ ਧਿਆਇਆ ਗਏ ਮਸਕਤਿ ਘਾਲਿ ॥\nਨਾਨਕ ਤੇ ਮੁਖ ਉਜਲੇ ਕੇਤੀ ਛੁਟੀ ਨਾਲਿ ॥੩੮॥",
+            "hindi": "पवणु गुरू पाणी पिता माता धरति महतु ॥\nदिवसु राति दुइ दाई दाइआ खेलै सगल जगतु ॥\nचंगिआईआ बुरिआईआ वाचै धरमु हदूरि ॥\nकरमी आपो आपणी के नेड़ै के दूरि ॥\nजिनी नामु धिआइआ गए मसकति घालि ॥\nनानक ते मुख उजले केती छुटी नालि ॥३८॥",
+            "english": "Pavan Guroo Paanee Pitaa Maataa Dharat Mahat.\nDivas Raat Du-ay Daa-ee Daa-i-aa Khaylai Sagal Jagat.\nChangi-aa-ee-aa Buri-aa-ee-aa Vaachai Dharam Hadoor.\nKarmee Aapo Aapnee Kay Nayrhai Kay Door.\nJinee Naam Dhi-aa-i-aa Ga-ay Maskat Ghaal.\nNaanak Tay Mukh Ujlay Kaytee Chhutee Naal. ||38||"
+        },
+        {
+            "id": 40,
+            "type": "salok",
+            "gurmukhi": "ਪਵਣੁ ਗੁਰੂ ਪਾਣੀ ਪਿਤਾ ਮਾਤਾ ਧਰਤਿ ਮਹਤੁ ॥\nਦਿਵਸੁ ਰਾਤਿ ਦੁਇ ਦਾਈ ਦਾਇਆ ਖੇਲੈ ਸਗਲ ਜਗਤੁ ॥\nਚੰਗਿਆਈਆ ਬੁਰਿਆਈਆ ਵਾਚੈ ਧਰਮੁ ਹਦੂਰਿ ॥\nਕਰਮੀ ਆਪੋ ਆਪਣੀ ਕੇ ਨੇੜੈ ਕੇ ਦੂਰਿ ॥\nਜਿਨੀ ਨਾਮੁ ਧਿਆਇਆ ਗਏ ਮਸਕਤਿ ਘਾਲਿ ॥\nਨਾਨਕ ਤੇ ਮੁਖ ਉਜਲੇ ਕੇਤੀ ਛੁਟੀ ਨਾਲਿ ॥੧॥",
+            "hindi": "पवणु गुरू पाणी पिता माता धरति महतु ॥\nदिवसु राति दुइ दाई दाइआ खेलै सगल जगतु ॥\nचंगिआईआ बुरिआईआ वाचै धरमु हदूरि ॥\nकरमी आपो आपणी के नेड़ै के दूरि ॥\nजिनी नामु धिआइआ गए मसकति घालि ॥\nनानक ते मुख उजले केती छुटी नालि ॥१॥",
+            "english": "Pavan Guroo Paanee Pitaa Maataa Dharat Mahat.\nDivas Raat Du-ay Daa-ee Daa-i-aa Khaylai Sagal Jagat.\nChangi-aa-ee-aa Buri-aa-ee-aa Vaachai Dharam Hadoor.\nKarmee Aapo Aapnee Kay Nayrhai Kay Door.\nJinee Naam Dhi-aa-i-aa Ga-ay Maskat Ghaal.\nNaanak Tay Mukh Ujlay Kaytee Chhutee Naal. ||1||"
+        }
+    ]
+}
