@@ -11,12 +11,13 @@ A peaceful, devotional mobile app for reading and listening to Japji Sahib Path 
 - Adjustable font sizes (Small, Medium, Large, Extra Large)
 - Fully offline - no internet required
 
-### 🎧 Listen Path
+### 🎧 Audio Player (Integrated in Read Path)
 - Audio player with play/pause controls
 - 10-second skip forward/backward
 - Seek bar for precise navigation
 - Offline audio playback
-- Beautiful audio player UI
+- Beautiful minimalist audio player UI
+- Integrated directly into Read Path screen
 
 ### 🌅 Daily Hukamnama
 - Fetches daily Hukamnama (currently using sample data)
@@ -48,7 +49,7 @@ A peaceful, devotional mobile app for reading and listening to Japji Sahib Path 
 - **Navigation**: Expo Router (file-based routing)
 - **State Management**: Zustand + Context API
 - **Styling**: LinearGradient backgrounds, golden/white theme
-- **Audio**: expo-av
+- **Audio**: expo-audio (modern, hooks-based API)
 - **Storage**: @react-native-async-storage/async-storage
 - **Icons**: @expo/vector-icons (Ionicons, MaterialCommunityIcons with Khanda)
 
@@ -91,13 +92,21 @@ eas build -p android --profile production
 
 The APK will be available for download from your EAS dashboard once the build completes.
 
-## Build size optimization
+## Build Size Optimization
 
 This project is configured to keep release builds lean:
 
-- JS bundle minification is enabled by default in production, and we also strip `console.*` calls (except `console.warn` and `console.error`) via Babel to reduce bundle size.
-- Android release builds enable Proguard and resource shrinking to remove unused classes and resources.
-- Use Android App Bundles (AAB) for production to let Google Play deliver ABI- and density-split APKs to users, significantly reducing install size compared to a universal APK.
+- **JS Bundle Minification**: Enabled by default in production
+- **Console Stripping**: Removes `console.*` calls (except `console.warn` and `console.error`) via Babel
+- **Proguard**: Enabled for Android release builds to remove unused classes
+- **Resource Shrinking**: Removes unused resources in Android builds
+- **Android App Bundles (AAB)**: Use for production to deliver optimized APKs per device configuration
+
+## Recent Updates
+
+✅ **Migrated to expo-audio** - Using the new `expo-audio` package instead of deprecated `expo-av`
+✅ **Integrated Audio Player** - Audio controls now integrated directly into Read Path screen
+✅ **Modern Hooks API** - Leveraging React hooks for cleaner, more performant audio playback
 
 What we changed:
 
@@ -121,7 +130,6 @@ app/
   │   └── _layout.tsx  # Tabs layout
   ├── _layout.tsx      # Root layout
   ├── read-path.tsx    # Read Path screen
-  ├── listen-path.tsx  # Listen Path screen
   ├── hukamnama.tsx    # Daily Hukamnama
   ├── settings.tsx     # Settings screen
   ├── about.tsx        # About screen

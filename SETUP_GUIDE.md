@@ -5,8 +5,8 @@
 A fully functional React Native app with Expo featuring:
 
 ✅ **Home Screen** - Beautiful UI with Khanda icon, golden theme  
-✅ **Read Path** - Japji Sahib in 3 languages with auto-scroll  
-✅ **Listen Path** - Audio player (requires audio file)  
+✅ **Read Path** - Japji Sahib in 3 languages with integrated audio player  
+✅ **Audio Player** - Play/pause, seek, skip controls (integrated in Read Path)  
 ✅ **Daily Hukamnama** - Offline-first with sample data  
 ✅ **Settings** - Dark mode & font size controls  
 ✅ **About Screen** - App info and credits  
@@ -80,12 +80,14 @@ npx expo run:android --variant release
 
 ## 🎵 Adding Audio File
 
-**Important**: The Listen Path screen requires an audio file to work.
+**Important**: The audio player in Read Path requires an audio file to work.
 
 1. Download Japji Sahib audio in MP3 format
 2. Rename it to `japji-sahib.mp3`
 3. Place it in: `assets/audio/japji-sahib.mp3`
 4. Rebuild the app
+
+The audio player is integrated directly into the Read Path screen for a seamless experience.
 
 **Where to get audio**:
 - SearchGurbani.com
@@ -154,8 +156,8 @@ Popular APIs:
 - [ ] Home screen loads with Khanda icon
 - [ ] Read Path shows text in all 3 languages
 - [ ] Language tabs switch correctly
-- [ ] Auto-scroll works
-- [ ] Font size adjustment works
+- [ ] Audio player controls work (play/pause, skip, seek)
+- [ ] Font size adjustment modal works
 - [ ] Dark mode toggles properly
 - [ ] Settings are saved and persist
 - [ ] Mala counter increments and resets
@@ -168,13 +170,13 @@ Popular APIs:
 
 ### Core Features
 - ✅ 3-language support (Gurmukhi, Hindi, English)
-- ✅ Audio playback with controls
+- ✅ Audio playback with controls (integrated in Read Path)
 - ✅ Dark mode
 - ✅ Offline-first architecture
-- ✅ Auto-scroll reading
-- ✅ Font size control
+- ✅ Font size control via modal
 - ✅ Mala counter
 - ✅ Daily Hukamnama
+- ✅ Modern expo-audio API (no deprecation warnings)
 
 ### UI/UX
 - ✅ Golden theme (#D4AF37)
@@ -194,7 +196,7 @@ Popular APIs:
 | Navigation | Expo Router (file-based) |
 | State | Zustand + Context API |
 | Storage | AsyncStorage |
-| Audio | expo-av |
+| Audio | expo-audio (modern hooks API) |
 | Styling | LinearGradient |
 | Icons | @expo/vector-icons |
 | Build | EAS Build |
@@ -210,8 +212,7 @@ jap-ji-sahib/
 │   │   ├── index.tsx          # Home screen
 │   │   └── _layout.tsx        # Tabs config
 │   ├── _layout.tsx            # Root layout
-│   ├── read-path.tsx          # Read screen
-│   ├── listen-path.tsx        # Audio player
+│   ├── read-path.tsx          # Read screen + Audio player
 │   ├── hukamnama.tsx          # Daily Hukamnama
 │   ├── settings.tsx           # Settings
 │   ├── about.tsx              # About
@@ -313,6 +314,8 @@ For issues or questions:
 ✅ Beautiful UI with Khanda icon  
 ✅ Dark mode  
 ✅ Mala counter  
+✅ Audio player integrated in Read Path
+✅ Modern expo-audio API
 
 ## ⚠️ What's Needed
 

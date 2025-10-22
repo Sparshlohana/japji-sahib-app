@@ -1,50 +1,52 @@
 # Complete Japji Sahib Text - Instructions
 
-The current `japji-sahib.json` file has only 6 verses (Mool Mantar + Jap + 4 Pauris).
+The current `japji-sahib.json` file has only 6 verses as sample data (Mool Mantar + Jap + 4 Pauris).
 
-## To Add Complete Text (38 Pauris + Mool Mantar + Jap + Final Salok = 41 total):
+## Complete Structure Required
 
-### Option 1: Download from SikhiToTheMax API
+**Total verses needed:** 41 verses
+- 1 Mool Mantar
+- 1 Jap (ਜਪੁ)
+- 38 Pauris (ਪਉੜੀਆਂ)
+- 1 Final Salok (ਸਲੋਕੁ)
+
+Currently have: **6 verses** (Mool Mantar + Jap + Pauris 1-4)
+**Still need:** **35 more verses** (Pauris 5-38 + Final Salok)
+
+## How to Add Complete Text
+
+### Option 1: Use Online APIs (Recommended)
+
+Download complete text from these trusted APIs:
+
+**SikhiToTheMax API**
 ```javascript
-// Visit: https://api.sikhitothemax.org/
-// Or use SearchGurbani.com API
+// Fetch from: https://api.sikhitothemax.org/
+// Provides complete Japji Sahib in all three scripts
 ```
 
-### Option 2: Use This Structure
+**SearchGurbani API**
+```javascript
+// Visit: https://searchgurbani.com/
+// API endpoints for Gurbani text
+```
 
-Continue adding Pauris 5-38 following this format:
+### Option 2: Manual Entry
+
+Continue adding verses to `data/japji-sahib.json` following this exact format:
 
 ```json
 {
     "id": 6,
     "type": "pauri",
     "number": 5,
-    "gurmukhi": "[Full Gurmukhi text]",
-    "hindi": "[Full Hindi text]",
-    "english": "[Full English transliteration]"
+    "gurmukhi": "[Full Pauri 5 text in Gurmukhi]",
+    "hindi": "[Full Pauri 5 text in Hindi]",
+    "english": "[Full Pauri 5 transliteration]"
 }
 ```
 
-### Option 3: Copy from These Sources
-
-**Reliable Sources for Complete Japji Sahib:**
-1. **SikhiToTheMax.org** - https://www.sikhitothemax.org/
-2. **SearchGurbani.com** - https://www.searchgurbani.com/guru-granth-sahib/japji-sahib
-3. **GurbaniFiles.org** - Pre-formatted JSON files
-4. **iGurbani.com** - Multilingual versions
-
-### Pauris You Need to Add:
-
-Currently have: **Mool Mantar + Jap + Pauris 1-4** (6 total)
-
-**Still need to add:**
-- Pauri 5 through Pauri 38 (34 more pauris)
-- Final Salok (1)
-
-**Total verses needed:** 41 verses
-
-### Quick Fill Template:
-
+**For the Final Salok:**
 ```json
 {
     "id": 42,
@@ -55,30 +57,149 @@ Currently have: **Mool Mantar + Jap + Pauris 1-4** (6 total)
 }
 ```
 
-## Recommended Approach:
+**Important Notes:**
+- Keep sequential `id` values (6, 7, 8, ... 42)
+- Pauri `number` should match the actual Pauri number (5, 6, 7, ... 38)
+- Final Salok has `type: "salok"` and no `number` field
+- Ensure proper JSON formatting (commas, quotes, brackets)
 
-1. Visit **SearchGurbani.com**
-2. Go to Japji Sahib section
-3. Copy each Pauri text
-4. Paste into the JSON following the existing format
-5. Ensure proper escaping of quotes and special characters
+### Option 3: Copy from Trusted Sources
 
-## Or Use This Python Script to Generate:
+**Reliable Sources for Complete Japji Sahib:**
 
-```python
-import requests
-import json
+1. **SikhiToTheMax.org** 
+   - URL: https://www.sikhitothemax.org/
+   - Features: Multiple scripts, line-by-line view
+   
+2. **SearchGurbani.com**
+   - URL: https://www.searchgurbani.com/guru-granth-sahib/japji-sahib
+   - Features: Complete text with translations
+   
+3. **GurbaniFiles.org**
+   - Pre-formatted JSON files available
+   
+4. **iGurbani.com**
+   - Multilingual versions
+   
+5. **DiscoverSikhi.com**
+   - Educational content with explanations
 
-# Fetch from SikhiToTheMax API
-# Process and format
-# Save to japji-sahib.json
+## Step-by-Step Process
+
+### 1. Choose Your Source
+Pick one of the reliable sources listed above
+
+### 2. Copy Text for Each Pauri
+For each remaining Pauri (5-38):
+- Copy Gurmukhi text
+- Copy Hindi translation
+- Copy English transliteration
+
+### 3. Format as JSON
+Add to `japji-sahib.json`:
+```json
+{
+    "id": [next sequential number],
+    "type": "pauri",
+    "number": [pauri number],
+    "gurmukhi": "[paste Gurmukhi]",
+    "hindi": "[paste Hindi]",
+    "english": "[paste English]"
+}
 ```
 
-## Testing After Adding:
+### 4. Don't Forget the Final Salok
+After Pauri 38, add the closing Salok
 
-1. Validate JSON syntax
-2. Check the app displays all verses
-3. Test scrolling through entire path
-4. Verify all 3 languages show correctly
+### 5. Validate JSON
+- Use a JSON validator (jsonlint.com)
+- Check for missing commas
+- Ensure all quotes are properly closed
+- Verify brackets are balanced
+
+## Testing After Adding
+
+1. **Validate JSON syntax**
+   ```bash
+   # You can use online tools or:
+   node -e "console.log(JSON.parse(require('fs').readFileSync('./data/japji-sahib.json')))"
+   ```
+
+2. **Test in app**
+   - Open Read Path screen
+   - Switch between all 3 languages
+   - Scroll through all verses
+   - Verify text displays correctly
+
+3. **Check for issues**
+   - Missing verses
+   - Incorrect ordering
+   - Special character rendering
+   - Line breaks and formatting
+
+## Common Issues & Solutions
+
+### Special Characters Not Displaying
+- Ensure file is saved as UTF-8
+- Verify Gurmukhi Unicode characters are properly encoded
+- Test on device, not just in code editor
+
+### Text Appearing Cut Off
+- Check for very long lines without spaces
+- Verify line height calculations in code
+- Test on different screen sizes
+
+### Missing Verses in App
+- Verify JSON array is properly formatted
+- Check that all verses have unique `id` values
+- Ensure no syntax errors break JSON parsing
+
+### Quotes Breaking JSON
+- Escape internal quotes: `\"` 
+- Or use smart text editors that handle escaping automatically
+
+## Automation Option (Advanced)
+
+If you're comfortable with programming, you can create a script to fetch and format the text:
+
+```javascript
+// Example Node.js script
+const fetch = require('node-fetch');
+const fs = require('fs');
+
+async function fetchJapjiSahib() {
+    // Fetch from API
+    // Format as JSON
+    // Save to file
+}
+```
+
+## Need Help?
+
+If you need assistance adding the complete text:
+1. Check the example format in existing `japji-sahib.json`
+2. Visit the recommended sources listed above
+3. Use JSON validators to check syntax
+4. Test incrementally (add a few Pauris, test, repeat)
 
 **ਵਾਹਿਗੁਰੂ ਜੀ ਕਾ ਖਾਲਸਾ, ਵਾਹਿਗੁਰੂ ਜੀ ਕੀ ਫਤਿਹ** 🙏
+
+---
+
+## File Structure Reference
+
+Your completed `japji-sahib.json` should look like:
+
+```json
+[
+    { "id": 1, "type": "mool_mantar", ... },
+    { "id": 2, "type": "pauri", "number": 0, ... },  // Jap
+    { "id": 3, "type": "pauri", "number": 1, ... },
+    { "id": 4, "type": "pauri", "number": 2, ... },
+    // ... continue through ...
+    { "id": 41, "type": "pauri", "number": 38, ... },
+    { "id": 42, "type": "salok", ... }
+]
+```
+
+Total: **42 objects in the array**

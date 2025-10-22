@@ -16,18 +16,20 @@ Your complete "Shri Japji Sahib" React Native mobile app is now **ready to use**
 #### 📖 Read Path Screen
 - Full Japji Sahib text in **Gurmukhi**, **Hindi**, and **English**
 - Language switcher with beautiful tabs
-- Auto-scroll functionality (toggle on/off)
-- Adjustable font size (4 sizes)
+- Adjustable font size (4 sizes via modal)
+- **Integrated Audio Player** with play/pause, skip controls, and seek bar
 - Offline-ready (no internet needed)
 - Verse-by-verse layout with clear formatting
+- Auto-scroll functionality (toggle on/off)
 
-#### 🎧 Listen Path Screen
-- Professional audio player interface
-- Play/Pause button
+#### 🎧 Audio Player (Integrated)
+- Seamlessly integrated into Read Path screen
+- Play/Pause button with modern UI
 - 10-second skip forward/backward
-- Seek bar for manual navigation
+- Interactive seek bar for navigation
 - Time display (current/total)
 - Designed for offline playback
+- Uses modern `expo-audio` API
 - Note: Add `japji-sahib.mp3` to `assets/audio/` folder
 
 #### 🌅 Daily Hukamnama
@@ -70,19 +72,20 @@ Your complete "Shri Japji Sahib" React Native mobile app is now **ready to use**
 - **Navigation**: Expo Router (file-based, type-safe)
 - **State Management**: Zustand + Context API
 - **Offline Storage**: AsyncStorage
-- **Audio**: expo-av
+- **Audio**: expo-audio (modern hooks-based API)
 - **Styling**: LinearGradient, responsive design
 - **Icons**: Comprehensive icon set with Sikh symbols
 - **Build System**: EAS Build configured for APK generation
+- **Optimization**: Proguard, resource shrinking, console stripping
 
 ### 📦 Files Created/Modified
 
-1. **App Screens**: 7 complete screens
+1. **App Screens**: 6 complete screens (Read Path with integrated audio player)
 2. **Theme System**: Full dark/light mode support
 3. **State Management**: Zustand store + Theme Context
 4. **Data**: Japji Sahib JSON structure
-5. **Configuration**: EAS build setup
-6. **Documentation**: README + SETUP_GUIDE
+5. **Configuration**: EAS build setup, build optimization
+6. **Documentation**: README + SETUP_GUIDE + MIGRATION_NOTES
 
 ---
 
@@ -120,10 +123,11 @@ Download link will appear when build completes (~10-15 minutes).
 
 ## ⚠️ What You Need to Add
 
-### 1. Audio File (Required for Listen Path)
+### 1. Audio File (Required for Audio Player)
 - Download Japji Sahib MP3
 - Rename to `japji-sahib.mp3`
 - Place in `assets/audio/japji-sahib.mp3`
+- Audio player is integrated into Read Path screen
 - Sources: SearchGurbani.com, SikhNet.com
 
 ### 2. Complete Text (Currently 5 sample verses)
@@ -148,9 +152,9 @@ Download link will appear when build completes (~10-15 minutes).
 | Requirement | Status | Notes |
 |------------|--------|-------|
 | Read Path with 3 languages | ✅ Complete | Tabs working perfectly |
-| Listen Path with audio | ✅ Complete | Requires MP3 file |
+| Audio player with controls | ✅ Complete | Integrated in Read Path, requires MP3 file |
 | Auto-scroll | ✅ Complete | Toggle in Read Path |
-| Font size control | ✅ Complete | 4 sizes in Settings |
+| Font size control | ✅ Complete | 4 sizes via modal in Read Path |
 | Offline support | ✅ Complete | Full offline capability |
 | Dark mode | ✅ Complete | Beautiful golden/black theme |
 | Khanda icon | ✅ Complete | On home screen |
@@ -161,6 +165,7 @@ Download link will appear when build completes (~10-15 minutes).
 | Calm UI design | ✅ Complete | Golden/white theme |
 | Waheguru footer | ✅ Complete | On all screens |
 | **Bonus: Mala Counter** | ✅ Complete | 108 beads visual |
+| **Modern Audio API** | ✅ Complete | Using expo-audio (no deprecation warnings) |
 
 ---
 
