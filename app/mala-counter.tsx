@@ -5,29 +5,35 @@ import { LinearGradient } from 'expo-linear-gradient';
 import { Stack } from 'expo-router';
 import React from 'react';
 import {
-    Dimensions,
+    ScrollView,
     StyleSheet,
     Text,
     TouchableOpacity,
     View,
+    useWindowDimensions,
 } from 'react-native';
-
-const { width } = Dimensions.get('window');
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 export default function MalaCounterScreen() {
     const { colors, isDarkMode } = useTheme();
     const { malaCount, incrementMala, resetMala } = useAppStore();
+    const { width } = useWindowDimensions();
+    const insets = useSafeAreaInsets();
 
     const gradientColors: [string, string] = isDarkMode
         ? ['#000000', '#1A1A1A']
         : ['#FFFFFF', '#FFFAF0'];
 
+    const isSmallScreen = width < 360;
+    const horizontalPadding = Math.max(16, Math.min(width * 0.05, 24));
+
     const renderMalaBeads = () => {
         const beads = [];
         const totalBeads = 108;
-        const radius = width * 0.35;
-        const centerX = width / 2;
-        const centerY = width / 2 + 50;
+        const containerWidth = width - (horizontalPadding * 2); // Account for padding
+        const radius = Math.min(containerWidth * 0.35, 150); // Cap radius for larger devices
+        const centerX = containerWidth / 2;
+        const centerY = Math.min(containerWidth * 0.5, 200) + 50; // Adaptive center
 
         for (let i = 0; i < totalBeads; i++) {
             const angle = (i / totalBeads) * 2 * Math.PI - Math.PI / 2;
@@ -69,14 +75,14 @@ export default function MalaCounterScreen() {
                 }}
             />
             <LinearGradient colors={gradientColors} style={styles.container}>
-                <View style={styles.content}>
+                <ScrollView contentContainerStyle={[styles.content, { paddingHorizontal: horizontalPadding, paddingBottom: insets.bottom + 20 }]}>
                     {/* Title */}
-                    <Text style={[styles.title, { color: colors.gold }]}>
+                    <Text style={[styles.title, { color: colors.gold, fontSize: isSmallScreen ? 20 : 24 }]}>
                         Japji Sahib Mala
                     </Text>
 
                     {/* Mala Visual */}
-                    <View style={[styles.malaContainer, { height: width + 100 }]}>
+                    <View style={[styles.malaContainer, { height: Math.min(width - (horizontalPadding * 2), 400) + 100 }]}>
                         {renderMalaBeads()}
 
                         {/* Center Counter */}
@@ -144,7 +150,7 @@ export default function MalaCounterScreen() {
                     </View>
 
                     {/* Info */}
-                    <Text style={[styles.infoText, { color: colors.textSecondary }]}>
+                    <Text style={[styles.infoText, { color: colors.textSecondary, fontSize: isSmallScreen ? 13 : 14 }]}>
                         {'Tap "'}
                         {'Count'}
                         {'" after each Japji Sahib recitation.'}
@@ -154,11 +160,11 @@ export default function MalaCounterScreen() {
 
                     {/* Footer */}
                     <View style={styles.footer}>
-                        <Text style={[styles.footerText, { color: colors.gold }]}>
+                        <Text style={[styles.footerText, { color: colors.gold, fontSize: isSmallScreen ? 13 : 14 }]}>
                             ਵਾਹਿਗੁਰੂ ਜੀ ਕਾ ਖਾਲਸਾ ਵਾਹਿਗੁਰੂ ਜੀ ਕੀ ਫਤਿਹ
                         </Text>
                     </View>
-                </View>
+                </ScrollView>
             </LinearGradient>
         </>
     );
@@ -169,18 +175,17 @@ const styles = StyleSheet.create({
         flex: 1,
     },
     content: {
-        flex: 1,
-        padding: 20,
+        flexGrow: 1,
+        paddingTop: 20,
         alignItems: 'center',
     },
     title: {
-        fontSize: 24,
         fontWeight: 'bold',
-        marginTop: 20,
+        marginTop: 10,
         marginBottom: 20,
     },
     malaContainer: {
-        width: width,
+        width: '100%',
         position: 'relative',
         marginBottom: 20,
     },
@@ -224,6 +229,7 @@ const styles = StyleSheet.create({
         borderRadius: 12,
         marginBottom: 30,
         width: '100%',
+        maxWidth: 400,
     },
     statItem: {
         flex: 1,
@@ -244,6 +250,7 @@ const styles = StyleSheet.create({
     },
     controls: {
         width: '100%',
+        maxWidth: 400,
         gap: 12,
         marginBottom: 20,
     },
@@ -259,6 +266,7 @@ const styles = StyleSheet.create({
         shadowOffset: { width: 0, height: 2 },
         shadowOpacity: 0.25,
         shadowRadius: 3.84,
+        minHeight: 60,
     },
     buttonText: {
         fontSize: 20,
@@ -273,24 +281,25 @@ const styles = StyleSheet.create({
         borderRadius: 12,
         gap: 8,
         borderWidth: 1,
+        minHeight: 56,
     },
     secondaryButtonText: {
         fontSize: 16,
         fontWeight: '500',
     },
     infoText: {
-        fontSize: 14,
         textAlign: 'center',
         lineHeight: 20,
         marginBottom: 20,
+        paddingHorizontal: 20,
     },
     footer: {
         alignItems: 'center',
         marginTop: 'auto',
         paddingBottom: 20,
+        paddingTop: 10,
     },
     footerText: {
-        fontSize: 14,
         fontWeight: '600',
         textAlign: 'center',
     },

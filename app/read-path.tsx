@@ -15,10 +15,14 @@ import {
     Text,
     TouchableOpacity,
     View,
+    useWindowDimensions,
 } from 'react-native';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 export default function ReadPathScreen() {
     const { colors, isDarkMode, fontSize, fontSizes } = useTheme();
+    const { width } = useWindowDimensions();
+    const insets = useSafeAreaInsets();
     // Font size keys for modal selection
     const fontSizeKeys = Object.keys(fontSizes) as (keyof typeof fontSizes)[];
     const [localFontSize, setLocalFontSize] = useState(fontSize);
@@ -34,6 +38,11 @@ export default function ReadPathScreen() {
     const gradientColors: [string, string] = isDarkMode
         ? ['#000000', '#1A1A1A']
         : ['#FFFFFF', '#FFFAF0'];
+
+    // Responsive sizing
+    const isSmallScreen = width < 360;
+    const horizontalPadding = Math.max(12, Math.min(width * 0.05, 20));
+    const modalWidth = Math.min(width * 0.85, 320);
 
     // Load audio on mount
     useEffect(() => {
@@ -167,9 +176,9 @@ export default function ReadPathScreen() {
                     transparent
                     onRequestClose={() => setFontModalVisible(false)}
                 >
-                    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: 'rgba(0,0,0,0.3)' }}>
-                        <View style={{ backgroundColor: colors.card, borderRadius: 20, padding: 24, minWidth: 260, alignItems: 'center', elevation: 5 }}>
-                            <Text style={{ fontSize: 18, fontWeight: 'bold', marginBottom: 18, color: colors.text }}>Choose Font Size</Text>
+                    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: 'rgba(0,0,0,0.3)', paddingHorizontal: 20 }}>
+                        <View style={{ backgroundColor: colors.card, borderRadius: 20, padding: isSmallScreen ? 20 : 24, width: modalWidth, maxWidth: '100%', alignItems: 'center', elevation: 5 }}>
+                            <Text style={{ fontSize: isSmallScreen ? 16 : 18, fontWeight: 'bold', marginBottom: 18, color: colors.text }}>Choose Font Size</Text>
                             {fontSizeKeys.map(key => (
                                 <TouchableOpacity
                                     key={key}
@@ -182,19 +191,21 @@ export default function ReadPathScreen() {
                                         borderColor: localFontSize === key ? colors.gold : colors.border,
                                         marginBottom: 10,
                                         width: '100%',
+                                        minHeight: 48,
+                                        justifyContent: 'center',
                                     }}
                                     onPress={() => {
                                         setLocalFontSize(key);
                                         setFontModalVisible(false);
                                     }}
                                 >
-                                    <Text style={{ fontSize: 16, color: localFontSize === key ? '#fff' : colors.text, textAlign: 'center', fontWeight: localFontSize === key ? 'bold' : '600' }}>
+                                    <Text style={{ fontSize: isSmallScreen ? 14 : 16, color: localFontSize === key ? '#fff' : colors.text, textAlign: 'center', fontWeight: localFontSize === key ? 'bold' : '600' }}>
                                         {key.charAt(0).toUpperCase() + key.slice(1)} ({fontSizes[key]})
                                     </Text>
                                 </TouchableOpacity>
                             ))}
                             <TouchableOpacity
-                                style={{ marginTop: 8, padding: 8, borderRadius: 8, backgroundColor: colors.border, width: '100%' }}
+                                style={{ marginTop: 8, padding: 12, borderRadius: 8, backgroundColor: colors.border, width: '100%', minHeight: 44, justifyContent: 'center' }}
                                 onPress={() => setFontModalVisible(false)}
                             >
                                 <Text style={{ color: colors.text, textAlign: 'center' }}>Cancel</Text>
@@ -276,7 +287,7 @@ export default function ReadPathScreen() {
                 <ScrollView
                     ref={scrollViewRef}
                     style={styles.scrollView}
-                    contentContainerStyle={[styles.content, { paddingBottom: 180 }]}
+                    contentContainerStyle={[styles.content, { paddingHorizontal: horizontalPadding, paddingBottom: 200 }]}
                 >
                     <Text style={[styles.title, { color: colors.gold }]}>
                         {japjiSahibData.title}
@@ -298,7 +309,7 @@ export default function ReadPathScreen() {
                 </ScrollView>
 
                 {/* Bottom Audio Player */}
-                <View style={[styles.playerContainer, { backgroundColor: colors.card, borderTopColor: colors.border }]}>
+                <View style={[styles.playerContainer, { backgroundColor: colors.card, borderTopColor: colors.border, paddingBottom: Math.max(insets.bottom, 16) }]}>
 
                     <View style={styles.progressContainer}>
                         <Slider
@@ -373,11 +384,13 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         padding: 8,
         gap: 8,
+        flexWrap: 'wrap',
     },
     tab: {
         flex: 1,
+        minWidth: 90,
         paddingVertical: 12,
-        paddingHorizontal: 16,
+        paddingHorizontal: 12,
         borderRadius: 8,
         alignItems: 'center',
     },
@@ -389,7 +402,8 @@ const styles = StyleSheet.create({
         flex: 1,
     },
     content: {
-        padding: 20,
+        paddingTop: 20,
+        paddingBottom: 20,
     },
     title: {
         fontSize: 28,
@@ -429,7 +443,6 @@ const styles = StyleSheet.create({
         bottom: 0,
         paddingTop: 12,
         paddingHorizontal: 16,
-        paddingBottom: 16,
         borderTopWidth: 1,
     },
     playerHeader: {
@@ -463,13 +476,14 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         alignItems: 'center',
         justifyContent: 'center',
-        gap: 20,
+        gap: 16,
         marginTop: 6,
+        flexWrap: 'wrap',
     },
     controlButton: {
-        width: 64,
-        height: 64,
-        borderRadius: 32,
+        width: 60,
+        height: 60,
+        borderRadius: 30,
         alignItems: 'center',
         justifyContent: 'center',
         elevation: 3,
@@ -479,9 +493,9 @@ const styles = StyleSheet.create({
         marginTop: 2,
     },
     playButton: {
-        width: 80,
-        height: 80,
-        borderRadius: 40,
+        width: 76,
+        height: 76,
+        borderRadius: 38,
         alignItems: 'center',
         justifyContent: 'center',
         elevation: 5,

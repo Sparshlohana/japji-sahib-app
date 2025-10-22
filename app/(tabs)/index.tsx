@@ -3,33 +3,40 @@ import { Ionicons, MaterialCommunityIcons } from '@expo/vector-icons';
 import { LinearGradient } from 'expo-linear-gradient';
 import { useRouter } from 'expo-router';
 import React from 'react';
-import { ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { ScrollView, StyleSheet, Text, TouchableOpacity, View, useWindowDimensions } from 'react-native';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 export default function HomeScreen() {
   const router = useRouter();
   const { colors, isDarkMode } = useTheme();
+  const insets = useSafeAreaInsets();
+  const { width } = useWindowDimensions();
 
   const gradientColors: [string, string, string] = isDarkMode
     ? ['#000000', '#1A1A1A', '#2A2A2A']
     : ['#FFFFFF', '#FFFAF0', '#FFF8DC'];
 
+  // Responsive padding based on screen width
+  const horizontalPadding = Math.max(20, Math.min(width * 0.05, 40));
+  const isSmallScreen = width < 360;
+
   return (
     <LinearGradient colors={gradientColors} style={styles.container}>
-      <ScrollView contentContainerStyle={styles.scrollContent}>
+      <ScrollView contentContainerStyle={[styles.scrollContent, { paddingHorizontal: horizontalPadding, paddingBottom: insets.bottom + 20 }]}>
         {/* Khanda Icon */}
         <View style={styles.iconContainer}>
           <MaterialCommunityIcons
             name="khanda"
-            size={80}
+            size={isSmallScreen ? 60 : 80}
             color={colors.gold}
           />
         </View>
 
         {/* Title */}
-        <Text style={[styles.title, { color: colors.text }]}>
+        <Text style={[styles.title, { color: colors.text, fontSize: isSmallScreen ? 28 : 36 }]}>
           ਸ਼੍ਰੀ ਜਪੁਜੀ ਸਾਹਿਬ
         </Text>
-        <Text style={[styles.subtitle, { color: colors.gold }]}>
+        <Text style={[styles.subtitle, { color: colors.gold, fontSize: isSmallScreen ? 20 : 24 }]}>
           Shri Japji Sahib
         </Text>
 
@@ -102,23 +109,21 @@ const styles = StyleSheet.create({
   },
   scrollContent: {
     flexGrow: 1,
-    padding: 20,
+    paddingTop: 20,
     alignItems: 'center',
     justifyContent: 'center',
   },
   iconContainer: {
-    marginTop: 40,
+    marginTop: 20,
     marginBottom: 20,
     padding: 20,
   },
   title: {
-    fontSize: 36,
     fontWeight: 'bold',
     textAlign: 'center',
     marginBottom: 8,
   },
   subtitle: {
-    fontSize: 24,
     textAlign: 'center',
     marginBottom: 40,
     fontWeight: '600',
@@ -128,6 +133,7 @@ const styles = StyleSheet.create({
     maxWidth: 400,
     gap: 16,
     marginBottom: 30,
+    paddingHorizontal: 10,
   },
   mainButton: {
     flexDirection: 'row',
@@ -142,6 +148,7 @@ const styles = StyleSheet.create({
     shadowOffset: { width: 0, height: 2 },
     shadowOpacity: 0.25,
     shadowRadius: 3.84,
+    minHeight: 60,
   },
   buttonText: {
     fontSize: 20,
@@ -155,6 +162,7 @@ const styles = StyleSheet.create({
     gap: 12,
     justifyContent: 'center',
     marginBottom: 40,
+    paddingHorizontal: 10,
   },
   secondaryButton: {
     flexDirection: 'row',
@@ -164,10 +172,14 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     gap: 8,
     minWidth: '45%',
+    flex: 1,
+    maxWidth: 180,
+    minHeight: 50,
   },
   secondaryText: {
     fontSize: 14,
     fontWeight: '500',
+    flexShrink: 1,
   },
   footer: {
     alignItems: 'center',

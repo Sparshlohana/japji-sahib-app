@@ -10,15 +10,22 @@ import {
     Text,
     TouchableOpacity,
     View,
+    useWindowDimensions,
 } from 'react-native';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 export default function SettingsScreen() {
     const { colors, isDarkMode, fontSize, toggleDarkMode, setFontSize } =
         useTheme();
+    const { width } = useWindowDimensions();
+    const insets = useSafeAreaInsets();
 
     const gradientColors: [string, string] = isDarkMode
         ? ['#000000', '#1A1A1A']
         : ['#FFFFFF', '#FFFAF0'];
+
+    const isSmallScreen = width < 360;
+    const horizontalPadding = Math.max(16, Math.min(width * 0.05, 24));
 
     const fontSizeOptions: { label: string; value: FontSize }[] = [
         { label: 'Small', value: 'small' },
@@ -38,7 +45,7 @@ export default function SettingsScreen() {
                 }}
             />
             <LinearGradient colors={gradientColors} style={styles.container}>
-                <ScrollView contentContainerStyle={styles.content}>
+                <ScrollView contentContainerStyle={[styles.content, { paddingHorizontal: horizontalPadding, paddingBottom: insets.bottom + 20 }]}>
                     {/* Display Settings */}
                     <View style={[styles.section, { backgroundColor: colors.card }]}>
                         <Text style={[styles.sectionTitle, { color: colors.gold }]}>
@@ -82,6 +89,8 @@ export default function SettingsScreen() {
                                                         ? colors.gold
                                                         : colors.background,
                                                 borderColor: colors.border,
+                                                minHeight: 44,
+                                                justifyContent: 'center',
                                             },
                                         ]}
                                         onPress={() => setFontSize(option.value)}
@@ -150,7 +159,8 @@ const styles = StyleSheet.create({
         flex: 1,
     },
     content: {
-        padding: 20,
+        paddingTop: 20,
+        paddingBottom: 20,
     },
     section: {
         padding: 20,
@@ -167,6 +177,7 @@ const styles = StyleSheet.create({
         justifyContent: 'space-between',
         alignItems: 'center',
         paddingVertical: 8,
+        minHeight: 48,
     },
     settingColumn: {
         paddingVertical: 8,
@@ -175,10 +186,12 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         alignItems: 'center',
         gap: 12,
+        flex: 1,
     },
     settingLabel: {
         fontSize: 16,
         fontWeight: '500',
+        flexShrink: 1,
     },
     divider: {
         height: 1,
@@ -195,23 +208,29 @@ const styles = StyleSheet.create({
         paddingHorizontal: 16,
         borderRadius: 8,
         borderWidth: 1,
+        minWidth: '22%',
     },
     fontSizeText: {
         fontSize: 14,
         fontWeight: '500',
+        textAlign: 'center',
     },
     infoRow: {
         flexDirection: 'row',
         justifyContent: 'space-between',
         alignItems: 'center',
         paddingVertical: 8,
+        minHeight: 44,
     },
     infoLabel: {
         fontSize: 16,
+        flexShrink: 1,
     },
     infoValue: {
         fontSize: 16,
         fontWeight: '500',
+        flexShrink: 1,
+        textAlign: 'right',
     },
     footer: {
         alignItems: 'center',

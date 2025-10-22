@@ -10,14 +10,21 @@ import {
     Text,
     TouchableOpacity,
     View,
+    useWindowDimensions,
 } from 'react-native';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 export default function AboutScreen() {
     const { colors, isDarkMode } = useTheme();
+    const { width } = useWindowDimensions();
+    const insets = useSafeAreaInsets();
 
     const gradientColors: [string, string] = isDarkMode
         ? ['#000000', '#1A1A1A']
         : ['#FFFFFF', '#FFFAF0'];
+
+    const isSmallScreen = width < 360;
+    const horizontalPadding = Math.max(16, Math.min(width * 0.05, 24));
 
     const openLink = (url: string) => {
         Linking.openURL(url);
@@ -34,21 +41,21 @@ export default function AboutScreen() {
                 }}
             />
             <LinearGradient colors={gradientColors} style={styles.container}>
-                <ScrollView contentContainerStyle={styles.content}>
+                <ScrollView contentContainerStyle={[styles.content, { paddingHorizontal: horizontalPadding, paddingBottom: insets.bottom + 20 }]}>
                     {/* App Icon */}
                     <View style={styles.iconContainer}>
                         <MaterialCommunityIcons
                             name="khanda"
-                            size={100}
+                            size={isSmallScreen ? 80 : 100}
                             color={colors.gold}
                         />
                     </View>
 
                     {/* App Name */}
-                    <Text style={[styles.appName, { color: colors.text }]}>
+                    <Text style={[styles.appName, { color: colors.text, fontSize: isSmallScreen ? 24 : 28 }]}>
                         Shri Japji Sahib
                     </Text>
-                    <Text style={[styles.version, { color: colors.textSecondary }]}>
+                    <Text style={[styles.version, { color: colors.textSecondary, fontSize: isSmallScreen ? 14 : 16 }]}>
                         Version 1.0.0
                     </Text>
 
@@ -166,20 +173,19 @@ const styles = StyleSheet.create({
         flex: 1,
     },
     content: {
-        padding: 20,
+        paddingTop: 20,
+        paddingBottom: 20,
     },
     iconContainer: {
         alignItems: 'center',
         marginVertical: 20,
     },
     appName: {
-        fontSize: 28,
         fontWeight: 'bold',
         textAlign: 'center',
         marginBottom: 8,
     },
     version: {
-        fontSize: 16,
         textAlign: 'center',
         marginBottom: 30,
     },
@@ -205,19 +211,23 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         alignItems: 'center',
         gap: 12,
+        minHeight: 40,
     },
     featureText: {
         fontSize: 16,
         flex: 1,
+        flexShrink: 1,
     },
     contactButton: {
         flexDirection: 'row',
         alignItems: 'center',
         gap: 12,
         paddingVertical: 12,
+        minHeight: 48,
     },
     contactText: {
         fontSize: 16,
+        flexShrink: 1,
     },
     credits: {
         fontSize: 14,

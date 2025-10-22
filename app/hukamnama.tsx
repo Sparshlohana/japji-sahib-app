@@ -10,7 +10,9 @@ import {
     StyleSheet,
     Text,
     View,
+    useWindowDimensions,
 } from 'react-native';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 interface HukamnamaData {
     gurmukhi: string;
@@ -21,6 +23,8 @@ interface HukamnamaData {
 
 export default function HukamnamaScreen() {
     const { colors, isDarkMode, fontSize, fontSizes } = useTheme();
+    const { width } = useWindowDimensions();
+    const insets = useSafeAreaInsets();
     const [hukamnama, setHukamnama] = useState<HukamnamaData | null>(null);
     const [isLoading, setIsLoading] = useState(true);
     const [refreshing, setRefreshing] = useState(false);
@@ -28,6 +32,9 @@ export default function HukamnamaScreen() {
     const gradientColors: [string, string] = isDarkMode
         ? ['#000000', '#1A1A1A']
         : ['#FFFFFF', '#FFFAF0'];
+
+    const isSmallScreen = width < 360;
+    const horizontalPadding = Math.max(16, Math.min(width * 0.05, 24));
 
     // Ensure date is always a human-readable string even if API returns nested objects
     const toReadableDate = (d: any): string => {
@@ -260,15 +267,15 @@ export default function HukamnamaScreen() {
             />
             <LinearGradient colors={gradientColors} style={styles.container}>
                 <ScrollView
-                    contentContainerStyle={styles.content}
+                    contentContainerStyle={[styles.content, { paddingHorizontal: horizontalPadding, paddingBottom: insets.bottom + 20 }]}
                     refreshControl={
                         <RefreshControl refreshing={refreshing} onRefresh={onRefresh} tintColor={colors.gold} />
                     }
                 >
                     {hukamnama ? (
                         <>
-                            <Text style={[styles.title, { color: colors.gold }]}>Daily Hukamnama</Text>
-                            <Text style={[styles.date, { color: colors.textSecondary }]}>{String(hukamnama.date)}</Text>
+                            <Text style={[styles.title, { color: colors.gold, fontSize: isSmallScreen ? 24 : 28 }]}>Daily Hukamnama</Text>
+                            <Text style={[styles.date, { color: colors.textSecondary, fontSize: isSmallScreen ? 13 : 14 }]}>{String(hukamnama.date)}</Text>
 
                             {hukamnama.gurmukhi?.trim() ? (
                                 <View style={[styles.section, { backgroundColor: colors.card }]}>
@@ -350,21 +357,21 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
         gap: 16,
+        paddingHorizontal: 20,
     },
     loadingText: {
         fontSize: 16,
     },
     content: {
-        padding: 20,
+        paddingTop: 20,
+        paddingBottom: 20,
     },
     title: {
-        fontSize: 28,
         fontWeight: 'bold',
         textAlign: 'center',
         marginBottom: 8,
     },
     date: {
-        fontSize: 14,
         textAlign: 'center',
         marginBottom: 30,
     },
