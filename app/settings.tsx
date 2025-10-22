@@ -24,7 +24,6 @@ export default function SettingsScreen() {
         ? ['#000000', '#1A1A1A']
         : ['#FFFFFF', '#FFFAF0'];
 
-    const isSmallScreen = width < 360;
     const horizontalPadding = Math.max(16, Math.min(width * 0.05, 24));
 
     const fontSizeOptions: { label: string; value: FontSize }[] = [

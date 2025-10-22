@@ -9,24 +9,21 @@ import { Stack } from 'expo-router';
 import React, { useEffect, useRef, useState } from 'react';
 import {
     ActivityIndicator,
-    Modal,
     ScrollView,
     StyleSheet,
     Text,
     TouchableOpacity,
     View,
-    useWindowDimensions,
+    useWindowDimensions
 } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 export default function ReadPathScreen() {
-    const { colors, isDarkMode, fontSize, fontSizes } = useTheme();
+    const { colors, isDarkMode } = useTheme();
     const { width } = useWindowDimensions();
     const insets = useSafeAreaInsets();
-    // Font size keys for modal selection
-    const fontSizeKeys = Object.keys(fontSizes) as (keyof typeof fontSizes)[];
-    const [localFontSize, setLocalFontSize] = useState(fontSize);
-    const [fontModalVisible, setFontModalVisible] = useState(false);
+    // Dynamic font size state (using pixel values directly)
+    const [currentFontSize, setCurrentFontSize] = useState(16);
     const { selectedLanguage, setLanguage } = useAppStore();
     const scrollViewRef = useRef<ScrollView>(null);
     // Audio player state
@@ -39,10 +36,21 @@ export default function ReadPathScreen() {
         ? ['#000000', '#1A1A1A']
         : ['#FFFFFF', '#FFFAF0'];
 
+    // Font size control functions
+    const minFontSize = 12;
+    const maxFontSize = 32;
+    const fontSizeStep = 2;
+
+    const increaseFontSize = () => {
+        setCurrentFontSize(prev => Math.min(prev + fontSizeStep, maxFontSize));
+    };
+
+    const decreaseFontSize = () => {
+        setCurrentFontSize(prev => Math.max(prev - fontSizeStep, minFontSize));
+    };
+
     // Responsive sizing
-    const isSmallScreen = width < 360;
     const horizontalPadding = Math.max(12, Math.min(width * 0.05, 20));
-    const modalWidth = Math.min(width * 0.85, 320);
 
     // Load audio on mount
     useEffect(() => {
@@ -127,16 +135,13 @@ export default function ReadPathScreen() {
 
         return (
             <View key={verse.id} style={[styles.verseContainer, { borderColor: colors.border }]}>
-                <Text style={[styles.verseNumber, { color: colors.gold }]}>
-                    {verse.type === 'mool_mantar' ? 'Mool Mantar' : `Pauri ${verse.number}`}
-                </Text>
                 <Text
                     style={[
                         styles.verseText,
                         {
                             color: colors.text,
-                            fontSize: fontSizes[localFontSize],
-                            lineHeight: fontSizes[localFontSize] * 1.6,
+                            fontSize: currentFontSize,
+                            lineHeight: currentFontSize * 1.6,
                         },
                     ]}
                 >
@@ -155,64 +160,30 @@ export default function ReadPathScreen() {
                     headerStyle: { backgroundColor: colors.primary },
                     headerTintColor: '#fff',
                     headerRight: () => (
-                        <TouchableOpacity
-                            onPress={() => setFontModalVisible(true)}
-                            style={{ paddingHorizontal: 12, paddingVertical: 6 }}
-                            accessibilityRole="button"
-                            accessibilityLabel="Change font size"
-                            hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
-                        >
-                            <Text style={{ color: '#fff', fontSize: 18, fontWeight: '700' }}>Aa</Text>
-                        </TouchableOpacity>
+                        <View style={{ flexDirection: 'row', alignItems: 'center', gap: 12, paddingRight: 8 }}>
+                            <TouchableOpacity
+                                onPress={decreaseFontSize}
+                                style={{ padding: 8 }}
+                                accessibilityRole="button"
+                                accessibilityLabel="Decrease font size"
+                                hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
+                            >
+                                <Ionicons name="remove-circle-outline" size={24} color="#fff" />
+                            </TouchableOpacity>
+                            <TouchableOpacity
+                                onPress={increaseFontSize}
+                                style={{ padding: 8 }}
+                                accessibilityRole="button"
+                                accessibilityLabel="Increase font size"
+                                hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
+                            >
+                                <Ionicons name="add-circle-outline" size={24} color="#fff" />
+                            </TouchableOpacity>
+                        </View>
                     ),
                 }}
             />
             <LinearGradient colors={gradientColors} style={styles.container}>
-                {/* (HeaderRight handles opening font size modal) */}
-                {/* Font Size Modal */}
-                <Modal
-                    visible={fontModalVisible}
-                    animationType="slide"
-                    transparent
-                    onRequestClose={() => setFontModalVisible(false)}
-                >
-                    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: 'rgba(0,0,0,0.3)', paddingHorizontal: 20 }}>
-                        <View style={{ backgroundColor: colors.card, borderRadius: 20, padding: isSmallScreen ? 20 : 24, width: modalWidth, maxWidth: '100%', alignItems: 'center', elevation: 5 }}>
-                            <Text style={{ fontSize: isSmallScreen ? 16 : 18, fontWeight: 'bold', marginBottom: 18, color: colors.text }}>Choose Font Size</Text>
-                            {fontSizeKeys.map(key => (
-                                <TouchableOpacity
-                                    key={key}
-                                    style={{
-                                        paddingVertical: 12,
-                                        paddingHorizontal: 32,
-                                        borderRadius: 12,
-                                        backgroundColor: localFontSize === key ? colors.gold : 'transparent',
-                                        borderWidth: 1,
-                                        borderColor: localFontSize === key ? colors.gold : colors.border,
-                                        marginBottom: 10,
-                                        width: '100%',
-                                        minHeight: 48,
-                                        justifyContent: 'center',
-                                    }}
-                                    onPress={() => {
-                                        setLocalFontSize(key);
-                                        setFontModalVisible(false);
-                                    }}
-                                >
-                                    <Text style={{ fontSize: isSmallScreen ? 14 : 16, color: localFontSize === key ? '#fff' : colors.text, textAlign: 'center', fontWeight: localFontSize === key ? 'bold' : '600' }}>
-                                        {key.charAt(0).toUpperCase() + key.slice(1)} ({fontSizes[key]})
-                                    </Text>
-                                </TouchableOpacity>
-                            ))}
-                            <TouchableOpacity
-                                style={{ marginTop: 8, padding: 12, borderRadius: 8, backgroundColor: colors.border, width: '100%', minHeight: 44, justifyContent: 'center' }}
-                                onPress={() => setFontModalVisible(false)}
-                            >
-                                <Text style={{ color: colors.text, textAlign: 'center' }}>Cancel</Text>
-                            </TouchableOpacity>
-                        </View>
-                    </View>
-                </Modal>
                 {/* Language Tabs */}
                 <View style={[styles.tabContainer, { backgroundColor: colors.card }]}>
                     <TouchableOpacity
@@ -416,13 +387,8 @@ const styles = StyleSheet.create({
         paddingBottom: 16,
         borderBottomWidth: 1,
     },
-    verseNumber: {
-        fontSize: 14,
-        fontWeight: '600',
-        marginBottom: 8,
-    },
     verseText: {
-        textAlign: 'left',
+        textAlign: 'center',
     },
     footer: {
         alignItems: 'center',
