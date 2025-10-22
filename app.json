@@ -60,9 +60,7 @@
       "reactCompiler": true
     },
     "extra": {
-      "eas": {
-        "projectId": "your-project-id"
-      }
+      "eas": {}
     }
   }
 }
