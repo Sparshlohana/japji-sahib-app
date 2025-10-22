@@ -50,7 +50,8 @@
         {
           "android": {
             "enableProguardInReleaseBuilds": true,
-            "enableShrinkResourcesInReleaseBuilds": true
+            "enableShrinkResourcesInReleaseBuilds": true,
+            "enableMinifyInReleaseBuilds": true
           }
         }
       ]
@@ -60,7 +61,11 @@
       "reactCompiler": true
     },
     "extra": {
-      "eas": {}
-    }
+      "eas": {
+        "projectId": "6a52ad0a-bb93-42b6-80f9-dced648154fd"
+      },
+      "router": {}
+    },
+    "owner": "sparshlohana"
   }
 }
