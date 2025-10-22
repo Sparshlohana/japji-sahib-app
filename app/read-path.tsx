@@ -31,6 +31,10 @@ export default function ReadPathScreen() {
     const player = useAudioPlayer(audioSource);
     const [isLoading, setIsLoading] = useState(false);
     const [audioLoaded, setAudioLoaded] = useState(false);
+    const [isPlaying, setIsPlaying] = useState(false);
+    const [currentTime, setCurrentTime] = useState(0);
+    const [duration, setDuration] = useState(0);
+    const [isSeeking, setIsSeeking] = useState(false);
 
     const gradientColors: [string, string] = isDarkMode
         ? ['#000000', '#1A1A1A']
@@ -74,27 +78,74 @@ export default function ReadPathScreen() {
         loadAudio();
     }, []);
 
-    const playPause = () => {
-        if (!audioLoaded) return;
-        if (player.playing) {
-            player.pause();
-        } else {
-            player.play();
+    // Sync audio player state with local state
+    useEffect(() => {
+        if (!player) return;
+
+        const updateInterval = setInterval(() => {
+            if (!isSeeking) {
+                setIsPlaying(player.playing);
+                setCurrentTime(player.currentTime || 0);
+                setDuration(player.duration || 0);
+            }
+        }, 100); // Update every 100ms for smooth progress
+
+        return () => clearInterval(updateInterval);
+    }, [player, isSeeking]);
+
+    // Reset playing state when audio ends
+    useEffect(() => {
+        if (!player) return;
+
+        const checkIfEnded = () => {
+            if (currentTime > 0 && duration > 0 && currentTime >= duration - 0.5) {
+                setIsPlaying(false);
+            }
+        };
+
+        checkIfEnded();
+    }, [currentTime, duration, player]);
+
+    const playPause = async () => {
+        if (!audioLoaded || !player) return;
+
+        try {
+            if (isPlaying) {
+                player.pause();
+                setIsPlaying(false);
+            } else {
+                player.play();
+                setIsPlaying(true);
+            }
+        } catch (error) {
+            console.error('Error toggling playback:', error);
         }
     };
 
     const skip = (seconds: number) => {
-        if (!audioLoaded || !player.currentTime) return;
+        if (!audioLoaded || !player) return;
+
         const newTime = Math.max(
             0,
-            Math.min((player.currentTime || 0) + seconds, player.duration || 0)
+            Math.min(currentTime + seconds, duration)
         );
+
         player.seekTo(newTime);
+        setCurrentTime(newTime);
     };
 
     const onSliderValueChange = (value: number) => {
-        if (audioLoaded) {
+        if (audioLoaded && player) {
+            setIsSeeking(true);
+            setCurrentTime(value);
+        }
+    };
+
+    const onSliderSlidingComplete = (value: number) => {
+        if (audioLoaded && player) {
             player.seekTo(value);
+            setCurrentTime(value);
+            setIsSeeking(false);
         }
     };
 
@@ -286,9 +337,10 @@ export default function ReadPathScreen() {
                         <Slider
                             style={styles.slider}
                             minimumValue={0}
-                            maximumValue={player.duration || 0}
-                            value={player.currentTime || 0}
-                            onSlidingComplete={onSliderValueChange}
+                            maximumValue={duration || 0}
+                            value={currentTime}
+                            onValueChange={onSliderValueChange}
+                            onSlidingComplete={onSliderSlidingComplete}
                             minimumTrackTintColor={colors.gold}
                             maximumTrackTintColor={colors.border}
                             thumbTintColor={colors.gold}
@@ -296,10 +348,10 @@ export default function ReadPathScreen() {
                         />
                         <View style={styles.timeContainer}>
                             <Text style={[styles.timeText, { color: colors.textSecondary }]}>
-                                {formatTime(player.currentTime)}
+                                {formatTime(currentTime)}
                             </Text>
                             <Text style={[styles.timeText, { color: colors.textSecondary }]}>
-                                {formatTime(player.duration)}
+                                {formatTime(duration)}
                             </Text>
                         </View>
                     </View>
@@ -322,7 +374,7 @@ export default function ReadPathScreen() {
                             {isLoading ? (
                                 <ActivityIndicator color="#fff" size="small" />
                             ) : (
-                                <Ionicons name={player.playing ? 'pause' : 'play'} size={32} color="#fff" />
+                                <Ionicons name={isPlaying ? 'pause' : 'play'} size={32} color="#fff" />
                             )}
                         </TouchableOpacity>
 
